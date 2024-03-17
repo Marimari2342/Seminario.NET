@@ -27,8 +27,8 @@ o2 = "Z";           o1 --> A
 **¿Qué líneas del siguiente código provocan conversiones boxing y unboxing?**
 
 Las conversiones boxing y unboxing permiten asignar variables de tipo de valor a variables de tipo de referencia y viceversa.
-* Cuando una variable de algun tipo de valor se asigna a una de tipo de referencia, se dice que se le aplicó la conversión BOXING.
-* Cuando una variable de algun tipo de referencia se asigna a una de tipo de valor, se dice que se le aplicó la conversión UNBOXING.
+* Cuando una variable de algun tipo de valor se asigna a una de tipo de referencia, se dice que se le aplicó la conversión **BOXING**.
+* Cuando una variable de algun tipo de referencia se asigna a una de tipo de valor, se dice que se le aplicó la conversión **UNBOXING**.
 ~~~
 char c1 = 'A';
 
@@ -46,8 +46,8 @@ string st2 = (string)o2; // st2(valor) <-- o2(referencia) == UNBOXING
 ## Punto 3
 **¿Qué diferencias existen entre las conversiones de tipo implícitas y explícitas?**
 
-* Conversiones implícitas: son aquellas en las que no hace falta indicar entre paréntesis la conversion. Ejemplo --> double num = 10;
-* Conversiones explicitas: tengo que indicar entre paréntesis el tipo de dato al que quiero convertir. Ejemplo --> int num = (int) 10.0; Si no aclaro entre paréntesis el tipo de conversion me va a tirar error.
+* **Conversiones implícitas:** son aquellas en las que no hace falta indicar entre paréntesis la conversion. Ejemplo --> double num = 10;
+* **Conversiones explicitas:** tengo que indicar entre paréntesis el tipo de dato al que quiero convertir. Ejemplo --> int num = (int) 10.0; Si no aclaro entre paréntesis el tipo de conversion me va a tirar error.
 
 ## Punto 4
 **Resolver los errores de compilación en el siguiente fragmento de código. Utilizar el operador as cuando sea posible.**
@@ -100,7 +100,9 @@ La salida por consola será true - false, pues en el primer caso compara dos cha
 ## Punto 8
 **Investigar acerca de la clase StringBuilder del espacio de nombre System.Text ¿En qué circunstancias es preferible utilizar StringBuilder en lugar de utilizar string? Implementar un caso de ejemplo en el que el rendimiento sea claramente superior utilizando StringBuilder en lugar de string y otro en el que no.**
 
-El objeto String es inmutable. Cada vez que se usa uno de los métodos de la clase System.String, se crea un objeto de cadena en la memoria, lo que requiere una nueva asignación de espacio para ese objeto. En las situaciones en las que es necesario realizar modificaciones repetidas en una cadena, la sobrecarga asociada a la creación de un objeto String puede ser costosa. La clase System.Text.StringBuilder se puede usar para modificar una cadena sin crear un objeto. Por ejemplo, el uso de la clase StringBuilder puede mejorar el rendimiento al concatenar muchas cadenas en un bucle.
+El objeto String es inmutable. Cada vez que se usa uno de los métodos de la clase System.String, se crea un objeto de cadena en la memoria, lo que requiere una nueva asignación de espacio para ese objeto. En las situaciones en las que es necesario realizar modificaciones repetidas en una cadena, la sobrecarga asociada a la creación de un objeto String puede ser costosa. 
+
+La clase **System.Text.StringBuilder** se puede usar para modificar una cadena sin crear un objeto. Por ejemplo, el uso de la clase StringBuilder puede mejorar el rendimiento al concatenar muchas cadenas en un bucle.
 
 **Debo usar String:**
 * Cuando la cantidad de cambios que su aplicación realizará en una cadena es pequeña.
@@ -110,3 +112,9 @@ El objeto String es inmutable. Cada vez que se usa uno de los métodos de la cla
 **Debo usar StringBuilder:**
 * Cuando espera que su aplicación realice un número desconocido o una cantidad significativa de cambios en una cadena.
 
+## Punto 9
+**Investigar sobre el tipo DateTime y usarlo para medir el tiempo de ejecución de los algoritmos implementados en el ejercicio anterior.**
+
+EL tipo **DateTime** nos permite trabajar con tiempos estandarizados. Podemos definir valores pasados, futuros o recibir la información actual. Podemos utilizar distintos formatos predefinidos o definir el nuestro propio.
+
+Para poder medir el tiempo de ejecución con DateTime, debemos establecer dos variables, una al inicio de la suseción de lineas, y una al final del código a testear; luego realizamos la resta de ambas y exponemos la diferencia.
