@@ -101,10 +101,10 @@ La salida por consola será true - false, pues en el primer caso compara dos cha
 **Investigar acerca de la clase StringBuilder del espacio de nombre System.Text ¿En qué circunstancias es preferible utilizar StringBuilder en lugar de utilizar string? Implementar un caso de ejemplo en el que el rendimiento sea claramente superior utilizando StringBuilder en lugar de string y otro en el que no.**
 
 El objeto String es inmutable. Cada vez que se usa uno de los métodos de la clase System.String, se crea un objeto de cadena en la memoria, lo que requiere una nueva asignación de espacio para ese objeto. En las situaciones en las que es necesario realizar modificaciones repetidas en una cadena, la sobrecarga asociada a la creación de un objeto String puede ser costosa. La clase System.Text.StringBuilder se puede usar para modificar una cadena sin crear un objeto. Por ejemplo, el uso de la clase StringBuilder puede mejorar el rendimiento al concatenar muchas cadenas en un bucle.
-Debo usar String:
+**Debo usar String:**
 *Cuando la cantidad de cambios que su aplicación realizará en una cadena es pequeña.
 *Cuando está realizando un número fijo de operaciones de concatenación. 
 *Cuando hay se realizan operaciones de búsqueda extensas mientras al construir la cadena.
-Debo usar StringBuilder:
+**Debo usar StringBuilder:**
 *Cuando espera que su aplicación realice un número desconocido o una cantidad
 *significativa de cambios en una cadena.
