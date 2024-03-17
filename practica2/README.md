@@ -76,3 +76,35 @@ Console.WriteLine(i);
 ~~~
 
 Porque no le asigno ningún valor a la variable i, entonces no puedo imprimirla en pantalla.
+
+## Punto 7
+### ¿Cuál es la salida por consola del siguiente fragmento de código? ¿Por qué la tercera y sexta línea producen resultados diferentes?
+
+~~~
+char c1 = 'A';
+
+char c2 = 'A';
+
+Console.WriteLine(c1 == c2); //Aca comparo dos char y sin iguales porque A==A
+
+object o1 = c1;
+
+object o2 = c2;
+
+Console.WriteLine(o1 == o2);    /*Aca comparo dos objetos y son distintos porque o1 no 
+                                es o2, el contenido en ambos es el mismo pero son dos
+                                objetos diferentes*/
+~~~
+La salida por consola será true - false, pues en el primer caso compara dos char que son iguales, y en el segundo caso compara dos objetos, que aunque ambos tengan el mismo contenido, no dejan de ser dos objetos distintos.
+
+## Punto 8
+### Investigar acerca de la clase StringBuilder del espacio de nombre System.Text ¿En qué circunstancias es preferible utilizar StringBuilder en lugar de utilizar string? Implementar un caso de ejemplo en el que el rendimiento sea claramente superior utilizando StringBuilder en lugar de string y otro en el que no.
+
+El objeto String es inmutable. Cada vez que se usa uno de los métodos de la clase System.String, se crea un objeto de cadena en la memoria, lo que requiere una nueva asignación de espacio para ese objeto. En las situaciones en las que es necesario realizar modificaciones repetidas en una cadena, la sobrecarga asociada a la creación de un objeto String puede ser costosa. La clase System.Text.StringBuilder se puede usar para modificar una cadena sin crear un objeto. Por ejemplo, el uso de la clase StringBuilder puede mejorar el rendimiento al concatenar muchas cadenas en un bucle.
+Debo usar String:
+*Cuando la cantidad de cambios que su aplicación realizará en una cadena es pequeña.
+*Cuando está realizando un número fijo de operaciones de concatenación. 
+*Cuando hay se realizan operaciones de búsqueda extensas mientras al construir la cadena.
+Debo usar StringBuilder:
+*Cuando espera que su aplicación realice un número desconocido o una cantidad
+*significativa de cambios en una cadena.
