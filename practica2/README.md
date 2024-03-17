@@ -4,18 +4,23 @@
 ### Dado el siguiente código: El tipo object es un tipo referencia, por lo tanto luego de la sentencia o2 = o1 ambas variables están apuntando a la misma dirección. ¿Cómo explica entonces que el resultado en la consola no sea “Z Z”?
 ~~~
 object o1 = "A";
+
 object o2 = o1;
+
 o2 = "Z";
+
 Console.WriteLine(o1 + " " + o2);
 ~~~
 Esto es porque son dos objetos distintos tengo:
 ~~~
 object o1 = "A";    o1 --> A
                     o2 --> ?
+
 object o2 = o1;     o1 --> A
                     o2 --> A
-o2 = "Z";       o1 --> A
-                o2 --> Z
+
+o2 = "Z";           o1 --> A
+                    o2 --> Z
 ~~~
 
 ## Punto 2
@@ -25,11 +30,16 @@ Las conversiones boxing y unboxing permiten asignar variables de tipo de valor a
 * Cuando una variable de algun tipo de valor se asigna a una de tipo de referencia, se dice que se le aplicó la conversión BOXING.
 * Cuando una variable de algun tipo de referencia se asigna a una de tipo de valor, se dice que se le aplicó la conversión UNBOXING.
 ~~~
-char c1 = 'A'; 
-string st1 = "A"; 
+char c1 = 'A';
+
+string st1 = "A";
+
 object o1 = c1; // o1(referencia) <-- c1(valor) == BOXING
+
 object o2 = st1; // o2(referencia) <-- st1(valor) == BOXING
+
 char c2 = (char)o1; // c2(valor) <-- o1(referencia) == UNBOXING
+
 string st2 = (string)o2; // st2(valor) <-- o2(referencia) == UNBOXING
 ~~~
 
@@ -38,3 +48,20 @@ string st2 = (string)o2; // st2(valor) <-- o2(referencia) == UNBOXING
 
 * Conversiones implícitas: son aquellas en las que no hace falta indicar entre paréntesis la conversion. Ejemplo --> double num = 10;
 * Conversiones explicitas: tengo que indicar entre paréntesis el tipo de dato al que quiero convertir. Ejemplo --> int num = (int) 10.0; Si no aclaro entre paréntesis el tipo de conversion me va a tirar error.
+
+## Punto 4
+### Resolver los errores de compilación en el siguiente fragmento de código. Utilizar el operador as cuando sea posible.
+
+~~~
+object o = "Hola Mundo!";
+string? st = o as string; //string acepta valores null entonces puedo usar as
+
+int i = 12;
+byte b = (byte)i; //no puedo usar as porque byte no acepta valores null
+
+double d = i;
+float f = (float)d; //no puedo usar as porque float no acepta valores null
+
+o = i;
+i = (int) o+ 1; //no puedo usar as porque int no acepta valores null
+~~~
