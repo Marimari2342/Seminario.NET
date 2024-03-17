@@ -1,9 +1,7 @@
 # PRÁCTICA 2
 
 ## Punto 1
-1) Dado el siguiente código: El tipo object es un tipo referencia, por lo tanto luego
-de la sentencia o2 = o1 ambas variables están apuntando a la misma dirección. ¿Cómo
-explica entonces que el resultado en la consola no sea “Z Z”?
+1) Dado el siguiente código: El tipo object es un tipo referencia, por lo tanto luego de la sentencia o2 = o1 ambas variables están apuntando a la misma dirección. ¿Cómo explica entonces que el resultado en la consola no sea “Z Z”?
 ~~~
 object o1 = "A";
 object o2 = o1;
@@ -23,12 +21,9 @@ o2 = "Z";       o1 --> A
 ## Punto 2
 2) Qué líneas del siguiente código provocan conversiones boxing y unboxing.
 
-Las conversiones boxing y unboxing permiten asignar variables de tipo de valor a
-variables de tipo de referencia y viceversa.
-    *__ Cuando una variable de algun tipo de valor se asigna a una de tipo de referencia,
-    se dice que se le aplicó la conversión BOXING.
-    *__ Cuando una variable de algun tipo de referencia se asigna a una de tipo de valor,
-    se dice que se le aplicó la conversión UNBOXING.
+Las conversiones boxing y unboxing permiten asignar variables de tipo de valor a variables de tipo de referencia y viceversa.
+* Cuando una variable de algun tipo de valor se asigna a una de tipo de referencia, se dice que se le aplicó la conversión BOXING.
+* Cuando una variable de algun tipo de referencia se asigna a una de tipo de valor, se dice que se le aplicó la conversión UNBOXING.
 ~~~
 char c1 = 'A'; 
 string st1 = "A"; 
