@@ -65,3 +65,14 @@ float f = (float)d; //no puedo usar as porque float no acepta valores null
 o = i;
 i = (int) o+ 1; //no puedo usar as porque int no acepta valores null
 ~~~
+
+## Punto 6
+### Supongamos que Program.cs sólo tiene dos líneas ¿Por qué no compila?
+
+~~~
+int i;
+
+Console.WriteLine(i);
+~~~
+
+Porque no le asigno ningún valor a la variable i, entonces no puedo imprimirla en pantalla.
