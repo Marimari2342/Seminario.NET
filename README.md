@@ -14,5 +14,5 @@
 >
 >**Mari**
 >
->![Gracias](Marimari2342/Marimari2342.github.io/imagenes/Madara.webp)
+>![Gracias](otros/Madara.webp)
 
