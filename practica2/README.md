@@ -1,7 +1,7 @@
 # PRÁCTICA 2
 
 ## Punto 1
-### 1) Dado el siguiente código: El tipo object es un tipo referencia, por lo tanto luego de la sentencia o2 = o1 ambas variables están apuntando a la misma dirección. ¿Cómo explica entonces que el resultado en la consola no sea “Z Z”?
+### Dado el siguiente código: El tipo object es un tipo referencia, por lo tanto luego de la sentencia o2 = o1 ambas variables están apuntando a la misma dirección. ¿Cómo explica entonces que el resultado en la consola no sea “Z Z”?
 ~~~
 object o1 = "A";
 object o2 = o1;
@@ -19,7 +19,7 @@ o2 = "Z";       o1 --> A
 ~~~
 
 ## Punto 2
-2) Qué líneas del siguiente código provocan conversiones boxing y unboxing.
+### ¿Qué líneas del siguiente código provocan conversiones boxing y unboxing?
 
 Las conversiones boxing y unboxing permiten asignar variables de tipo de valor a variables de tipo de referencia y viceversa.
 * Cuando una variable de algun tipo de valor se asigna a una de tipo de referencia, se dice que se le aplicó la conversión BOXING.
@@ -32,3 +32,9 @@ object o2 = st1; // o2(referencia) <-- st1(valor) == BOXING
 char c2 = (char)o1; // c2(valor) <-- o1(referencia) == UNBOXING
 string st2 = (string)o2; // st2(valor) <-- o2(referencia) == UNBOXING
 ~~~
+
+## Punto 3
+### ¿Qué diferencias existen entre las conversiones de tipo implícitas y explícitas?
+
+* Conversiones implícitas: son aquellas en las que no hace falta indicar entre paréntesis la conversion. Ejemplo --> double num = 10;
+* Conversiones explicitas: tengo que indicar entre paréntesis el tipo de dato al que quiero convertir. Ejemplo --> int num = (int) 10.0; Si no aclaro entre paréntesis el tipo de conversion me va a tirar error.
