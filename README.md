@@ -1,6 +1,6 @@
 # Seminario.NET
 
-**Este es un seminario a elección del 2do año de la Facultad de Informática UNLP para las carreras de:**
+**Este es un seminario a elección del tercer semestre de la Facultad de Informática UNLP para las carreras de:**
 
 * Analista Programador Universitario
 * Analista en Tecnologías de la Información y la Comunicación
