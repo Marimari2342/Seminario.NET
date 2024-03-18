@@ -12,5 +12,5 @@
 >
 >Acceder al [Programa de la materia](https://drive.google.com/file/d/1yfrQGZLrh8Z9Gs9SNmbAkgnuz3MQRFPK/view?usp=drive_link).
 
-![Gracias](imagenes/firmagith.png)
+![Gracias](Marimari2342/Marimari2342.github.io/imagenes/firmagith.png)
 
