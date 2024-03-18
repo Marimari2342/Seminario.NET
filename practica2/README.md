@@ -134,3 +134,7 @@ La clase **System.Text.StringBuilder** se puede usar para modificar una cadena s
 EL tipo **DateTime** nos permite trabajar con tiempos estandarizados. Podemos definir valores pasados, futuros o recibir la información actual. Podemos utilizar distintos formatos predefinidos o definir el nuestro propio.
 
 Para poder medir el tiempo de ejecución con DateTime, debemos establecer dos variables, una al inicio de la suseción de lineas, y una al final del código a testear; luego realizamos la resta de ambas y exponemos la diferencia.
+
+
+
+<p><img align="center" src="https://github.com/Marimari2342/Marimari2342/blob/main/firmagith.png" alt="marigit"/></p>
