@@ -156,4 +156,4 @@ Console.WriteLine("100".Length);
 
 Lo que hace es decirme la cantidad de caracteres que componen el string "100", es decir devuelve 3 en pantalla.
 
-![Gracias](/../xtras/firmagith.png)
+![Gracias](/../main/xtras/firmagith.png)
