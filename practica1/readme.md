@@ -168,7 +168,7 @@ Si, lo que va a hacer esta sentencia es pedirte que ingreses un string y automat
 
 
 ## Punto 9
-***Escribir un programa que lea dos palabras separadas por un blanco que terminan con <ENTER>, y determinar si son simétricas (Ej: 'abbccd' y 'dccbba' son simétricas). Tip: si st es un string, entonces \st[0]\ devuelve el primer carácter de st, y \st[st.Length-1]\ devuelve el último carácter de st.***
+***Escribir un programa que lea dos palabras separadas por un blanco que terminan con <ENTER>, y determinar si son simétricas (Ej: 'abbccd' y 'dccbba' son simétricas). Tip: si st es un string, entonces st[0] devuelve el primer carácter de st, y st[st.Length-1] devuelve el último carácter de st.***
 
 
 **st.Split(' ');** hace un array de subcadenas utilizando el carácter espacio (' ') como delimitador. Por ejemplo, si el usuario ingresa "hola mundo" en st, entonces st.Split(' ') creará un array con dos elementos: "hola" y "mundo". Entonces, después de esa línea de código, si imprimes st[0], obtendrás "hola", y si imprimes st[1], tendrás "mundo". Me ayuda a saber cuantos espacios hubo, tantos como elementos en el arreglo.
