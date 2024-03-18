@@ -19,7 +19,7 @@ Console.Write("Mundo");
 
 
 ## Punto 2
-***Investigar por las secuencias de escape \n, \t , \" y \\. Escribir un programa que las utilice para imprimir distintos mensajes en la consola.***
+***Investigar por las secuencias de escape \n, \t , \\" y \\\. Escribir un programa que las utilice para imprimir distintos mensajes en la consola.***
 
 
 * \n --> nueva linea (funciona como un ENTER)
@@ -71,10 +71,6 @@ else
 
 ***a) utilizando if ... else if***
 
-***b) utilizando switch***
-
-
-a)
 ~~~
 Console.WriteLine("Ingrese su nombre:");
 string nombre = Console.ReadLine();
@@ -100,7 +96,7 @@ else
 }
 ~~~
 
-b)
+***b) utilizando switch***
 ~~~
 Console.WriteLine("Ingrese su nombre:");
 string nombre = Console.ReadLine();
