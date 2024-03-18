@@ -122,3 +122,38 @@ switch (nombre)
 
 
 ## Punto 6
+***Utilizar Console.ReadLine() para leer líneas de texto (secuencia de caracteres que finaliza al presionar <ENTER>) por la consola. Por cada línea leída se debe imprimir inmediatamente la cantidad de caracteres de la misma. El programa termina al ingresar la cadena vacía. Tip: si st es una variable de tipo string, entonces st.Length devuelve la cantidad de caracteres del string.***
+
+~~~
+Console.WriteLine("Ingrese una palabra");
+
+string st = Console.ReadLine();
+
+int i = st.Length;
+
+while (i>0)
+
+{
+
+    Console.WriteLine("cantidad de letras: "+i);
+
+    Console.WriteLine("Ingrese otra palabra");
+
+    st = Console.ReadLine();
+
+    i = st.Length;
+
+}
+~~~
+
+
+##Punto 7
+***¿Qué hace la instrucción Console.WriteLine("100".Length); ?***
+
+~~~
+Console.WriteLine("100".Length);
+~~~
+
+Lo que hace es decirme la cantidad de caracteres que componen el string "100", es decir devuelve 3 en pantalla.
+
+![Gracias](xtras/firmagith.png)
