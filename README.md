@@ -11,6 +11,6 @@
 >Año de cursada: 2024.
 >
 >Acceder al [Programa de la materia](https://drive.google.com/file/d/1yfrQGZLrh8Z9Gs9SNmbAkgnuz3MQRFPK/view?usp=drive_link).
->
->![Gracias](otros/firmagit.png)
+
+![Gracias](otros/firmagit.png)
 
