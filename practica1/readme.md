@@ -34,3 +34,33 @@ Console.WriteLine("Ahora voy a escribir las comillas: \" y una barra diagonal: \
 
 Console.WriteLine("Voy a hacer una tabulación horizontal --> \t asi");
 ~~~
+
+
+## Punto 3
+***El carácter @ delante de un string desactiva los códigos de escape. Probar el siguiente fragmento de código, eliminar el carácter @ y utilizar las secuencias de escape necesarias para que el programa siga funcionando de igual manera***
+
+
+Saco el @ y para que no me tire error uso el codigo de escape \\ de barra diagonal inversa.
+~~~
+string st = "c:\\windows\\system";
+
+Console.WriteLine(st);
+~~~
+
+
+## Punto 4
+***Escribir un programa que solicite al usuario ingresar su nombre e imprima en la consola un saludo personalizado utilizando ese nombre o la frase “Hola mundo” si el usuario ingresó una línea en blanco. Para ingresar un string desde el teclado utilizar Console.ReadLine()***
+
+
+~~~
+Console.WriteLine("Ingrese su nombre:");
+string nombre = Console.ReadLine();
+if (nombre == "")
+{
+    Console.WriteLine("Hola mundo");
+}
+else
+{
+    Console.WriteLine("Hola " + nombre + " bienvenido/a");
+}
+~~~
