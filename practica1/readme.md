@@ -231,8 +231,9 @@ for (int num=1;num <=1000;num++)
 
 
 ## Punto 11
-***Comprobar el funcionamiento del siguiente fragmento de código, analizar el resultado y contestar las preguntas.
-a) ¿Qué se puede concluir respecto del operador de división “/” ?***
+***Comprobar el funcionamiento del siguiente fragmento de código, analizar el resultado y contestar las preguntas.***
+
+***a) ¿Qué se puede concluir respecto del operador de división “/” ?***
 
 Este operador lo que hace es redondear para abajo el número y cortarlo en el caso de que el resultado sea un decimal (en el caso de dividir dos enteros), entonces si por ejemplo quiero dividir dos numeros enteros 5/2 , el resultado no será 2,5 sino 2 pues me corta el número ya que devuelve un entero. Ahora si a uno de mis dos números le pongo un .
 me lo toma como un double y no me redondea los decimales.
@@ -260,5 +261,84 @@ Console.WriteLine("Si c es una variable double, c=3");
 
 Console.WriteLine("entonces a/c = " + a / c);
 ~~~
+
+
+## Punto 12
+***Escribir un programa que imprima todos los divisores de un número entero ingresado desde la consola. Para obtener el entero desde un string st utilizar int.Parse(st).***
+
+
+~~~
+Console.WriteLine("Ingrese un numero: ");
+int num = int.Parse(Console.ReadLine()); //obtengo el entero desde un string
+Console.WriteLine("Divisores de "+num+": ");
+for (int i = 1;i<=num;i++)
+{
+    if (num%i == 0)
+    {
+        Console.Write(i+" ");
+    }
+}
+~~~
+
+
+## Punto 13
+***Si a y b son variables enteras, identificar el problema (y la forma de resolverlo) de la siguiente expresión. Tip: observar qué pasa cuando b = 0.***
+
+
+~~~
+Console.WriteLine("Ingrese enteros a y b: ");
+
+int a = int.Parse(Console.ReadLine());
+
+int b = int.Parse(Console.ReadLine());
+
+if ((b != 0) && (a/b > 5)) Console.WriteLine(a/b);
+~~~
+
+El problema es que si b=0, igual evalua la segunda condición dentro del if, entonces divide entre 0 y eso tira error, porque no puedo tener un cero en el denominador. El modo de solucionarlo es poner && en lugar de & (AND en cortocircuito) que lo que hace es, si ve que la primer condición del if es falsa, no evalua la segunda y directamente
+sigue con el programa.
+
+## Punto 14
+***Utilizar el operador ternario condicional para establecer el contenido de una variable entera con el menor valor de otras dos variables enteras.***
+
+~~~
+int a = 80;
+int b = 19;
+int num = (a<b) ? a : b;
+Console.WriteLine(num);
+~~~
+
+
+## Punto 15
+***¿Cuál es el problema del código siguiente y cómo se soluciona?***
+
+
+Declaro la variable i dos veces. Para solucionar hago:
+~~~
+for (int i = 1; i <= 10;)
+{
+    Console.WriteLine(i++);
+}
+~~~
+
+
+## Punto 16
+***Analizar el siguiente código. ¿Cuál es la salida por consola?***
+
+
+~~~
+int i = 1;
+if (--i == 0)   //pre decremento: resto 1 y luego evaluo [1 - 1 = 0 == 0]
+{
+    Console.WriteLine("cero");
+}
+if (i++ == 0)   //post incremento: evaluo y luego sumo 1 [0 == 0 + 1 = 1]
+{
+    Console.WriteLine("cero");
+}
+Console.WriteLine(i);
+~~~
+
+
 
 ![Gracias](/../main/xtras/firmagith.png)
