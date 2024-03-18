@@ -40,7 +40,7 @@ Console.WriteLine("Voy a hacer una tabulación horizontal --> \t asi");
 ***El carácter @ delante de un string desactiva los códigos de escape. Probar el siguiente fragmento de código, eliminar el carácter @ y utilizar las secuencias de escape necesarias para que el programa siga funcionando de igual manera***
 
 
-Saco el @ y para que no me tire error uso el codigo de escape \\ de barra diagonal inversa.
+Saco el @ y para que no me tire error uso el codigo de escape \\\ de barra diagonal inversa.
 ~~~
 string st = "c:\\windows\\system";
 
@@ -64,3 +64,65 @@ else
     Console.WriteLine("Hola " + nombre + " bienvenido/a");
 }
 ~~~
+
+
+## Punto 5
+***Idem. al ejercicio anterior salvo que se imprimirá un mensaje de saludo diferente según sea el nombre ingresado por el usuario. Así para “Juan” debe imprimir “¡Hola amigo!”, para “María” debe imprimir “Buen día señora”, para “Alberto” debe imprimir “Hola Alberto”. En otro caso, debe imprimir “Buen día ” seguido del nombre ingresado o “¡Buen día mundo!” si se ha ingresado una línea vacía.***
+
+***a) utilizando if ... else if***
+
+***b) utilizando switch***
+
+
+a)
+~~~
+Console.WriteLine("Ingrese su nombre:");
+string nombre = Console.ReadLine();
+if (nombre == "Juan")
+{ 
+    Console.WriteLine("¡Hola amigo!");
+}
+else if (nombre == "Maria")
+{
+    Console.WriteLine("Buen dia señora");
+}
+else if (nombre == "Alberto")
+{
+    Console.WriteLine("Hola "+nombre);
+}
+else if (nombre == "")
+{
+    Console.WriteLine("¡Buen dia mundo!");
+}
+else
+{
+    Console.WriteLine("Buen dia "+nombre);
+}
+~~~
+
+b)
+~~~
+Console.WriteLine("Ingrese su nombre:");
+string nombre = Console.ReadLine();
+switch (nombre)
+{
+    case "Juan":
+        Console.WriteLine("¡Hola amigo!");
+        break;
+    case "Maria":
+        Console.WriteLine("Buen dia señora");
+        break;
+    case "Alberto":
+        Console.WriteLine("Hola "+nombre);
+        break;
+    case "":
+        Console.WriteLine("¡Buen dia mundo!");
+        break;
+    default:
+        Console.WriteLine("Buen dia "+nombre);
+        break;
+}
+~~~
+
+
+## Punto 6
