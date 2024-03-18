@@ -341,4 +341,4 @@ Console.WriteLine(i);
 
 
 
-![Gracias](/../main/xtras/firmagith.png)
+<p><img align="center" src="https://github.com/Marimari2342/Marimari2342/blob/main/firmagith.png" alt="marigit"/></p>
