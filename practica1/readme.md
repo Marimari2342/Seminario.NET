@@ -147,7 +147,7 @@ while (i>0)
 ~~~
 
 
-##Punto 7
+## Punto 7
 ***¿Qué hace la instrucción Console.WriteLine("100".Length); ?***
 
 ~~~
@@ -155,5 +155,63 @@ Console.WriteLine("100".Length);
 ~~~
 
 Lo que hace es decirme la cantidad de caracteres que componen el string "100", es decir devuelve 3 en pantalla.
+
+## Punto 8
+***Sea st una variable de tipo string correctamente declarada. ¿Es válida la siguiente instrucción: Console.WriteLine(st=Console.ReadLine());?***
+
+~~~
+string st;
+
+Console.WriteLine(st = Console.ReadLine());
+~~~
+Si, lo que va a hacer esta sentencia es pedirte que ingreses un string y automaticamente escribirlo abajo.
+
+
+## Punto 9
+***Escribir un programa que lea dos palabras separadas por un blanco que terminan con <ENTER>, y determinar si son simétricas (Ej: 'abbccd' y 'dccbba' son simétricas). Tip: si st es un string, entonces \st[0]\ devuelve el primer carácter de st, y \st[st.Length-1]\ devuelve el último carácter de st.***
+
+
+**st.Split(' ');** hace un array de subcadenas utilizando el carácter espacio (' ') como delimitador. Por ejemplo, si el usuario ingresa "hola mundo" en st, entonces st.Split(' ') creará un array con dos elementos: "hola" y "mundo". Entonces, después de esa línea de código, si imprimes st[0], obtendrás "hola", y si imprimes st[1], tendrás "mundo". Me ayuda a saber cuantos espacios hubo, tantos como elementos en el arreglo.
+
+
+~~~
+Console.WriteLine("Escriba dos palabras separadas por un espacio");
+string st = Console.ReadLine();
+
+if (st.Length == 0)
+{
+    Console.WriteLine("ERROR, no ingreso dos palabras");
+}
+else
+{
+    string st1 = st.Split(" ")[0]; //palabra1
+    string st2 = st.Split(" ")[1]; //palabra2
+
+    if (st1.Length! > st2.Length)
+    {
+        Console.WriteLine("Las palabras no son simétricas y tienen distintas dimensiones");
+    }
+    else
+    {
+        bool ok = true;
+        for (int i = 0; i < st1.Length; i++)
+        {
+            if (st1[i] != st2[st1.Length - 1 - i])
+            {
+                ok = false;
+                break;
+            }
+        }
+        if (ok)
+        {
+            Console.WriteLine("Las palabras son simetricas");
+        }
+        else
+        {
+            Console.WriteLine("Las palabras NO son simetricas");
+        }
+    }
+}
+~~~
 
 ![Gracias](/../main/xtras/firmagith.png)
