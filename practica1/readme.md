@@ -214,4 +214,51 @@ else
 }
 ~~~
 
+
+## Punto 10
+***Escribir un programa que imprima en la consola todos los múltiplos de 17 o de 29 comprendidos entre 1 y 1000.***
+
+
+~~~
+for (int num=1;num <=1000;num++)
+{
+    if (num % 17 == 0||num % 29 == 0)
+    {
+        Console.Write(num+" ");
+    }
+}
+~~~
+
+
+## Punto 11
+***Comprobar el funcionamiento del siguiente fragmento de código, analizar el resultado y contestar las preguntas.
+a) ¿Qué se puede concluir respecto del operador de división “/” ?***
+
+Este operador lo que hace es redondear para abajo el número y cortarlo en el caso de que el resultado sea un decimal (en el caso de dividir dos enteros), entonces si por ejemplo quiero dividir dos numeros enteros 5/2 , el resultado no será 2,5 sino 2 pues me corta el número ya que devuelve un entero. Ahora si a uno de mis dos números le pongo un .
+me lo toma como un double y no me redondea los decimales.
+
+***b) ¿Cómo funciona el operador + entre un string y un dato numérico?***
+
+Si dos numeros se suman se obtiene la suma aritmetica, si dos strings se suman, se concatenan, ahora si sumo un string y un numero, obtengo la concatenación entre ambos.
+
+~~~
+Console.WriteLine("10/3 = " + 10 / 3);
+
+Console.WriteLine("10.0/3 = " + 10.0 / 3);
+
+Console.WriteLine("10/3.0 = " + 10 / 3.0);
+
+int a = 10, b = 3;
+
+Console.WriteLine("Si a y b son variables enteras, si a=10 y b=3");
+
+Console.WriteLine("entonces a/b = " + a / b);
+
+double c = 3;
+
+Console.WriteLine("Si c es una variable double, c=3");
+
+Console.WriteLine("entonces a/c = " + a / c);
+~~~
+
 ![Gracias](/../main/xtras/firmagith.png)
