@@ -24,8 +24,8 @@ Console.Write("Mundo");
 
 * \n --> nueva linea (funciona como un ENTER)
 * \t --> tabulacion horizontal (el cursos se desplaza horizontalmente despues de imprimir)
-* \" --> comillas dobles (lo uso si quiero imprimir " en pantalla, puesto que si no lo indico así, el código entiendo que estoy abriendo o cerrando un string que quiero mostrar)
-* \\ --> barra diagonal inversa (lo mismo que el anterior pero con la barra invertida)
+* \\" --> comillas dobles (lo uso si quiero imprimir " en pantalla, puesto que si no lo indico así, el código entiendo que estoy abriendo o cerrando un string que quiero mostrar)
+* \\\ --> barra diagonal inversa (lo mismo que el anterior pero con la barra invertida)
 
 ~~~
 Console.Write ("Voy a hacer un salto de linea \n");
