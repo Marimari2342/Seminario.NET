@@ -121,10 +121,27 @@ La clase **System.Text.StringBuilder** se puede usar para modificar una cadena s
 **Debo usar String:**
 * Cuando la cantidad de cambios que su aplicación realizará en una cadena es pequeña.
 * Cuando está realizando un número fijo de operaciones de concatenación. 
-* Cuando hay se realizan operaciones de búsqueda extensas mientras al construir la cadena.
+* Cuando se realizan operaciones de búsqueda extensas al construir la cadena.
+
+~~~
+string nombre = "Hola soy Juanita";
+
+Console.WriteLine(nombre);
+~~~
 
 **Debo usar StringBuilder:**
 * Cuando espera que su aplicación realice un número desconocido o una cantidad significativa de cambios en una cadena.
+
+~~~
+using System.Text;
+
+StringBuilder num = new StringBuilder("Los numeros del 1 al 1000 son: ");
+for (int i = 1; i < 1000; i++)
+{
+    num.Append(i.ToString());
+}
+Console.WriteLine(num);
+~~~
 
 
 ## Punto 9
@@ -134,6 +151,45 @@ La clase **System.Text.StringBuilder** se puede usar para modificar una cadena s
 EL tipo **DateTime** nos permite trabajar con tiempos estandarizados. Podemos definir valores pasados, futuros o recibir la información actual. Podemos utilizar distintos formatos predefinidos o definir el nuestro propio.
 
 Para poder medir el tiempo de ejecución con DateTime, debemos establecer dos variables, una al inicio de la suseción de lineas, y una al final del código a testear; luego realizamos la resta de ambas y exponemos la diferencia.
+
+Primer caso: conviene usar string.
+~~~
+//using System.Text;
+
+DateTime start = DateTime.Now;
+string nombre = "Hola soy Juanita";
+//StringBuilder nombre = new StringBuilder("Hola soy Juanita");
+Console.WriteLine(nombre);
+DateTime end = DateTime.Now;
+
+TimeSpan tiempo = end - start;
+Console.WriteLine("Tiempo transcurrido usando string: " + tiempo);
+//Console.WriteLine("Tiempo transcurrido usando StringBuilder: " + tiempo);
+~~~
+
+Segundo caso: conviene usar StringBuilder.
+~~~
+using System.Text;
+
+DateTime start = DateTime.Now;
+//string num = "Los numeros del 1 al 1000 son: ";
+StringBuilder num = new StringBuilder("Los numeros del 1 al 1000 son: ");
+for (int i = 1; i < 1000; i++)
+{
+    //num += i.ToString();
+    num.Append(i.ToString());
+}
+Console.WriteLine(num);
+DateTime end = DateTime.Now;
+
+TimeSpan tiempo = end - start;
+//Console.WriteLine("Tiempo transcurrido usando string: " + tiempo);
+Console.WriteLine("Tiempo transcurrido usando StringBuilder: " + tiempo);
+~~~
+
+
+## Punto 10
+***Comprobar el funcionamiento del siguiente programa y dibujar el estado de la pila y la memoria heap cuando la ejecución alcanza los puntos indicados (comentarios en el código)***
 
 
 
