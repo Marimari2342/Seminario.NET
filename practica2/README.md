@@ -232,10 +232,10 @@ foreach (var palabra in palabras)
 
 
 ## Punto 12
-***Definir el tipo de datos enumerativo llamado Meses y utilizarlo para:
-a) Imprimir en la consola el nombre de cada uno de los meses en orden inverso (diciembre, noviembre, … , enero).
-b) Solicitar al usuario que ingrese un texto y responder si el texto tipeado corresponde al nombre de un mes.
-Nota: en todos los casos utilizar un for iterando sobre una variable de tipo Meses***
+***Definir el tipo de datos enumerativo llamado Meses y utilizarlo para:***
+* ***Imprimir en la consola el nombre de cada uno de los meses en orden inverso (diciembre, noviembre, … , enero).***
+* ***Solicitar al usuario que ingrese un texto y responder si el texto tipeado corresponde al nombre de un mes.***
+***Nota: en todos los casos utilizar un for iterando sobre una variable de tipo Meses***
 
 
 
