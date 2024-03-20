@@ -192,5 +192,45 @@ Console.WriteLine("Tiempo transcurrido usando StringBuilder: " + tiempo);
 ***Comprobar el funcionamiento del siguiente programa y dibujar el estado de la pila y la memoria heap cuando la ejecución alcanza los puntos indicados (comentarios en el código)***
 
 
+~~~
+using System.Text;
+object[] v = new object[10];
+v[0] = new StringBuilder("Net");
+for (int i = 1; i < 10; i++)
+{
+    v[i] = v[i - 1];
+}
+(v[5] as StringBuilder).Insert(0, "Framework .");
+foreach (StringBuilder s in v)
+    Console.WriteLine(s);
+//dibujar el estado de la pila y la mem. heap
+//en este punto de la ejecución
+v[5] = new StringBuilder("CSharp");
+foreach (StringBuilder s in v)
+    Console.WriteLine(s);
+//dibujar el estado de la pila y la mem. heap
+//en este punto de la ejecución
+~~~
+
+
+## Punto 11
+***¿Para qué sirve el método Split de la clase string? Usarlo para escribir en la consola todas las palabras (una por línea) de una frase ingresada por consola por el usuario.***
+
+
+El método String.Split crea una matriz de subcadenas mediante la división de la cadena de entrada en función de uno o varios delimitadores. A menudo, este método es la manera más fácil de separar una cadena en límites de palabras. También sirve para dividir las cadenas en otras cadenas o caracteres específicos.
+
+~~~
+Console.WriteLine("Ingrese una frase: ");
+string? frase = Console.ReadLine();
+string[] palabras = frase.Split(' ');
+
+foreach (var palabra in palabras)
+{
+    System.Console.WriteLine($"{palabra}");
+}
+~~~
+
+
+
 
 <p><img align="center" src="https://github.com/Marimari2342/Marimari2342/blob/main/firmagith.png" alt="marigit"/></p>
