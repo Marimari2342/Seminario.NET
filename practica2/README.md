@@ -133,7 +133,7 @@ Console.WriteLine(nombre);
 * Cuando espera que su aplicación realice un número desconocido o una cantidad significativa de cambios en una cadena.
 
 ~~~
-using System.Text; //StringBuilder esta definido en el espacio System.Text, por eso me conviene escribir esto.
+using System.Text; //StringBuilder esta definido en el espacio System.Text, por eso escribo esto.
 
 StringBuilder num = new StringBuilder("Los numeros del 1 al 1000 son: ");
 for (int i = 1; i < 1000; i++)
