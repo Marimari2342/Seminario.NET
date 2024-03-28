@@ -212,9 +212,13 @@ foreach (StringBuilder s in v)
 //en este punto de la ejecución [CASO2]
 ~~~
 
-En el CASO1, asignamos a todos los objetos del vector, el contenido del objeto en v[0], al ser por referencia, todos apuntan a la misma dirección del Heap, pues se comparte la dirección del objeto v[0].
+En el **CASO 1**, asignamos a todos los objetos del vector, el contenido del objeto en v[0], al ser por referencia, todos apuntan a la misma dirección del Heap, pues se comparte la dirección del objeto v[0].
+
 ![Caso1](/../main/recursos/imagen1.png)
-En el CASO2, creamos un nuevo StringBuilder y lo asignamos a v[5], entonces, ahora v[5] va a estar apuntando a una dirección distinta, mientras que el resto de los objetos del vector apuntan a la misma dirección pues comparten 1 sóla dirección con v[0].
+
+En el **CASO 2**, creamos un nuevo StringBuilder y lo asignamos a v[5], entonces, ahora v[5] va a estar apuntando a una dirección distinta, mientras que el resto de los objetos del vector apuntan a la misma dirección pues comparten 1 sóla dirección con v[0].
+
+![Caso2](/../main/recursos/imagen2.png)
 
 ## Punto 11
 ***¿Para qué sirve el método Split de la clase string? Usarlo para escribir en la consola todas las palabras (una por línea) de una frase ingresada por consola por el usuario.***
