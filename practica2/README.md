@@ -220,6 +220,7 @@ En el **CASO 2**, creamos un nuevo StringBuilder y lo asignamos a v[5], entonces
 
 ![Caso2](/../main/recursos/imagen2.png)
 
+
 ## Punto 11
 ***¿Para qué sirve el método Split de la clase string? Usarlo para escribir en la consola todas las palabras (una por línea) de una frase ingresada por consola por el usuario.***
 
@@ -243,6 +244,41 @@ foreach (var palabra in palabras)
 * ***Imprimir en la consola el nombre de cada uno de los meses en orden inverso (diciembre, noviembre, … , enero).***
 * ***Solicitar al usuario que ingrese un texto y responder si el texto tipeado corresponde al nombre de un mes.***
 ***Nota: en todos los casos utilizar un for iterando sobre una variable de tipo Meses***
+
+
+## Punto 13
+***¿Cuál es la salida por consola si no se pasan argumentos por la línea de comandos?***
+
+
+~~~
+Console.WriteLine(args == null);
+Console.WriteLine(args.Length);
+~~~
+
+Si no paso argumentos por la linea de comandos y no los definí en el archivo launch.json, la salida por consola será: 
+* Primer linea --> **false**, pues args <> null
+* Segunda linea --> **0**, pues no tengo ningún argumento definido ni pasado por la linea de comandos.
+
+## Punto 14
+***¿Qué hace la instrucción? ¿Asigna a la variable vector el valor null?***
+
+
+~~~
+int[]? vector = new int[0];
+~~~
+
+
+## Punto 15
+***Determinar qué hace el siguiente programa y explicar qué sucede si no se pasan parámetros cuando
+se invoca desde la línea de comandos.***
+
+
+~~~
+Console.WriteLine("¡Hola {0}!", args[0]);
+~~~
+
+
+
 
 
 
