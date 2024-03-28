@@ -212,8 +212,8 @@ foreach (StringBuilder s in v)
 //en este punto de la ejecución
 ~~~
 
-![Caso1](/../recursos/imagen1.png)
-![Caso2](/../recursos/imagen2.png)
+![Caso1](/../main/recursos/imagen1.png)
+![Caso2](/../main/recursos/imagen2.png)
 
 ## Punto 11
 ***¿Para qué sirve el método Split de la clase string? Usarlo para escribir en la consola todas las palabras (una por línea) de una frase ingresada por consola por el usuario.***
