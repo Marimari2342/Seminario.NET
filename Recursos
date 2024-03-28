@@ -1,1 +1,0 @@
-Imágenes y demás.
