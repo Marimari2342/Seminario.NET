@@ -267,6 +267,8 @@ Si no paso argumentos por la linea de comandos y no los definí en el archivo la
 int[]? vector = new int[0];
 ~~~
 
+No, lo que hace la instrucción es indicar que el vector de enteros acepta valores null, y luego declara un vector de 0 elementos enteros. Si en lugar de tener 0 elementos tuviera 1 elemento, ese elemento al querer leerlo devolvería 0.
+
 
 ## Punto 15
 ***Determinar qué hace el siguiente programa y explicar qué sucede si no se pasan parámetros cuando
@@ -277,7 +279,8 @@ se invoca desde la línea de comandos.***
 Console.WriteLine("¡Hola {0}!", args[0]);
 ~~~
 
-
+Este programa muestra en pantalla el mensaje ¡Hola <arg[0]>!, donde arg[0] es un String que pasé como parámetro o definí previamente. Si no paso argumentos por la linea de comandos y no los definí en el archivo launch.json, el programa me dará error puesto que args[0] es null. 
+Pro ejemplo si args[0]: "Juana", el programa devolverá --> ¡Hola Juana!
 
 
 
