@@ -279,8 +279,8 @@ se invoca desde la línea de comandos.***
 Console.WriteLine("¡Hola {0}!", args[0]);
 ~~~
 
-Este programa muestra en pantalla el mensaje ¡Hola <arg[0]>!, donde arg[0] es un String que pasé como parámetro o definí previamente. Si no paso argumentos por la linea de comandos y no los definí en el archivo launch.json, el programa me dará error puesto que args[0] es null. 
-Pro ejemplo si args[0]: "Juana", el programa devolverá --> ¡Hola Juana!
+Este programa muestra en pantalla el mensaje ¡Hola <arg[0]>!, donde arg[0] es un String que pasé como parámetro o definí previamente. Si no paso argumentos por la linea de comandos y no los definí en el archivo launch.json, el programa me dará error puesto que args[0] mo está definido. 
+Por ejemplo si args[0]: "Juana", el programa devolverá --> ¡Hola Juana!
 
 
 
