@@ -408,8 +408,43 @@ internal class Program
 
 ***b) Definiendo una función recursiva***
 
+~~~
+internal class Program
+{
+    private static void Main(string[] args)
+    {
+        int n = int.Parse(args[0]);
+        Console.WriteLine("Factorial del numero ingresado: "+Fac(n));
+
+        static int Fac(int n)
+        {
+            if (n==1)
+            {
+                return n;
+            }
+            else
+            {
+                return n*Fac(n-1);
+            }
+        }
+    }
+}
+~~~
+
 ***c) idem a b) pero con expression-bodied methods (Tip: utilizar el operador condicional ternario)***
 
+~~~
+internal class Program
+{
+    private static void Main(string[] args)
+    {
+        int n = int.Parse(args[0]);
+        Console.WriteLine("Factorial del numero ingresado: "+Fac(n));
+
+        static int Fac(int n) => n==1 ? 1 : n * Fac(n - 1);
+    }
+}
+~~~
 
 
 ## Punto 19
