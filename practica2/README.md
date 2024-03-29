@@ -246,6 +246,47 @@ foreach (var palabra in palabras)
 ***Nota: en todos los casos utilizar un for iterando sobre una variable de tipo Meses***
 
 
+~~~
+internal class Program
+{
+    private static void Main(string[] args)
+    {
+        string[] meses = Enum.GetNames(typeof(Meses));
+
+        //a) Imprimo los meses en orden inverso
+        for (int i = meses.Length - 1; i >= 0; i--)
+        {
+            Console.Write(meses[i]+" | ");
+        }
+
+        //b) Buscar un mes
+        Console.WriteLine("\n Ingrese un palabra");
+        string texto = Console.ReadLine();
+        bool esMes = false;
+        for (int i = 0; i < meses.Length; i++)
+        {
+            if (meses[i] == texto)
+            {
+                Console.WriteLine("El texto ingresado es un mes");
+                esMes = true;
+            }
+        }
+        if (!esMes)
+        {
+            Console.WriteLine("El texto ingresado NO es un mes");
+        }
+    }
+}
+
+//Defino tipo de dato enumerativo Meses
+enum Meses
+{
+    enero, febrero, marzo, abril, mayo, junio, julio, 
+    agosto, septiembre, octubre, noviembre, diciembre
+}
+~~~
+
+
 ## Punto 13
 ***¿Cuál es la salida por consola si no se pasan argumentos por la línea de comandos?***
 
