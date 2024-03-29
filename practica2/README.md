@@ -296,8 +296,12 @@ for (int i = 0; i< args.Length; i++)
 
 ***b) Utilizando la sentencia foreach***
 
-
-
+~~~
+foreach (string nombre in args)
+{
+    Console.WriteLine("Hola "+nombre+", ¡Buen día!");
+}
+~~~
 
 
 ## Punto 17
