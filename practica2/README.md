@@ -320,6 +320,25 @@ Por ejemplo si args[0]: "Juana", el programa devolverá --> ¡Hola Juana!
 ***Codificar el método Swap que recibe 2 parámetros enteros e intercambia sus valores. El cambio debe apreciarse en el método invocador.***
 
 
+~~~
+Console.WriteLine("Ingrese dos números:");
+string st1 = Console.ReadLine();
+string st2 = Console.ReadLine();
+int num1 = int.Parse(st1);
+int num2 = int.Parse(st2);
+Console.WriteLine("Sin cambiar {0} == {1}", num1, num2);
+Swap( ref num1, ref num2);
+Console.WriteLine("Swap {0} == {1}", num1, num2);
+
+
+static void Swap(ref int num1, ref int num2)
+{
+    int aux = num2;
+    num2 = num1;
+    num1 = aux;
+}
+~~~
+
 
 ## Punto 21
 ***Codificar el método Imprimir para que el siguiente código produzca la salida por consola que se observa. Considerar que el usuario del método Imprimir podría querer más adelante imprimir otros datos, posiblemente de otros tipos pasando una cantidad distinta de parámetros cada vez que invoque el método. Tip: usar params***
