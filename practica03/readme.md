@@ -138,6 +138,7 @@ internal class Program
 
         static double[] GetDiagonalPrincipal(double[,] matriz)
         {
+            EsCuadrada(matriz.GetLength(0), matriz.GetLength(1));
             double[] vecPrinc = new double[matriz.GetLength(0)];
             for (int i = 0; i < matriz.GetLength(0); i++)
             {
@@ -148,6 +149,7 @@ internal class Program
 
         static double[] GetDiagonalSecundaria(double[,] matriz)
         {
+            EsCuadrada(matriz.GetLength(0), matriz.GetLength(1));
             double[] vecSec = new double[matriz.GetLength(0)];
             for (int i = 0;i<matriz.GetLength(0); i++)
             {
@@ -164,6 +166,15 @@ internal class Program
                 Console.Write($"{diagonal[i],5}");
             }
             Console.WriteLine("\n");
+        }
+        
+        static void EsCuadrada(int f, int c)
+        {
+            if (f != c)
+            {
+                throw new Exception("La matriz NO es cuadrada");
+            }
+            return;
         }
     }
 }
