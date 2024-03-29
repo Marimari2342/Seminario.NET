@@ -271,8 +271,7 @@ No, lo que hace la instrucción es indicar que el vector de enteros acepta valor
 
 
 ## Punto 15
-***Determinar qué hace el siguiente programa y explicar qué sucede si no se pasan parámetros cuando
-se invoca desde la línea de comandos.***
+***Determinar qué hace el siguiente programa y explicar qué sucede si no se pasan parámetros cuando se invoca desde la línea de comandos.***
 
 
 ~~~
@@ -283,6 +282,54 @@ Este programa muestra en pantalla el mensaje ¡Hola <arg[0]>!, donde arg[0] es u
 Por ejemplo si args[0]: "Juana", el programa devolverá --> ¡Hola Juana!
 
 
+## Punto 16
+***Escribir un programa que reciba una lista de nombres como parámetro por la línea de comandos e imprima por consola un saludo personalizado para cada uno de ellos.***
+
+***a) Utilizando la sentencia for***
+
+***b) Utilizando la sentencia foreach***
+
+
+
+
+
+## Punto 17
+***Implementar un programa que muestre todos los números primos entre 1 y un número natural dado (pasado al programa como argumento por la línea de comandos). Definir el método bool EsPrimo(int n) que devuelve true sólo si n es primo. Esta función debe comprobar si n es divisible por algún número entero entre 2 y la raíz cuadrada de n. (Nota: Math.Sqrt(d) devuelve la raíz cuadrada de d)***
+
+
+
+
+## Punto 18
+***Escribir una función (método int Fac(int n)) que calcule el factorial de un número n pasado al programa como parámetro por la línea de comando***
+
+***a) Definiendo una función no recursiva***
+
+***b) Definiendo una función recursiva***
+
+***c) idem a b) pero con expression-bodied methods (Tip: utilizar el operador condicional ternario)***
+
+
+
+## Punto 19
+***Idem. al ejercicio 18.a) y 18.b) pero devolviendo el resultado en un parámetro de salida void Fac(int n, out int f)***
+
+
+
+
+## Punto 20
+***Codificar el método Swap que recibe 2 parámetros enteros e intercambia sus valores. El cambio debe apreciarse en el método invocador.***
+
+
+
+## Punto 21
+***Codificar el método Imprimir para que el siguiente código produzca la salida por consola que se observa. Considerar que el usuario del método Imprimir podría querer más adelante imprimir otros datos, posiblemente de otros tipos pasando una cantidad distinta de parámetros cada vez que invoque el método. Tip: usar params***
+
+~~~
+Imprimir(1, "casa", 'A', 3.4, DayOfWeek.Saturday);
+Imprimir(1, 2, "tres");
+Imprimir();
+Imprimir("-------------");
+~~~
 
 
 
