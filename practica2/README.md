@@ -287,6 +287,13 @@ Por ejemplo si args[0]: "Juana", el programa devolverá --> ¡Hola Juana!
 
 ***a) Utilizando la sentencia for***
 
+~~~
+for (int i = 0; i< args.Length; i++)
+{
+    Console.WriteLine("Hola " + args[i] + ", ¡Buen día!");
+}
+~~~
+
 ***b) Utilizando la sentencia foreach***
 
 
