@@ -43,7 +43,7 @@ internal class Program
         }
         ImprimirMatriz(matriz);
 
-        void ImprimirMatriz(double[,] matriz)
+        static void ImprimirMatriz(double[,] matriz)
         {
             for (int i = 0; i < matriz.GetLength(0); i++)
             {
@@ -62,3 +62,37 @@ internal class Program
 ## Punto 3
 ***Implementar el método ImprimirMatrizConFormato, similar al anterior pero ahora con un
 parámetro más que representa la plantilla de formato que debe aplicarse a los números al imprimirse. La plantilla de formato es un string de acuerdo a las convenciones de formato compuesto, por ejemplo “0.0” implica escribir los valores reales con un dígito para la parte decimal.***
+
+
+~~~
+internal class Program
+{
+    private static void Main(string[] args)
+    {
+        double[,] matriz = new double[3, 3];
+        
+        for (int i = 0; i < 9; i++)
+        {
+            matriz[i / 3, i % 3] = i + 1;
+        }
+        string formato = "0.0";
+        ImprimirMatrizConFormato(matriz,formato);
+
+        static void ImprimirMatrizConFormato(double[,] matriz, string formatString)
+        {
+            for (int i = 0; i < matriz.GetLength(0); i++)
+            {
+                for (int j = 0; j < matriz.GetLength(1); j++)
+                {
+                    Console.Write($"{matriz[i, j].ToString(formatString),-7}");
+                }
+                Console.Write("\n");
+            }
+        }
+    }
+}
+~~~
+
+
+## Punto 4
+***Implementar los métodos GetDiagonalPrincipal y GetDiagonalSecundaria que devuelven un vector con la diagonal correspondiente de la matriz pasada como parámetro. Si la matriz no es cuadrada generar una excepción ArgumentException.***
