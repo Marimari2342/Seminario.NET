@@ -103,14 +103,15 @@ internal class Program
     {
         int f = int.Parse(args[0]);
         int c = int.Parse(args[1]);
+
         //Cargo la matriz
-        double[,] matriz = new double[f,c]; 
-        int aux=1;
-        for (int i=0;i<f;i++)
+        double[,] matriz = new double[f, c];
+        int aux = 1;
+        for (int i = 0; i < f; i++)
         {
-            for (int j=0;j<c;j++)
+            for (int j = 0; j < c; j++)
             {
-                matriz[i,j]= aux;
+                matriz[i, j] = aux;
                 aux++;
             }
         }
@@ -120,50 +121,49 @@ internal class Program
         {
             for (int j = 0; j < c; j++)
             {
-                Console.Write($"{matriz[i,j],-5}");
+                Console.Write($"{matriz[i, j],-5}");
             }
             Console.Write("\n");
         }
 
         try
         {
-            double[] vecPrinc = GetDiagonalPrincipal(matriz);
-            double[] vecSec = GetDiagonalSecundaria(matriz);
+            Mostrar(GetDiagonalPrincipal(matriz), "Diagonal Principal");
+            Mostrar(GetDiagonalSecundaria(matriz), "Diagonal Secundaria");
         }
-        catch
+        catch (Exception e)
         {
-            throw new ArgumentException("La matriz no es cuadrada");
+            Console.WriteLine(e.Message);
         }
 
         static double[] GetDiagonalPrincipal(double[,] matriz)
         {
-            EsCuadrada(matriz.GetLength(0), matriz.GetLength(1));
             double[] vecPrinc = new double[matriz.GetLength(0)];
-            for (int i=0;i<matriz.GetLength(0);i++)
+            for (int i = 0; i < matriz.GetLength(0); i++)
             {
-                vecPrinc[i] = matriz[i,i];
+                vecPrinc[i] = matriz[i, i];
             }
             return vecPrinc;
         }
 
         static double[] GetDiagonalSecundaria(double[,] matriz)
         {
-            EsCuadrada(matriz.GetLength(0), matriz.GetLength(1));
             double[] vecSec = new double[matriz.GetLength(0)];
-            for (int i = matriz.GetLength(0)-1; i>=0; i++)
+            for (int i = 0;i<matriz.GetLength(0); i++)
             {
-                vecSec[i] = matriz[i, i];
+                vecSec[i] = matriz[i, matriz.GetLength(0)-i-1];
             }
             return vecSec;
         }
 
-        static void EsCuadrada(int f,int c)
+        static void Mostrar(double []diagonal,string st)
         {
-            if (f!=c)
+            Console.WriteLine(st);
+            for (int i=0;i<diagonal.Length;i++)
             {
-                throw new ArgumentException("La matriz no es cuadrada");
+                Console.Write($"{diagonal[i],5}");
             }
-            return;
+            Console.WriteLine("\n");
         }
     }
 }
