@@ -70,7 +70,6 @@ internal class Program
     private static void Main(string[] args)
     {
         double[,] matriz = new double[3, 3];
-        
         for (int i = 0; i < 9; i++)
         {
             matriz[i / 3, i % 3] = i + 1;
@@ -96,3 +95,81 @@ internal class Program
 
 ## Punto 4
 ***Implementar los métodos GetDiagonalPrincipal y GetDiagonalSecundaria que devuelven un vector con la diagonal correspondiente de la matriz pasada como parámetro. Si la matriz no es cuadrada generar una excepción ArgumentException.***
+
+~~~
+internal class Program
+{
+    private static void Main(string[] args)
+    {
+        int f = int.Parse(args[0]);
+        int c = int.Parse(args[1]);
+        //Cargo la matriz
+        double[,] matriz = new double[f,c]; 
+        int aux=1;
+        for (int i=0;i<f;i++)
+        {
+            for (int j=0;j<c;j++)
+            {
+                matriz[i,j]= aux;
+                aux++;
+            }
+        }
+
+        //Muestro la matriz
+        for (int i = 0; i < f; i++)
+        {
+            for (int j = 0; j < c; j++)
+            {
+                Console.Write($"{matriz[i,j],-5}");
+            }
+            Console.Write("\n");
+        }
+
+        try
+        {
+            double[] vecPrinc = GetDiagonalPrincipal(matriz);
+            double[] vecSec = GetDiagonalSecundaria(matriz);
+        }
+        catch
+        {
+            throw new ArgumentException("La matriz no es cuadrada");
+        }
+
+        static double[] GetDiagonalPrincipal(double[,] matriz)
+        {
+            EsCuadrada(matriz.GetLength(0), matriz.GetLength(1));
+            double[] vecPrinc = new double[matriz.GetLength(0)];
+            for (int i=0;i<matriz.GetLength(0);i++)
+            {
+                vecPrinc[i] = matriz[i,i];
+            }
+            return vecPrinc;
+        }
+
+        static double[] GetDiagonalSecundaria(double[,] matriz)
+        {
+            EsCuadrada(matriz.GetLength(0), matriz.GetLength(1));
+            double[] vecSec = new double[matriz.GetLength(0)];
+            for (int i = matriz.GetLength(0)-1; i>=0; i++)
+            {
+                vecSec[i] = matriz[i, i];
+            }
+            return vecSec;
+        }
+
+        static void EsCuadrada(int f,int c)
+        {
+            if (f!=c)
+            {
+                throw new ArgumentException("La matriz no es cuadrada");
+            }
+            return;
+        }
+    }
+}
+~~~
+
+
+## Punto5
+***Implementar un método que devuelva un arreglo de arreglos con los mismos elementos que la matriz pasada como parámetro:***
+
