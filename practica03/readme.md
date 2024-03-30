@@ -255,8 +255,24 @@ f = e;
 
 
 ~~~
+internal class Program
+{
+    private static void Main(string[] args)
+    {
+        double num = 3.12569;
+        Console.WriteLine("Mi numero es {0}",num);
 
+        Console.WriteLine($"Numero: {num:0.0}");         //Numero pi: 3,1
+        Console.WriteLine("Numero: {0:0.0}",num);
+        Console.WriteLine($"Numero: {num:0.00}");        //Numero pi: 3,14
+        Console.WriteLine("Numero: {0:0.00}",num);
+        Console.WriteLine($"Numero: {num:0.000}");       //Numero pi: 3,142
+        Console.WriteLine("Numero: {0:0.000}",num);
+    }
+}
 ~~~
+
+En el ejemplo notamos que al darle formato al número, este no se trunca, sino que redondea para arriba en el caso de que el decimal siguiente sea mayor o igual a 5, o para abajo en caso contrario. Tanto en los ejemplos con cadenas de formato compuesto como en los ejemplos con cadenas interpoladas, el redondeo sucede de igual modo.
 
 
 ## Punto11
