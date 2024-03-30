@@ -262,11 +262,11 @@ internal class Program
         double num = 3.12569;
         Console.WriteLine("Mi numero es {0}",num);
 
-        Console.WriteLine($"Numero: {num:0.0}");         //Numero pi: 3,1
+        Console.WriteLine($"Numero: {num:0.0}");         //Numero: 3,1
         Console.WriteLine("Numero: {0:0.0}",num);
-        Console.WriteLine($"Numero: {num:0.00}");        //Numero pi: 3,14
+        Console.WriteLine($"Numero: {num:0.00}");        //Numero: 3,13
         Console.WriteLine("Numero: {0:0.00}",num);
-        Console.WriteLine($"Numero: {num:0.000}");       //Numero pi: 3,142
+        Console.WriteLine($"Numero: {num:0.000}");       //Numero: 3,126
         Console.WriteLine("Numero: {0:0.000}",num);
     }
 }
