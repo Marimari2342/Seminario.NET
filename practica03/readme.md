@@ -186,7 +186,66 @@ internal class Program
 
 
 ~~~
-double[][] GetArregloDeArreglo(double [,] matriz)
+internal class Program
+{
+    private static void Main(string[] args)
+    {
+        //Declaro y cargo la matriz
+        double[,] matriz = new double[3, 3];
+        for (int i = 0; i < 9; i++)
+        {
+            matriz[i / 3, i % 3] = i + 1;
+        }
+
+        //Mostrar Matriz en pantalla
+        ImprimirMatriz(matriz);
+
+        //Llamo al método que devuelva un arreglo de arreglos (y lo imprima)
+        ImprimirArreglos(GetArregloDeArreglo(matriz));
+
+
+        static double[][] GetArregloDeArreglo(double[,] matriz)
+        {
+            int a = matriz.GetLength(0);
+            int b = matriz.GetLength(1);
+            double[][] arreglo = new double[b][];
+            for (int i = 0; i < a; i++)
+            {
+                arreglo[i] = new double[a];
+                for (int j = 0; j < b; j++)
+                {
+                    arreglo[i][j] = matriz[i, j];
+                }
+            }
+            return arreglo;
+        }
+
+        static void ImprimirMatriz(double[,] matriz)
+        {
+            for (int i = 0; i < matriz.GetLength(0); i++)
+            {
+                for (int j = 0; j < matriz.GetLength(1); j++)
+                {
+                    Console.Write($"{matriz[i, j],-5}");
+                }
+                Console.Write("\n");
+            }
+        }
+
+        static void ImprimirArreglos(double[][] arreglo)
+        {
+            for (int i = 0; i < arreglo.Length; i++)
+            {
+                Console.WriteLine("Arreglo {0} :", i+1);
+                for (int j = 0; j < arreglo[i].Length; j++)
+                {
+                    Console.Write($"{arreglo[i][j],-5}");
+                }
+                Console.Write("\n");
+            }
+        }
+    }
+}
 ~~~
 
 
