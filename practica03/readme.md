@@ -224,10 +224,11 @@ Console.WriteLine(obj.Length);
 Console.WriteLine(dyna.Length);
 ~~~
 
-ERRORES DE COMPILACIÓN
+**Errores de Compilación**
 * obj.Length--> El tipo object no tiene una definición para "Length" ni un método de
 extensión accesible "Length" que acepte un primer argumento del tipo object.
-ERRORES DE EJECUCIÓN
+
+**Errores de Ejecución**
 * dyna.Length--> El tipo int no tiene una definición para "Length" ni un método "Length"
 definido, pero como la variable dyna fue definida como dynamic, el error no salta en 
 la compilación, sino en la ejecución.
