@@ -4,7 +4,7 @@
 ## Punto 1
 ***Definir una clase Persona con 3 campos públicos: Nombre, Edad y DNI. Escribir un algoritmo que permita al usuario ingresar en una consola una serie de datos de esta forma:***
 
-* **Nombre,Documento,Edad <ENTER>.**
+* **Nombre,Documento,Edad </ENTER/>.**
 
 ***Una vez finalizada la entrada de datos, el programa debe imprimir en la consola un listado con 4 columnas de la siguiente forma:***
 
