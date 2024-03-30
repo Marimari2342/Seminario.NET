@@ -604,6 +604,150 @@ internal class Program
 
 
 ~~~
+using System.Text;
+
+internal class Program
+{
+    private static void Main(string[] args)
+    {
+        Console.WriteLine("Ingrese frase a cifrar: ");
+        string? txt = Console.ReadLine();
+        if (txt != null)
+        {
+            txt = txt.ToUpper(); //Paso a Mayus
+            //Console.WriteLine(txt);
+
+            int[] clave = { 5, 3, 9, 7 };
+            //Declaro el queue y le guardo el codigo
+            Queue<int> codigo;
+            codigo = CargarQueue(clave);
+
+            StringBuilder txtCifr = Cifrar(txt, codigo);
+            Console.WriteLine("Texto cifrado: {0}.", txtCifr);
+            string code = txtCifr.ToString();
+            codigo = CargarQueue(clave);
+            StringBuilder txtDescif = Descifrar(code, codigo);
+            Console.WriteLine("Texto descifrado {0}.", txtDescif);
+        }
+
+
+        //METODOS
+
+        static Queue <int> CargarQueue(int [] clave)
+        {
+            Queue <int> codigo = new Queue <int> ();
+            for (int i = 0; i < clave.Length; i++)
+            {
+                codigo.Enqueue(clave[i]);
+            }
+            return codigo;
+        }
+        
+
+        static StringBuilder Cifrar(string txt, Queue<int> q)
+        {
+            StringBuilder txtCod = new StringBuilder();
+            char[] txtSinCifrar = txt.ToCharArray();
+            char[] txtCifrado = new char[txt.Length];
+            int cod;
+            int num;
+            int numCod;
+            for (int i = 0; i < txt.Length; i++)
+            {
+                cod = q.Dequeue();
+                num = txtSinCifrar[i];
+                //Console.WriteLine("cod: {0}, num: {1}", cod, num);
+                numCod = Decod(cod, num,"Cifrar");
+                //Console.WriteLine("numCod: {0}", numCod);
+                txtCifrado[i] = Cod(numCod);
+                txtCod.Append(txtCifrado[i]);
+                q.Enqueue(cod);
+            }
+            return txtCod;
+        }
+
+        static StringBuilder Descifrar(string txt, Queue<int> q)
+        {
+            StringBuilder txtCod = new StringBuilder();
+            char[] txtCifrado = txt.ToCharArray();
+            char[] txtDescifrado = new char[txt.Length];
+            int cod;
+            int num;
+            int numCod;
+            for (int i = 0; i < txt.Length; i++)
+            {
+                cod = q.Dequeue();
+                num = txtCifrado[i];
+                //Console.WriteLine("cod: {0}, num: {1}", cod, num);
+                numCod = Decod(cod, num,"Descifrar");
+                //Console.WriteLine("numCod: {0}", numCod);
+                txtDescifrado[i] = Cod(numCod);
+                txtCod.Append(txtDescifrado[i]);
+                q.Enqueue(cod);
+            }
+            return txtCod;
+        }
+
+        static int Decod(int cod, int num,string op)
+        {
+            int aux;
+            if (num >= 65 && num < 79)
+            {
+                num = num - 64;
+            }
+            else if (num >= 79 && num <= 90)
+            {
+                num = num - 63;
+            }
+            else if (num == (int)'Ñ')
+            {
+                num = 15;
+            }
+            else if (num == (int)' ')
+            {
+                num = 28;
+            }
+
+            if (op== "Cifrar")
+            {
+                aux = cod + num;
+            }
+            else
+            {
+                aux = num - cod;
+            }
+            return aux;
+        }
+
+        static char Cod(int num)
+        {
+            if (num > 28)
+            {
+                num = num - 28;
+            }
+            else if (num <=0 )
+            {
+                num = num + 28;
+            }
+            if (num == 15)
+            {
+                return 'Ñ';
+            }
+            else if (num >= 1 && num < 15)
+            {
+                return (char)(num + 64);
+            }
+            else if (num >= 15 && num <= 27)
+            {
+                return (char)(num + 63);
+            }
+            else
+            {
+                return ' ';
+            }
+        }
+    }
+}
 
 ~~~
 
