@@ -254,9 +254,135 @@ internal class Program
 
 
 ~~~
-double[,]? Suma(double[,] A, double[,] B)
-double[,]? Resta(double[,] A, double[,] B)
-double[,] Multiplicacion(double[,] A, double[,] B)
+internal class Program
+{
+    private static void Main(string[] args)
+    {
+        int f = int.Parse(args[0]);
+        int c = int.Parse(args[1]);
+        int f2 = int.Parse(args[2]);
+        int c2 = int.Parse(args[3]);
+
+        //Crear matriz
+        double[,] matriz1 = CrearMatriz(f, c);
+        double[,] matriz2 = CrearMatriz(f2, c2);
+
+        //Mostrar matriz
+        MostrarMatriz(matriz1, "1");
+        MostrarMatriz(matriz2, "2");
+
+        double[,] suma = Suma(matriz1, matriz2);
+        double[,] resta = Resta(matriz1, matriz2);
+        if (suma != null && resta != null)
+        {
+            MostrarMatriz(suma, "Suma");
+            MostrarMatriz(resta, "Resta");
+        }
+        else
+        {
+            Console.WriteLine("No puedo calcular Suma y Resta de matrices que no tienen el mismo tamaño.");
+        }
+
+        MostrarMatriz(Multiplicacion(matriz1, matriz2), "Producto");
+
+
+        //METODOS
+        static double[,] CrearMatriz(int f, int c)
+        {
+            double[,] matriz = new double[f, c];
+            for (int i = 0; i < f * c; i++)
+            {
+                matriz[i / c, i % c] = i + 1;
+            }
+            return matriz;
+        }
+
+        static void MostrarMatriz(double[,] matriz, string dato)
+        {
+            Console.WriteLine("Matriz {0} :", dato);
+            for (int i = 0; i < matriz.GetLength(0); i++)
+            {
+                for (int j = 0; j < matriz.GetLength(1); j++)
+                {
+                    Console.Write($"{matriz[i, j],-5}");
+                }
+                Console.Write("\n");
+            }
+        }
+
+        //Metodo SUMA
+        double[,]? Suma(double[,] A, double[,] B)
+        {
+            if (A.GetLength(0) == B.GetLength(0) && A.GetLength(1) == B.GetLength(1))
+            {
+                double[,] suma = new double[A.GetLength(0), A.GetLength(1)];
+                for (int i = 0; i < A.GetLength(0); i++)
+                {
+                    for (int j = 0; j < A.GetLength(1); j++)
+                    {
+                        suma[i, j] = A[i, j] + B[i, j];
+                    }
+                }
+                return suma;
+            }
+            else
+            {
+                return null;
+            }
+        }
+
+        //Metodo RESTA
+        double[,]? Resta(double[,] A, double[,] B)
+        {
+            if (A.GetLength(0) == B.GetLength(0) && A.GetLength(1) == B.GetLength(1))
+            {
+                double[,] resta = new double[A.GetLength(0), A.GetLength(1)];
+                for (int i = 0; i < A.GetLength(0); i++)
+                {
+                    for (int j = 0; j < A.GetLength(1); j++)
+                    {
+                        resta[i, j] = A[i, j] - B[i, j];
+                    }
+                }
+                return resta;
+            }
+            else
+            {
+                return null;
+            }
+        }
+
+        //Metodo PRODUCTO
+        double[,] Multiplicacion(double[,] A, double[,] B)
+        {
+            CompararFilasColumnas(A.GetLength(1), B.GetLength(0));
+            double[,] mul = new double[A.GetLength(0), B.GetLength(1)];
+            double suma;
+            for (int i = 0; i < A.GetLength(0); i++)
+            {
+                for (int j = 0; j < B.GetLength(1); j++)
+                {
+                    suma=0;
+                    for (int k=0;k<B.GetLength(0);k++)
+                    {
+                        suma+=A[i,k]*B[k,j];
+                    }
+                    mul[i, j] = suma;
+                }
+            }
+            return mul;
+        }
+
+        //Metodo ArgumentException
+        static void CompararFilasColumnas(int a, int b)
+        {
+            if (a != b)
+            {
+                throw new ArgumentException("La cantidad de columnas de la matriz 1 es distinto a la cantidad de filas de la matriz 2");
+            }
+        }
+    }
+}
 ~~~
 
 
