@@ -475,3 +475,8 @@ void Metodo3()
 * Método 2 propagó una excepción no tratada: El Método 2 realiza la misma acción que desencadena en una excepción, a diferencia del Metodo 1 este tiene un manejador catch, pero el mismo esta destinado a tratar con excepciones tipo OverflowException. Por lo tanto, la excepción será manejada en el catch correspondiente en el Main.
 * Excepción InvalidCast en Metodo3: El Método 3 si posee un catch especializado en la excepción InvalidCastException**.
 * Método 3 propagó una excepción: Dentro del manejador catch en el método 3, hay una propagación (throw) que lo envía a ser manejado por el método que lo llamó. En este caso, se ve en el catch correspondiente del método Main.
+
+
+
+
+<p><img align="center" src="https://github.com/Marimari2342/Marimari2342/blob/main/firmagith.png" alt="marigit"/></p>
