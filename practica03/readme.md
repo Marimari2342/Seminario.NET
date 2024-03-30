@@ -269,6 +269,10 @@ a.Remove(5);
 a.RemoveAt(4);
 ~~~
 
+* a.Remove(5); --> Remueve el número indicado de la lista, como el 5 no está en la lista se genera un error.
+
+* a.RemoveAt(4); --> Remueve el elemento de la lista ubicado en la posición indicada, la primer posición es 0, por lo tanto en una lista de 4 elementos, la última posición es 3, entonces como la posición 4 no está en la lista se genera un error.
+
 
 ## Punto12
 ***Realizar un análisis sintáctico para determinar si los paréntesis en una expresión aritmética están bien balanceados. Verificar que por cada paréntesis de apertura exista uno de cierre en la cadena de entrada. Utilizar una pila para resolverlo. Los paréntesis de apertura de la entrada se almacenan en una pila hasta encontrar uno de cierre, realizándose entonces la extracción del último paréntesis de apertura almacenado. Si durante el proceso se lee un paréntesis de cierre y la pila está vacía, entonces la cadena es incorrecta. Al finalizar el análisis, la pila debe quedar vacía para que la cadena leída sea aceptada, de lo contrario la misma no es válida.***
