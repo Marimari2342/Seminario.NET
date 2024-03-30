@@ -365,6 +365,7 @@ catch (Exception e)
 }
 ~~~
 
+Salida por consola: Attempted to divide by zero. Esto se debe a que no se puede dividir por cero. Además, hay que tener en cuenta que la linea que produce una excepción es *Console.WriteLine(1 / x);*, en donde divido un entero por cero. En el caso de la primer linea, *Console.WriteLine(1.0 / x);* divido un double por cero y en ese caso devuelve infinito (es como si tomara límite cuando el denominador tiende a cero y el numerador es un real).
 
 ## Punto16
 ***Implementar un programa que permita al usuario ingresar números por la consola. Debe ingresarse un número por línea, finalizando el proceso cuando el usuario ingresa una línea vacía. A medida que se van ingresando los valores el sistema debe mostrar por la consola la suma acumulada de los mismos. Utilizar double.Parse() y try/catch para validar que la entrada ingresada sea un número válido, en caso contrario advertir con un mensaje al usuario y proseguir con el ingreso de datos.***

@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\maria\\Downloads\\Seminario.NET\\practica1\\practica1.csproj",
+      "projectUniqueName": "C:\\Users\\maria\\Downloads\\Seminario.NET\\practica01\\practica1.csproj",
       "projectName": "practica1",
-      "projectPath": "C:\\Users\\maria\\Downloads\\Seminario.NET\\practica1\\practica1.csproj",
+      "projectPath": "C:\\Users\\maria\\Downloads\\Seminario.NET\\practica01\\practica1.csproj",
       "packagesPath": "C:\\Users\\maria\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\maria\\Downloads\\Seminario.NET\\practica1\\obj\\",
+      "outputPath": "C:\\Users\\maria\\Downloads\\Seminario.NET\\practica01\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\maria\\AppData\\Roaming\\NuGet\\NuGet.Config"
