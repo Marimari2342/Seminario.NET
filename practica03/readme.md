@@ -502,7 +502,54 @@ a.RemoveAt(4);
 
 
 ~~~
+internal class Program
+{
+    private static void Main(string[] args)
+    {
+        Console.WriteLine("Ingrese texto a analizar: ");
+        string? txt = Console.ReadLine();
 
+        if (txt != null)
+        {
+            try
+            {
+                //Convierto string en un vector de char
+                char[] arr;
+                arr = txt.ToCharArray(0, txt.Length);
+
+                Stack<char> pila = new Stack<char>();
+                
+                for (int i = 0; i < txt.Length; i++)
+                {
+                    if(arr[i]=='(')
+                    {
+                        pila.Push(arr[i]);
+                    }
+                    else if (arr[i]==')' && pila.Count>0)
+                    {
+                        pila.Pop();
+                    }
+                    else if (arr[i] == ')' && pila.Count == 0)
+                    {
+                        throw new ArgumentException("Cadena incorrecta.");
+                    }
+                }
+                if (pila.Count != 0)
+                {
+                    throw new ArgumentException("Cadena incorrecta.");
+                }
+                else 
+                {
+                    Console.WriteLine("Cadena balanceada.");
+                }
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+            }
+        }
+    }
+}
 ~~~
 
 
