@@ -511,7 +511,36 @@ a.RemoveAt(4);
 
 
 ~~~
+using System.Text;
 
+internal class Program
+{
+    private static void Main(string[] args)
+    {
+        int numD = int.Parse(args[0]);
+        try
+        {
+            Stack<int> pila = new Stack<int>();
+            int aux;
+            while (numD != 0)
+            {
+                aux = numD % 2;
+                numD = numD / 2;
+                pila.Push(aux);
+            }
+            StringBuilder bin = new StringBuilder();
+            while (pila.Count > 0)
+            {
+                bin.Append(pila.Pop());
+            }
+            Console.WriteLine("El numero decimal {0} es {1} en binario.",args[0],bin);
+        }
+        catch (Exception e)
+        {
+            Console.WriteLine(e.Message);
+        }
+    }
+}
 ~~~
 
 
