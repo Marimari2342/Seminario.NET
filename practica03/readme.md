@@ -233,21 +233,27 @@ Console.WriteLine(dyna.Length);
 var a = 3L;
 dynamic b = 32;
 object obj = 3;
-a = a * 2.0;
+a = a * 2.0;                                        //ERROR
 b = b * 2.0;
 b = "hola";
 obj = b;
 b = b + 11;
-obj = obj + 11;
+obj = obj + 11;                                     //ERROR
 var c = new { Nombre = "Juan" };
 var d = new { Nombre = "María" };
 var e = new { Nombre = "Maria", Edad = 20 };
 var f = new { Edad = 20, Nombre = "Maria" };
-f.Edad = 22;
+f.Edad = 22;                                        //ERROR
 d = c;
-e = d;
-f = e;
+e = d;                                              //ERROR
+f = e;                                              //ERROR
 ~~~
+
+* a = a * 2.0; --> No puedo convertir implícitamente un tipo double en un tipo long.
+* obj = obj + 11; --> El operador + no se puede aplicar a operandos del tipo object e int.
+* f.Edad = 22; --> El indizador es de sólo lectura, no puedo asignarle un valor.
+* e = d; --> No puedo convertir implicitamente el tipo <anonymous type: string Nombre> en <anonymous type: string Nombre, int Edad>.
+* f = e; --> No puedo convertir implicitamente el tipo <anonymous type: string Nombre, int Edad> en <anonymous type: int Edad, string Nombre>.
 
 
 ## Punto10
