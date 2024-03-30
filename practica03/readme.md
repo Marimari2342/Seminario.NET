@@ -210,6 +210,11 @@ int i = 10;
 var x = i * 1.0;
 var y = 1f;
 var z = i * y;
+
+Console.WriteLine("i: {0}",i.GetType());      //i: System.Int32
+Console.WriteLine("x: {0}",x.GetType());      //x: System.Double (int*double=double)
+Console.WriteLine("y: {0}", y.GetType());     //y: System.Single (float)
+Console.WriteLine("z: {0}", z.GetType());     //z: System.Single (double*float=float)
 ~~~
 
 
