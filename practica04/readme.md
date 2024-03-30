@@ -11,5 +11,8 @@
 ![ImagenEjemplo](/../main/recursos/imagen6.png)
 
 ***NOTA: Se puede utilizar: Console.SetIn(new System.IO.StreamReader(nombreDeArchivo)); para cambiar la entrada estándar de la consola y poder leer directamente desde un archivo de texto.***
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> a1661b98f7fc8fe266813991024677313f4f98e3
