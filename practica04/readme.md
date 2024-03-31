@@ -187,6 +187,8 @@ if (st4 == null)
 ## Punto 12
 ***Crear una solución con tres proyectos: una biblioteca de clases llamada Automotores, una biblioteca de clases llamada Figuras y una aplicación de consola llamada Aplicacion. La biblioteca Automotores debe contener una clase pública Auto (codificada de la misma manera que la vista en la teoría). La biblioteca Figuras debe contener las clases públicas Circulo y Rectangulo, codificadas de tal forma que el siguiente código (escrito en Program.cs del proyecto Aplicacion) produzca la siguiente salida***
 
+![ImagenPantalla](/../main/recursos/imagen10.png)
+
 ~~~
 using Figuras;
 using Automotores;
@@ -222,10 +224,9 @@ foreach (Auto a in listaAutos)
 }
 ~~~
 
-![ImagenPantalla](/../main/recursos/imagen10.png)
-
-
-
+<br>
+<br>
+<br>
 
 
 <p><img align="center" src="https://github.com/Marimari2342/Marimari2342/blob/main/firmagith.png" alt="marigit"/></p>
