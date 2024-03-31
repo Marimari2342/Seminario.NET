@@ -339,6 +339,9 @@ if (i++ == 0)   //post incremento: evaluo y luego sumo 1 [0 == 0 + 1 = 1]
 Console.WriteLine(i);
 ~~~
 
+<br>
+<br>
+<br>
 
 
 <p><img align="center" src="https://github.com/Marimari2342/Marimari2342/blob/main/firmagith.png" alt="marigit"/></p>

@@ -886,7 +886,9 @@ Salida por consola del siguiente programa:
 * Excepción InvalidCast en Metodo3: El Método 3 si posee un catch especializado en la excepción InvalidCastException**.
 * Método 3 propagó una excepción: Dentro del manejador catch en el método 3, hay una propagación (throw) que lo envía a ser manejado por el método que lo llamó. En este caso, se ve en el catch correspondiente del método Main.
 
-
+<br>
+<br>
+<br>
 
 
 <p><img align="center" src="https://github.com/Marimari2342/Marimari2342/blob/main/firmagith.png" alt="marigit"/></p>
