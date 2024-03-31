@@ -1,5 +1,4 @@
 ﻿/*PUNTO 1 - 2 */
-
 using ejercicios;
 
 internal class Program
@@ -8,6 +7,7 @@ internal class Program
     {
         string? datos = " ";
         int cant = 0;
+        //datos = Console.SetIn(new System.IO.StreamReader("recursos/personas.txt"));
         while (datos != "FIN")
         {
             Console.WriteLine("Ingrese nombre, edad y DNI separados por una coma, o FIN para salir");
