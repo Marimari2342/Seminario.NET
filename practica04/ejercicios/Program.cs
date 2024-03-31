@@ -20,7 +20,7 @@ internal class Program
                 cant++;
                 Persona p;
                 p = new Persona(nombre, edad, dni);
-                Console.WriteLine(p.ObtenerDescripcion(cant));
+                Console.WriteLine(p.Imprimir(cant));
             }
         }
     }

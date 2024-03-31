@@ -12,10 +12,16 @@
 
 ***NOTA: Se puede utilizar: Console.SetIn(new System.IO.StreamReader(nombreDeArchivo)); para cambiar la entrada estándar de la consola y poder leer directamente desde un archivo de texto.***
 
+>[!NOTE]
+>
+> Punto 1 --> Contestado en *Persona.cs* y *Program.cs*.
 
 ## Punto 2
 ***Modificar el programa anterior haciendo privados todos los campos. Definir un constructor adecuado y un método público Imprimir() que escriba en la consola los campos del objeto con el formato requerido para el listado.***
 
+>[!NOTE]
+>
+> Punto 2 --> Contestado en *Persona.cs* y *Program.cs*.
 
 ## Punto 3
 ***Agregar a la clase Persona un método EsMayorQue(Persona p) que devuelva verdadero si la persona que recibe el mensaje tiene más edad que la persona enviada como parámetro. Utilizarlo para realizar un programa que devuelva la persona más jóven de la lista.***
