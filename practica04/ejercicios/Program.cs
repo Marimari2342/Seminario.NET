@@ -1,1 +1,25 @@
-﻿
+﻿using ejercicios;
+
+internal class Program
+{
+    private static void Main(string[] args)
+    {
+        string? datos = " ";
+        int cant = 0;
+        while (datos != "FIN")
+        {
+            Console.WriteLine("Ingrese nombre, edad y DNI separados por una coma, o FIN para salir");
+            datos = Console.ReadLine();
+            if (datos != null)
+            {
+                string nombre = (string)datos.Split(",")[0];
+                string edad = datos.Split(",")[1];
+                string dni = datos.Split(",")[2];
+                cant++;
+                Persona p;
+                p = new Persona(nombre, edad, dni);
+                Console.WriteLine(p.ObtenerDescripcion(cant));
+            }
+        }
+    }
+}
