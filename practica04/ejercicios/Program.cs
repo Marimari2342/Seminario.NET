@@ -1,4 +1,6 @@
-﻿using ejercicios;
+﻿/*PUNTO 1 - 2 */
+
+using ejercicios;
 
 internal class Program
 {

@@ -1,4 +1,5 @@
-﻿namespace ejercicios;
+﻿/*PUNTO 1 - CLASE PERSONA*/
+namespace ejercicios;
 
 public class Persona
 {
