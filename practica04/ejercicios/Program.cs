@@ -1,33 +1,36 @@
-﻿/*PUNTO 1 - 2 */
-using ejercicios;
+﻿using ejercicios;
 
 internal class Program
 {
     private static void Main(string[] args)
     {
-        string? datos = " ";
-        int cant = 0;
-        //datos = Console.SetIn(new System.IO.StreamReader("recursos/personas.txt"));
-        while (datos != "FIN")
+        try
         {
-            Console.WriteLine("Ingrese nombre, edad y DNI separados por una coma, o FIN para salir");
-            datos = Console.ReadLine();
-            if (datos != "FIN" && datos != null)
+            //Punto 1 y 2
+            StreamReader listaDatos = new System.IO.StreamReader("recursos/personas.txt");
+            int dF = int.Parse(listaDatos.ReadLine());
+            Persona[] vectorPersonas = new Persona[dF];
+            string? datos;
+
+            for (int i = 0; i < dF; i++)
             {
-                string nombre = (string)datos.Split(",")[0];
+                datos = listaDatos.ReadLine();
+                string nombre = datos.Split(",")[0];
                 int edad = Int32.Parse(datos.Split(",")[1]);
                 string dni = datos.Split(",")[2];
-                cant++;
-                Persona p;
-                p = new Persona(nombre, edad, dni,cant);
-                Console.WriteLine(p.ObtenerDescripcion());
+                vectorPersonas[i] = new Persona(nombre, edad, dni, i + 1);
+            }
+
+            for (int i = 0; i < dF; i++)
+            {
+                Console.WriteLine(vectorPersonas[i].Imprimir());
             }
             //Punto 3
-            Persona p2 = new Persona("Juana", 15, "47839248");
-            Persona p3 = new Persona("Lucrecia", 17, "46521895");
-            Console.WriteLine(p2.ObtenerDescripcion(1));
-            Console.WriteLine(p3.ObtenerDescripcion(2));
-            Console.WriteLine(p2.EsMayorQue(p3));
+            Console.WriteLine(vectorPersonas[0].EsMayorQue(vectorPersonas[1]));
+        }
+        catch (Exception e)
+        {
+            Console.WriteLine(e.Message);
         }
     }
 }

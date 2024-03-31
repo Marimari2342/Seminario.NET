@@ -12,6 +12,25 @@
 
 ***NOTA: Se puede utilizar: Console.SetIn(new System.IO.StreamReader(nombreDeArchivo)); para cambiar la entrada estándar de la consola y poder leer directamente desde un archivo de texto.***
 
+Armé un vector de personas, y la dimensión del vector la indico en la primer linea del archivo *personas.txt*. Esto no lo indica el ejercicio pero lo armé así para no sobreescribir la persona ya leida y armar una estructura, para poder luego usar en el punto 3 a la hora de comparar las edades.
+
+~~~
+StreamReader listaDatos = new System.IO.StreamReader("recursos/personas.txt");
+int dF = int.Parse(listaDatos.ReadLine());
+Persona[] vectorPersonas = new Persona[dF];
+string? datos;
+
+for (int i = 0; i < dF; i++)
+{
+    datos = listaDatos.ReadLine();
+    string nombre = datos.Split(",")[0];
+    int edad = Int32.Parse(datos.Split(",")[1]);
+    string dni = datos.Split(",")[2];
+    vectorPersonas[i] = new Persona(nombre, edad, dni, i + 1);
+}
+~~~
+
+
 >[!NOTE]
 >
 > Punto 1 --> Contestado en *Persona.cs* y *Program.cs*.
