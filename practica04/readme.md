@@ -26,6 +26,23 @@
 ## Punto 3
 ***Agregar a la clase Persona un método EsMayorQue(Persona p) que devuelva verdadero si la persona que recibe el mensaje tiene más edad que la persona enviada como parámetro. Utilizarlo para realizar un programa que devuelva la persona más jóven de la lista.***
 
+~~~
+//METODO
+public bool EsMayorQue(Persona p) //Punto 3
+{
+    bool cumple = false;
+    if (p.Edad < this.Edad)
+    {
+        cumple = true;
+    }
+    return cumple;
+}
+~~~
+
+>[!NOTE]
+>
+> Punto 3 --> Contestado en *Persona.cs* y *Program.cs*.
+
 
 ## Punto 4
 ***Codificar la clase Hora de tal forma que el siguiente código produzca la salida por consola que se observa.***
