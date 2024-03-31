@@ -19,6 +19,25 @@
 ## Punto 2
 ***Modificar el programa anterior haciendo privados todos los campos. Definir un constructor adecuado y un método público Imprimir() que escriba en la consola los campos del objeto con el formato requerido para el listado.***
 
+~~~
+//CONSTRUCTOR
+
+public Persona(string unNombre, int unaEdad, string unDni, int unNum)
+{
+    Nombre = unNombre;
+    Edad = unaEdad;
+    DNI = unDni;
+    Num = unNum;
+}
+~~~
+
+~~~
+//METODO Imprimir()
+
+public string Imprimir() =>
+    $"{Num+")",-5} {Nombre,-15} {Edad,-5} {DNI,-10}";
+~~~
+
 >[!NOTE]
 >
 > Punto 2 --> Contestado en *Persona.cs* y *Program.cs*.
@@ -27,7 +46,8 @@
 ***Agregar a la clase Persona un método EsMayorQue(Persona p) que devuelva verdadero si la persona que recibe el mensaje tiene más edad que la persona enviada como parámetro. Utilizarlo para realizar un programa que devuelva la persona más jóven de la lista.***
 
 ~~~
-//METODO
+//METODO EsMayorQue(Persona p)
+
 public bool EsMayorQue(Persona p) //Punto 3
 {
     bool cumple = false;

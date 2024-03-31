@@ -19,8 +19,8 @@ internal class Program
                 string dni = datos.Split(",")[2];
                 cant++;
                 Persona p;
-                p = new Persona(nombre, edad, dni);
-                Console.WriteLine(p.ObtenerDescripcion(cant));
+                p = new Persona(nombre, edad, dni,cant);
+                Console.WriteLine(p.ObtenerDescripcion());
             }
             //Punto 3
             Persona p2 = new Persona("Juana", 15, "47839248");
