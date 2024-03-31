@@ -29,6 +29,5 @@ internal class Program
             Console.WriteLine(p3.ObtenerDescripcion(2));
             Console.WriteLine(p2.EsMayorQue(p3));
         }
-        }
     }
 }
