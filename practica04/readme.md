@@ -78,7 +78,7 @@ public bool EsMayorQue(Persona p) //Punto 3
 }
 ~~~
 
-Buscar la persona más joven usando el método *EsMayorQue(p)*
+Buscar la persona más joven usando el método *EsMayorQue(p)*.
 ~~~
 Persona masJoven = new Persona("", 100, "", 0);
 for (int i = 0; i < dF; i++)
@@ -103,13 +103,13 @@ Console.WriteLine(masJoven.Imprimir());
 
 ![ImagenPantalla](/../main/recursos/imagen7.png)
 
-En el programa principal
+En el programa principal:
 ~~~
 Hora h = new Hora(23, 30, 15);
 Console.WriteLine(h.Imprimir());
 ~~~
 
-En la clase Hora
+En la clase Hora:
 ~~~
 namespace ejercicios;
 
@@ -136,8 +136,6 @@ public class Hora
 > Punto 4 --> Contestado en *Hora.cs* y *Program.cs*.
 
 
-
-
 ## Punto 5
 ***Agregar un segundo constructor a la clase Hora para que pueda especificarse la hora por medio de un único valor que admita decimales. Por ejemplo 3,5 indica la hora 3 y 30 minutos. Si se utiliza este segundo constructor, el método imprimir debe mostrar los segundos con tres dígitos decimales. Así el siguiente código debe producir la salida por consola que se observa.***
 
@@ -150,6 +148,32 @@ new Hora(14.45114).Imprimir();
 
 ![ImagenPantalla](/../main/recursos/imagen8.png)
 
+Segundo Constructor:
+~~~
+public Hora(double hora)
+{
+    this.Horas = (int)hora;
+    this.Minutos = (int)((hora - this.Horas) * 60);
+    this.SegDec = (hora - (this.Horas + this.Minutos / 60.0)) * Math.Pow(60, 2);
+    //Math.Pow(num, pot)--> eleva un numero a la potencia indicada en pot
+}
+~~~
+
+También cambiamos el método imprimir, (lo pasamos de string a void pues tiene que devolver la hora sin necesidad de usar Console.WriteLine() en el programa principal).
+
+~~~
+public void Imprimir()
+{
+    if (this.SegDec == -1)
+    {
+        Console.WriteLine($"{this.Horas} horas, {this.Minutos} minutos y {this.Segundos} segundos");
+    }
+    else
+    {
+        Console.WriteLine($"{this.Horas} horas, {this.Minutos} minutos y {this.SegDec:0.000} segundos");
+    }
+}
+~~~
 
 ## Punto 6
 ***Codificar una clase llamada Ecuacion2 para representar una ecuación de 2º grado. Esta clase debe tener 3 campos privados, los coeficientes a, b y c de tipo double. La única forma de establecer los valores de estos campos será en el momento de la instanciación de un objeto Ecuacion2.***

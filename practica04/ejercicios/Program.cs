@@ -39,7 +39,12 @@ internal class Program
 
             //Punto 4
             Hora h = new Hora(23, 30, 15);
-            Console.WriteLine(h.Imprimir());
+            h.Imprimir();
+            //Punto 5
+            new Hora(23, 30, 15).Imprimir();
+            new Hora(14.43).Imprimir();
+            new Hora(14.45).Imprimir();
+            new Hora(14.45114).Imprimir();
         }
         catch (Exception e)
         {
