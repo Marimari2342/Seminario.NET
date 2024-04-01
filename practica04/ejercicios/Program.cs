@@ -36,6 +36,10 @@ internal class Program
             }
             Console.WriteLine("Persona más joven:");
             Console.WriteLine(masJoven.Imprimir());
+
+            //Punto 4
+            Hora h = new Hora(23, 30, 15);
+            Console.WriteLine(h.Imprimir());
         }
         catch (Exception e)
         {

@@ -101,12 +101,41 @@ Console.WriteLine(masJoven.Imprimir());
 ## Punto 4
 ***Codificar la clase Hora de tal forma que el siguiente código produzca la salida por consola que se observa.***
 
+![ImagenPantalla](/../main/recursos/imagen7.png)
+
+En el programa principal
 ~~~
-Hora h = new Hora(23,30,15);
-h.Imprimir
+Hora h = new Hora(23, 30, 15);
+Console.WriteLine(h.Imprimir());
 ~~~
 
-![ImagenPantalla](/../main/recursos/imagen7.png)
+En la clase Hora
+~~~
+namespace ejercicios;
+
+public class Hora
+{
+    private int Horas;
+    private int Minutos;
+    private int Segundos;
+
+    public Hora(int unaHora, int unMin, int unSeg)
+    {
+        Horas = unaHora;
+        Minutos = unMin;
+        Segundos = unSeg;
+    }
+
+    public string Imprimir() =>
+        $"{Horas} horas, {Minutos} minutos y {Segundos} segundos";
+}
+~~~
+
+>[!NOTE]
+>
+> Punto 4 --> Contestado en *Hora.cs* y *Program.cs*.
+
+
 
 
 ## Punto 5
