@@ -25,6 +25,7 @@ internal class Program
             {
                 Console.WriteLine(vectorPersonas[i].Imprimir());
             }
+
             //Punto 3
             Persona masJoven = new Persona("", 100, "", 0);
             for (int i = 0; i < dF; i++)
@@ -40,6 +41,7 @@ internal class Program
             //Punto 4
             Hora h = new Hora(23, 30, 15);
             h.Imprimir();
+
             //Punto 5
             new Hora(23, 30, 15).Imprimir();
             new Hora(14.43).Imprimir();
@@ -59,6 +61,21 @@ internal class Program
             Console.WriteLine(ec3.GetDiscriminante());
             Console.WriteLine(ec3.GetCantidadDeRaices());
             ec3.ImprimirRaices();
+
+            //Punto 10
+            Cuenta cuenta = new Cuenta();
+            cuenta.Imprimir();
+            cuenta = new Cuenta(30222111);
+            cuenta.Imprimir();
+            cuenta = new Cuenta("José Perez");
+            cuenta.Imprimir();
+            cuenta = new Cuenta("Maria Diaz", 20287544);
+            cuenta.Imprimir();
+            cuenta.Depositar(200);
+            cuenta.Imprimir();
+            cuenta.Extraer(150);
+            cuenta.Imprimir();
+            cuenta.Extraer(1500);
         }
         catch (Exception e)
         {

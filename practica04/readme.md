@@ -346,6 +346,10 @@ class Cuenta
 ![ImagenPantalla](/../main/recursos/imagen9.png)
 
 
+>[!NOTE]
+>
+> Punto 10 --> Contestado en *Cuenta.cs* y *Program.cs*.
+
 ## Punto 11
 ***Reemplazar estas líneas de código por otras equivalentes que utilicen el operador null-coalescing (?? ) y / o la asignación null-coalescing (??=)***
 
