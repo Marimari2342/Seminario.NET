@@ -267,6 +267,9 @@ public void restarle(Matriz m)
 public void multiplicarPor(Matriz m)
 ~~~
 
+>[!NOTE]
+>
+> Punto 7 --> Contestado en *Matriz.cs* y *Program.cs* (buscar archivos dentro de la carpeta [ejercicios](/practica04/ejercicios/)).
 
 ## Punto 8
 ***Prestar atención a los siguientes programas (ninguno funciona correctamente). ¿Qué se puede decir acerca de la inicialización de los objetos? ¿En qué casos son inicializados
