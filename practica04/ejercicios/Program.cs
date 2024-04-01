@@ -45,6 +45,20 @@ internal class Program
             new Hora(14.43).Imprimir();
             new Hora(14.45).Imprimir();
             new Hora(14.45114).Imprimir();
+
+            //Punto 6
+            Ecuacion2 ec1 = new Ecuacion2(5, 2, 1);
+            Console.WriteLine(ec1.GetDiscriminante());
+            Console.WriteLine(ec1.GetCantidadDeRaices());
+            ec1.ImprimirRaices();
+            Ecuacion2 ec2 = new Ecuacion2(-1, 2, 1);
+            Console.WriteLine(ec2.GetDiscriminante());
+            Console.WriteLine(ec2.GetCantidadDeRaices());
+            ec2.ImprimirRaices();
+            Ecuacion2 ec3 = new Ecuacion2(1, 2, 1);
+            Console.WriteLine(ec3.GetDiscriminante());
+            Console.WriteLine(ec3.GetCantidadDeRaices());
+            ec3.ImprimirRaices();
         }
         catch (Exception e)
         {
