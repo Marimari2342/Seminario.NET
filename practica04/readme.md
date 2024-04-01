@@ -33,7 +33,7 @@ for (int i = 0; i < dF; i++)
 
 >[!NOTE]
 >
-> Punto 1 --> Contestado en *Persona.cs* y *Program.cs*.
+> Punto 1 --> Contestado en *Persona.cs* y *Program.cs* (buscar archivos dentro de la carpeta ejercicios).
 
 ## Punto 2
 ***Modificar el programa anterior haciendo privados todos los campos. Definir un constructor adecuado y un método público Imprimir() que escriba en la consola los campos del objeto con el formato requerido para el listado.***
@@ -59,7 +59,7 @@ public string Imprimir() =>
 
 >[!NOTE]
 >
-> Punto 2 --> Contestado en *Persona.cs* y *Program.cs*.
+> Punto 2 --> Contestado en *Persona.cs* y *Program.cs* (buscar archivos dentro de la carpeta ejercicios).
 
 ## Punto 3
 ***Agregar a la clase Persona un método EsMayorQue(Persona p) que devuelva verdadero si la persona que recibe el mensaje tiene más edad que la persona enviada como parámetro. Utilizarlo para realizar un programa que devuelva la persona más jóven de la lista.***
@@ -95,7 +95,7 @@ Console.WriteLine(masJoven.Imprimir());
 
 >[!NOTE]
 >
-> Punto 3 --> Contestado en *Persona.cs* y *Program.cs*.
+> Punto 3 --> Contestado en *Persona.cs* y *Program.cs* (buscar archivos dentro de la carpeta ejercicios).
 
 
 ## Punto 4
@@ -133,7 +133,7 @@ public class Hora
 
 >[!NOTE]
 >
-> Punto 4 --> Contestado en *Hora.cs* y *Program.cs*.
+> Punto 4 --> Contestado en *Hora.cs* y *Program.cs* (buscar archivos dentro de la carpeta ejercicios).
 
 
 ## Punto 5
@@ -177,7 +177,7 @@ public void Imprimir()
 
 >[!NOTE]
 >
-> Punto 5 --> Contestado en *Hora.cs* y *Program.cs*.
+> Punto 5 --> Contestado en *Hora.cs* y *Program.cs* (buscar archivos dentro de la carpeta ejercicios).
 
 
 ## Punto 6
@@ -244,7 +244,7 @@ public void ImprimirRaices()
 
 >[!NOTE]
 >
-> Punto 6 --> Contestado en *Ecuacion2.cs* y *Program.cs*.
+> Punto 6 --> Contestado en *Ecuacion2.cs* y *Program.cs* (buscar archivos dentro de la carpeta ejercicios).
 
 
 ## Punto 7
@@ -348,7 +348,7 @@ class Cuenta
 
 >[!NOTE]
 >
-> Punto 10 --> Contestado en *Cuenta.cs* y *Program.cs*.
+> Punto 10 --> Contestado en *Cuenta.cs* y *Program.cs* (buscar archivos dentro de la carpeta ejercicios).
 
 ## Punto 11
 ***Reemplazar estas líneas de código por otras equivalentes que utilicen el operador null-coalescing (?? ) y / o la asignación null-coalescing (??=)***
