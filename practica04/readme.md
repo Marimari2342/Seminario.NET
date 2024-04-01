@@ -33,7 +33,7 @@ for (int i = 0; i < dF; i++)
 
 >[!NOTE]
 >
-> Punto 1 --> Contestado en *Persona.cs* y *Program.cs* (buscar archivos dentro de la carpeta ejercicios).
+> Punto 1 --> Contestado en *Persona.cs* y *Program.cs* (buscar archivos dentro de la carpeta [ejercicios](/practica04/ejercicios/)).
 
 ## Punto 2
 ***Modificar el programa anterior haciendo privados todos los campos. Definir un constructor adecuado y un método público Imprimir() que escriba en la consola los campos del objeto con el formato requerido para el listado.***
