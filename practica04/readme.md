@@ -78,6 +78,21 @@ public bool EsMayorQue(Persona p) //Punto 3
 }
 ~~~
 
+Buscar la persona más joven usando el método *EsMayorQue(p)*
+~~~
+Persona masJoven = new Persona("", 100, "", 0);
+for (int i = 0; i < dF; i++)
+{
+    if (masJoven.EsMayorQue(vectorPersonas[i]))
+    {
+        masJoven = vectorPersonas[i];
+    }
+}
+Console.WriteLine("Persona más joven:");
+Console.WriteLine(masJoven.Imprimir());
+~~~
+
+
 >[!NOTE]
 >
 > Punto 3 --> Contestado en *Persona.cs* y *Program.cs*.

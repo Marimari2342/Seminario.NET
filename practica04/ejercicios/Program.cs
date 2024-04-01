@@ -26,7 +26,16 @@ internal class Program
                 Console.WriteLine(vectorPersonas[i].Imprimir());
             }
             //Punto 3
-            Console.WriteLine(vectorPersonas[0].EsMayorQue(vectorPersonas[1]));
+            Persona masJoven = new Persona("", 100, "", 0);
+            for (int i = 0; i < dF; i++)
+            {
+                if (masJoven.EsMayorQue(vectorPersonas[i]))
+                {
+                    masJoven = vectorPersonas[i];
+                }
+            }
+            Console.WriteLine("Persona más joven:");
+            Console.WriteLine(masJoven.Imprimir());
         }
         catch (Exception e)
         {

@@ -16,14 +16,6 @@ public class Persona
         Num = unNum;
     }
 
-    public Persona()
-    {
-        Nombre = " ";
-        Edad = 0;
-        DNI = " ";
-        Num = 0;
-    }
-
     public string Imprimir() =>
         $"{Num+")",-5} {Nombre,-15} {Edad,-5} {DNI,-10}";
 
