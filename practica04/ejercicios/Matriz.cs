@@ -187,9 +187,3 @@ public class Matriz
         return;
     }
 }
-
-/*
-
-
-
-public void multiplicarPor(Matriz m)*/
