@@ -9,7 +9,7 @@
 * Write() -->      Imprime en pantalla sin saltar de linea al final.
 * ReadKey() -->    Obtiene la siguiente tecla de carácter o de función presionada por el usuario. La tecla presionada se muestra en la ventana de la consola.
 
-~~~
+~~~c#
 Console.Write("Hola");
 
 Console.ReadKey();
@@ -27,7 +27,7 @@ Console.Write("Mundo");
 * \\" --> comillas dobles (lo uso si quiero imprimir " en pantalla, puesto que si no lo indico así, el código entiendo que estoy abriendo o cerrando un string que quiero mostrar)
 * \\\ --> barra diagonal inversa (lo mismo que el anterior pero con la barra invertida)
 
-~~~
+~~~c#
 Console.Write ("Voy a hacer un salto de linea \n");
 
 Console.WriteLine("Ahora voy a escribir las comillas: \" y una barra diagonal: \\");
@@ -41,7 +41,7 @@ Console.WriteLine("Voy a hacer una tabulación horizontal --> \t asi");
 
 
 Saco el @ y para que no me tire error uso el codigo de escape \\\ de barra diagonal inversa.
-~~~
+~~~c#
 string st = "c:\\windows\\system";
 
 Console.WriteLine(st);
@@ -52,7 +52,7 @@ Console.WriteLine(st);
 ***Escribir un programa que solicite al usuario ingresar su nombre e imprima en la consola un saludo personalizado utilizando ese nombre o la frase “Hola mundo” si el usuario ingresó una línea en blanco. Para ingresar un string desde el teclado utilizar Console.ReadLine()***
 
 
-~~~
+~~~c#
 Console.WriteLine("Ingrese su nombre:");
 string nombre = Console.ReadLine();
 if (nombre == "")
@@ -71,7 +71,7 @@ else
 
 ***a) utilizando if ... else if***
 
-~~~
+~~~c#
 Console.WriteLine("Ingrese su nombre:");
 string nombre = Console.ReadLine();
 if (nombre == "Juan")
@@ -97,7 +97,7 @@ else
 ~~~
 
 ***b) utilizando switch***
-~~~
+~~~c#
 Console.WriteLine("Ingrese su nombre:");
 string nombre = Console.ReadLine();
 switch (nombre)
@@ -124,7 +124,7 @@ switch (nombre)
 ## Punto 6
 ***Utilizar Console.ReadLine() para leer líneas de texto (secuencia de caracteres que finaliza al presionar <ENTER>) por la consola. Por cada línea leída se debe imprimir inmediatamente la cantidad de caracteres de la misma. El programa termina al ingresar la cadena vacía. Tip: si st es una variable de tipo string, entonces st.Length devuelve la cantidad de caracteres del string.***
 
-~~~
+~~~c#
 Console.WriteLine("Ingrese una palabra");
 
 string st = Console.ReadLine();
@@ -150,7 +150,7 @@ while (i>0)
 ## Punto 7
 ***¿Qué hace la instrucción Console.WriteLine("100".Length); ?***
 
-~~~
+~~~c#
 Console.WriteLine("100".Length);
 ~~~
 
@@ -159,7 +159,7 @@ Lo que hace es decirme la cantidad de caracteres que componen el string "100", e
 ## Punto 8
 ***Sea st una variable de tipo string correctamente declarada. ¿Es válida la siguiente instrucción: Console.WriteLine(st=Console.ReadLine());?***
 
-~~~
+~~~c#
 string st;
 
 Console.WriteLine(st = Console.ReadLine());
@@ -174,7 +174,7 @@ Si, lo que va a hacer esta sentencia es pedirte que ingreses un string y automat
 **st.Split(' ');** hace un array de subcadenas utilizando el carácter espacio (' ') como delimitador. Por ejemplo, si el usuario ingresa "hola mundo" en st, entonces st.Split(' ') creará un array con dos elementos: "hola" y "mundo". Entonces, después de esa línea de código, si imprimes st[0], obtendrás "hola", y si imprimes st[1], tendrás "mundo". Me ayuda a saber cuantos espacios hubo, tantos como elementos en el arreglo.
 
 
-~~~
+~~~c#
 Console.WriteLine("Escriba dos palabras separadas por un espacio");
 string st = Console.ReadLine();
 
@@ -219,7 +219,7 @@ else
 ***Escribir un programa que imprima en la consola todos los múltiplos de 17 o de 29 comprendidos entre 1 y 1000.***
 
 
-~~~
+~~~c#
 for (int num=1;num <=1000;num++)
 {
     if (num % 17 == 0||num % 29 == 0)
@@ -242,7 +242,7 @@ me lo toma como un double y no me redondea los decimales.
 
 Si dos numeros se suman se obtiene la suma aritmetica, si dos strings se suman, se concatenan, ahora si sumo un string y un numero, obtengo la concatenación entre ambos.
 
-~~~
+~~~c#
 Console.WriteLine("10/3 = " + 10 / 3);
 
 Console.WriteLine("10.0/3 = " + 10.0 / 3);
@@ -267,7 +267,7 @@ Console.WriteLine("entonces a/c = " + a / c);
 ***Escribir un programa que imprima todos los divisores de un número entero ingresado desde la consola. Para obtener el entero desde un string st utilizar int.Parse(st).***
 
 
-~~~
+~~~c#
 Console.WriteLine("Ingrese un numero: ");
 int num = int.Parse(Console.ReadLine()); //obtengo el entero desde un string
 Console.WriteLine("Divisores de "+num+": ");
@@ -285,7 +285,7 @@ for (int i = 1;i<=num;i++)
 ***Si a y b son variables enteras, identificar el problema (y la forma de resolverlo) de la siguiente expresión. Tip: observar qué pasa cuando b = 0.***
 
 
-~~~
+~~~c#
 Console.WriteLine("Ingrese enteros a y b: ");
 
 int a = int.Parse(Console.ReadLine());
@@ -301,7 +301,7 @@ sigue con el programa.
 ## Punto 14
 ***Utilizar el operador ternario condicional para establecer el contenido de una variable entera con el menor valor de otras dos variables enteras.***
 
-~~~
+~~~c#
 int a = 80;
 int b = 19;
 int num = (a<b) ? a : b;
@@ -314,7 +314,7 @@ Console.WriteLine(num);
 
 
 Declaro la variable i dos veces. Para solucionar hago:
-~~~
+~~~c#
 for (int i = 1; i <= 10;)
 {
     Console.WriteLine(i++);
@@ -326,7 +326,7 @@ for (int i = 1; i <= 10;)
 ***Analizar el siguiente código. ¿Cuál es la salida por consola?***
 
 
-~~~
+~~~c#
 int i = 1;
 if (--i == 0)   //pre decremento: resto 1 y luego evaluo [1 - 1 = 0 == 0]
 {
