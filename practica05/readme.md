@@ -143,6 +143,19 @@ public static List<Cuenta> GetCuentas()
 >
 > Punto 2 --> Contestado en *Cuenta.cs* y *Program.cs*.
 
+## 🟣 Punto 3
+
+***Reemplazar el método estático GetCuentas() del ejercicio anterior por una propiedad estática de sólo lectura.***
+
+<details><summary> <code> click para ver resolución 🖱 </code></summary><br>
+
+~~~c#
+
+~~~
+
+</details>
+
+
 <br>
 <br>
 <br>
