@@ -286,6 +286,8 @@ public void ImprimirRaices()
 ## 🔵 Punto 7
 ***Implementar la clase Matriz que se utilizará para trabajar con matrices matemáticas. Implementar los dos constructores y todos los métodos que se detallan a continuación:***
 
+<details><summary> <code> click para ver resolución 🖱 </code></summary><br>
+
 ~~~c#
 public Matriz(int filas, int columnas)
 public Matriz(double[,] matriz)
@@ -306,6 +308,8 @@ public void multiplicarPor(Matriz m)
 >[!NOTE]
 >
 > Punto 7 --> Contestado en *Matriz.cs* y *Program.cs* (buscar archivos dentro de la carpeta [ejercicios](/practica04/ejercicios/)).
+
+</details>
 
 ## 🔵 Punto 8
 ***Prestar atención a los siguientes programas (ninguno funciona correctamente). ¿Qué se puede decir acerca de la inicialización de los objetos? ¿En qué casos son inicializados
@@ -337,6 +341,9 @@ class Foo
 }
 ~~~
 
+<details><summary> <code> click para ver resolución 🖱 </code></summary><br>
+</details>
+
 
 ## 🔵 Punto 9
 ***¿Qué se puede decir en relación a la sobrecarga de métodos en este ejemplo?***
@@ -355,6 +362,9 @@ class A
     }
 }
 ~~~
+
+<details><summary> <code> click para ver resolución 🖱 </code></summary><br>
+</details>
 
 ## 🔵 Punto 10
 ***Completar la clase Cuenta para que el siguiente código produzca la salida indicada. Utilizar en la medida de lo posible la sintaxis :this en el encabezado de los constructores para invocar a otro constructor ya definido.***
@@ -384,10 +394,13 @@ class Cuenta
 
 ![ImagenPantalla](/../main/recursos/imagen9.png)
 
+<details><summary> <code> click para ver resolución 🖱 </code></summary><br>
 
 >[!NOTE]
 >
 > Punto 10 --> Contestado en *Cuenta.cs* y *Program.cs* (buscar archivos dentro de la carpeta [ejercicios](/practica04/ejercicios/)).
+
+</details>
 
 ## 🔵 Punto 11
 ***Reemplazar estas líneas de código por otras equivalentes que utilicen el operador null-coalescing (?? ) y / o la asignación null-coalescing (??=)***
