@@ -1,7 +1,7 @@
 # .NET - Practica 3
 
 
-## Punto 1
+## 🟢 Punto 1
 ***Ejecutar y analizar cuidadosamente el siguiente programa:***
 
 ~~~c#
@@ -27,7 +27,7 @@ k = Console.ReadKey(true);
 * k = Console.ReadKey(true); **-->** el programa espera a que se presione una nueva tecla. 
 
 
-## Punto 2
+## 🟢 Punto 2
 ***Implementar un método para imprimir por consola todos los elementos de una matriz (arreglo de dos dimensiones) pasada como parámetro. Debe imprimir todos los elementos de una fila en la misma línea en la consola. Ayuda: Si A es un arreglo, A.GetLength(i) devuelve la longitud del arreglo en la dimensión i.***
 
 
@@ -59,7 +59,7 @@ internal class Program
 ~~~
 
 
-## Punto 3
+## 🟢 Punto 3
 ***Implementar el método ImprimirMatrizConFormato, similar al anterior pero ahora con un
 parámetro más que representa la plantilla de formato que debe aplicarse a los números al imprimirse. La plantilla de formato es un string de acuerdo a las convenciones de formato compuesto, por ejemplo “0.0” implica escribir los valores reales con un dígito para la parte decimal.***
 
@@ -93,7 +93,7 @@ internal class Program
 ~~~
 
 
-## Punto 4
+## 🟢 Punto 4
 ***Implementar los métodos GetDiagonalPrincipal y GetDiagonalSecundaria que devuelven un vector con la diagonal correspondiente de la matriz pasada como parámetro. Si la matriz no es cuadrada generar una excepción ArgumentException.***
 
 ~~~c#
@@ -181,7 +181,7 @@ internal class Program
 ~~~
 
 
-## Punto 5
+## 🟢 Punto 5
 ***Implementar un método que devuelva un arreglo de arreglos con los mismos elementos que la matriz pasada como parámetro:***
 
 
@@ -249,7 +249,7 @@ internal class Program
 ~~~
 
 
-## Punto 6
+## 🟢 Punto 6
 ***Implementar los siguientes métodos que devuelvan la suma, resta y multiplicación de matrices pasadas como parámetros. Para el caso de la suma y la resta, las matrices deben ser del mismo tamaño, en caso de no serlo devolver null. Para el caso de la multiplicación la cantidad de columnas de A debe ser igual a la cantidad de filas de B, en caso contrario generar una excepción ArgumentException.***
 
 
@@ -386,7 +386,7 @@ internal class Program
 ~~~
 
 
-## Punto 7
+## 🟢 Punto 7
 ***¿De qué tipo quedan definidas las variables x, y, z en el siguiente código?***
 
 
@@ -403,7 +403,7 @@ Console.WriteLine("z: {0}", z.GetType());     //z: System.Single (double*float=f
 ~~~
 
 
-## Punto 8
+## 🟢 Punto 8
 ***Señalar errores de compilación y/o ejecución en el siguiente código***
 
 
@@ -426,7 +426,7 @@ definido, pero como la variable dyna fue definida como dynamic, el error no salt
 la compilación, sino en la ejecución.
 
 
-## Punto 9
+## 🟢 Punto 9
 ***¿Qué líneas del siguiente método provocan error de compilación y por qué?***
 
 
@@ -457,7 +457,7 @@ f = e;                                              //ERROR
 * f = e; --> No puedo convertir implicitamente el tipo <anonymous type: string Nombre, int Edad> en <anonymous type: int Edad, string Nombre>.
 
 
-## Punto 10
+## 🟢 Punto 10
 ***Verificar con un par de ejemplos si la sección opcional [:formatString] de formatos compuestos redondea o trunca cuando se formatean números reales restringiendo la cantidad de decimales. Plantear los ejemplos con cadenas de formato compuesto y con cadenas interpoladas.***
 
 
@@ -482,7 +482,7 @@ internal class Program
 En el ejemplo notamos que al darle formato al número, este no se trunca, sino que redondea para arriba en el caso de que el decimal siguiente sea mayor o igual a 5, o para abajo en caso contrario. Tanto en los ejemplos con cadenas de formato compuesto como en los ejemplos con cadenas interpoladas, el redondeo sucede de igual modo.
 
 
-## Punto 11
+## 🟢 Punto 11
 ***Señalar errores de ejecución en el siguiente código***
 
 
@@ -497,7 +497,7 @@ a.RemoveAt(4);
 * a.RemoveAt(4); --> Remueve el elemento de la lista ubicado en la posición indicada, la primer posición es 0, por lo tanto en una lista de 4 elementos, la última posición es 3, entonces como la posición 4 no está en la lista se genera un error.
 
 
-## Punto 12
+## 🟢 Punto 12
 ***Realizar un análisis sintáctico para determinar si los paréntesis en una expresión aritmética están bien balanceados. Verificar que por cada paréntesis de apertura exista uno de cierre en la cadena de entrada. Utilizar una pila para resolverlo. Los paréntesis de apertura de la entrada se almacenan en una pila hasta encontrar uno de cierre, realizándose entonces la extracción del último paréntesis de apertura almacenado. Si durante el proceso se lee un paréntesis de cierre y la pila está vacía, entonces la cadena es incorrecta. Al finalizar el análisis, la pila debe quedar vacía para que la cadena leída sea aceptada, de lo contrario la misma no es válida.***
 
 
@@ -553,7 +553,7 @@ internal class Program
 ~~~
 
 
-## Punto 13
+## 🟢 Punto 13
 ***Utilizar la clase Stack<T> (pila) para implementar un programa que pase un número en base 10 a otra base realizando divisiones sucesivas. Por ejemplo para pasar 35 en base 10 a binario dividimos sucesivamente por dos hasta encontrar un cociente menor que el divisor, luego el resultado se obtiene leyendo de abajo hacia arriba el cociente de la última división seguida por todos los restos.***
 
 
@@ -591,7 +591,7 @@ internal class Program
 ~~~
 
 
-## Punto 14
+## 🟢 Punto 14
 ***Utilizar la clase Queue<T> para implementar un programa que realice el cifrado de un texto aplicando la técnica de clave repetitiva. La técnica de clave repetitiva consiste en desplazar un carácter una cantidad constante de acuerdo a la lista de valores que se encuentra en la clave. Por ejemplo: para la siguiente tabla de caracteres:***
 
 ![Imagen1](/../main/recursos/imagen4.png)
@@ -751,7 +751,7 @@ internal class Program
 ~~~
 
 
-## Punto 15
+## 🟢 Punto 15
 ***¿Qué salida por la consola produce el siguiente código? ¿Qué se puede inferir respecto de la excepción división por cero en relación al tipo de los operandos?***
 
 
@@ -771,7 +771,7 @@ catch (Exception e)
 
 Salida por consola: **Attempted to divide by zero.** Esto se debe a que no se puede dividir por cero. Además, hay que tener en cuenta que la linea que produce una excepción es *Console.WriteLine(1 / x);*, en donde divido un entero por cero. En el caso de la primer linea, *Console.WriteLine(1.0 / x);* divido un double por cero y en ese caso devuelve infinito (es como si tomara límite cuando el denominador tiende a cero y el numerador es un real).
 
-## Punto 16
+## 🟢 Punto 16
 ***Implementar un programa que permita al usuario ingresar números por la consola. Debe ingresarse un número por línea, finalizando el proceso cuando el usuario ingresa una línea vacía. A medida que se van ingresando los valores el sistema debe mostrar por la consola la suma acumulada de los mismos. Utilizar double.Parse() y try/catch para validar que la entrada ingresada sea un número válido, en caso contrario advertir con un mensaje al usuario y proseguir con el ingreso de datos.***
 
 
@@ -804,7 +804,7 @@ internal class Program
 ~~~
 
 
-## Punto 17
+## 🟢 Punto 17
 ***Cuál es la salida por consola del siguiente programa:***
 
 
