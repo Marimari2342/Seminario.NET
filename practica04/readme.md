@@ -284,8 +284,6 @@ public void ImprimirRaices()
 ## 🔵 Punto 7
 ***Implementar la clase Matriz que se utilizará para trabajar con matrices matemáticas. Implementar los dos constructores y todos los métodos que se detallan a continuación:***
 
-<details><summary> <code> click para ver resolución 🖱 </code></summary><br>
-
 ~~~c#
 public Matriz(int filas, int columnas)
 public Matriz(double[,] matriz)
@@ -302,8 +300,6 @@ public void sumarle(Matriz m)
 public void restarle(Matriz m)
 public void multiplicarPor(Matriz m)
 ~~~
-
-</details>
 
 >[!NOTE]
 >
