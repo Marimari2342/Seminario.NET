@@ -4,7 +4,7 @@
 ## Punto 1
 ***Dado el siguiente código: El tipo object es un tipo referencia, por lo tanto luego de la sentencia o2 = o1 ambas variables están apuntando a la misma dirección. ¿Cómo explica entonces que el resultado en la consola no sea “Z Z”?***
 
-~~~
+~~~c#
 object o1 = "A";
 
 object o2 = o1;
@@ -14,7 +14,7 @@ o2 = "Z";
 Console.WriteLine(o1 + " " + o2);
 ~~~
 Esto es porque son dos objetos distintos tengo:
-~~~
+~~~c#
 object o1 = "A";    o1 --> A
                     o2 --> ?
 
@@ -33,7 +33,7 @@ o2 = "Z";           o1 --> A
 Las conversiones boxing y unboxing permiten asignar variables de tipo de valor a variables de tipo de referencia y viceversa.
 * Cuando una variable de algun tipo de valor se asigna a una de tipo de referencia, se dice que se le aplicó la conversión **BOXING**.
 * Cuando una variable de algun tipo de referencia se asigna a una de tipo de valor, se dice que se le aplicó la conversión **UNBOXING**.
-~~~
+~~~c#
 char c1 = 'A';
 
 string st1 = "A";
@@ -60,7 +60,7 @@ string st2 = (string)o2; // st2(valor) <-- o2(referencia) == UNBOXING
 ***Resolver los errores de compilación en el siguiente fragmento de código. Utilizar el operador as cuando sea posible.***
 
 
-~~~
+~~~c#
 object o = "Hola Mundo!";
 string? st = o as string; //string acepta valores null entonces puedo usar as
 
@@ -79,7 +79,7 @@ i = (int) o+ 1; //no puedo usar as porque int no acepta valores null
 ***Supongamos que Program.cs sólo tiene dos líneas ¿Por qué no compila?***
 
 
-~~~
+~~~c#
 int i;
 
 Console.WriteLine(i);
@@ -92,7 +92,7 @@ Porque no le asigno ningún valor a la variable i, entonces no puedo imprimirla 
 ***¿Cuál es la salida por consola del siguiente fragmento de código? ¿Por qué la tercera y sexta línea producen resultados diferentes?***
 
 
-~~~
+~~~c#
 char c1 = 'A';
 
 char c2 = 'A';
@@ -123,7 +123,7 @@ La clase **System.Text.StringBuilder** se puede usar para modificar una cadena s
 * Cuando está realizando un número fijo de operaciones de concatenación. 
 * Cuando se realizan operaciones de búsqueda extensas al construir la cadena.
 
-~~~
+~~~c#
 string nombre = "Hola soy Juanita";
 
 Console.WriteLine(nombre);
@@ -132,7 +132,7 @@ Console.WriteLine(nombre);
 **Debo usar StringBuilder:**
 * Cuando espera que su aplicación realice un número desconocido o una cantidad significativa de cambios en una cadena.
 
-~~~
+~~~c#
 using System.Text; //StringBuilder esta definido en el espacio System.Text, por eso escribo esto.
 
 StringBuilder num = new StringBuilder("Los numeros del 1 al 1000 son: ");
@@ -153,7 +153,7 @@ EL tipo **DateTime** nos permite trabajar con tiempos estandarizados. Podemos de
 Para poder medir el tiempo de ejecución con DateTime, debemos establecer dos variables, una al inicio de la suseción de lineas, y una al final del código a testear; luego realizamos la resta de ambas y exponemos la diferencia.
 
 Primer caso: conviene usar string.
-~~~
+~~~c#
 //using System.Text;
 
 DateTime start = DateTime.Now;
@@ -168,7 +168,7 @@ Console.WriteLine("Tiempo transcurrido usando string: " + tiempo);
 ~~~
 
 Segundo caso: conviene usar StringBuilder.
-~~~
+~~~c#
 using System.Text;
 
 DateTime start = DateTime.Now;
@@ -192,7 +192,7 @@ Console.WriteLine("Tiempo transcurrido usando StringBuilder: " + tiempo);
 ***Comprobar el funcionamiento del siguiente programa y dibujar el estado de la pila y la memoria heap cuando la ejecución alcanza los puntos indicados (comentarios en el código)***
 
 
-~~~
+~~~c#
 using System.Text;
 object[] v = new object[10];
 v[0] = new StringBuilder("Net");
@@ -227,7 +227,7 @@ En el **CASO 2**, creamos un nuevo StringBuilder y lo asignamos a v[5], entonces
 
 El método String.Split crea una matriz de subcadenas mediante la división de la cadena de entrada en función de uno o varios delimitadores. A menudo, este método es la manera más fácil de separar una cadena en límites de palabras. También sirve para dividir las cadenas en otras cadenas o caracteres específicos.
 
-~~~
+~~~c#
 Console.WriteLine("Ingrese una frase: ");
 string? frase = Console.ReadLine();
 string[] palabras = frase.Split(' ');
@@ -246,7 +246,7 @@ foreach (var palabra in palabras)
 ***Nota: en todos los casos utilizar un for iterando sobre una variable de tipo Meses***
 
 
-~~~
+~~~c#
 internal class Program
 {
     private static void Main(string[] args)
@@ -291,7 +291,7 @@ enum Meses
 ***¿Cuál es la salida por consola si no se pasan argumentos por la línea de comandos?***
 
 
-~~~
+~~~c#
 Console.WriteLine(args == null);
 Console.WriteLine(args.Length);
 ~~~
@@ -304,7 +304,7 @@ Si no paso argumentos por la linea de comandos y no los definí en el archivo la
 ***¿Qué hace la instrucción? ¿Asigna a la variable vector el valor null?***
 
 
-~~~
+~~~c#
 int[]? vector = new int[0];
 ~~~
 
@@ -315,7 +315,7 @@ No, lo que hace la instrucción es indicar que el vector de enteros acepta valor
 ***Determinar qué hace el siguiente programa y explicar qué sucede si no se pasan parámetros cuando se invoca desde la línea de comandos.***
 
 
-~~~
+~~~c#
 Console.WriteLine("¡Hola {0}!", args[0]);
 ~~~
 
@@ -328,7 +328,7 @@ Por ejemplo si args[0]: "Juana", el programa devolverá --> ¡Hola Juana!
 
 ***a) Utilizando la sentencia for***
 
-~~~
+~~~c#
 for (int i = 0; i< args.Length; i++)
 {
     Console.WriteLine("Hola " + args[i] + ", ¡Buen día!");
@@ -337,7 +337,7 @@ for (int i = 0; i< args.Length; i++)
 
 ***b) Utilizando la sentencia foreach***
 
-~~~
+~~~c#
 foreach (string nombre in args)
 {
     Console.WriteLine("Hola "+nombre+", ¡Buen día!");
@@ -349,7 +349,7 @@ foreach (string nombre in args)
 ***Implementar un programa que muestre todos los números primos entre 1 y un número natural dado (pasado al programa como argumento por la línea de comandos). Definir el método bool EsPrimo(int n) que devuelve true sólo si n es primo. Esta función debe comprobar si n es divisible por algún número entero entre 2 y la raíz cuadrada de n. (Nota: Math.Sqrt(d) devuelve la raíz cuadrada de d)***
 
 
-~~~
+~~~c#
 internal class Program
 {
     private static void Main(string[] args)
@@ -385,7 +385,7 @@ internal class Program
 
 ***a) Definiendo una función no recursiva***
 
-~~~
+~~~c#
 internal class Program
 {
     private static void Main(string[] args)
@@ -408,7 +408,7 @@ internal class Program
 
 ***b) Definiendo una función recursiva***
 
-~~~
+~~~c#
 internal class Program
 {
     private static void Main(string[] args)
@@ -433,7 +433,7 @@ internal class Program
 
 ***c) idem a b) pero con expression-bodied methods (Tip: utilizar el operador condicional ternario)***
 
-~~~
+~~~c#
 internal class Program
 {
     private static void Main(string[] args)
@@ -452,7 +452,7 @@ internal class Program
 
 * Función NO recursiva que devuelve el resultado en un parámetro de salida
 
-~~~
+~~~c#
 internal class Program
 {
     private static void Main(string[] args)
@@ -475,7 +475,7 @@ internal class Program
   
 * Función recursiva que devuelve el resultado en un parámetro de salida
 
-~~~
+~~~c#
 internal class Program
 {
     private static void Main(string[] args)
@@ -505,7 +505,7 @@ internal class Program
 ***Codificar el método Swap que recibe 2 parámetros enteros e intercambia sus valores. El cambio debe apreciarse en el método invocador.***
 
 
-~~~
+~~~c#
 Console.WriteLine("Ingrese dos números:");
 string st1 = Console.ReadLine();
 string st2 = Console.ReadLine();
@@ -528,7 +528,7 @@ static void Swap(ref int num1, ref int num2)
 ## Punto 21
 ***Codificar el método Imprimir para que el siguiente código produzca la salida por consola que se observa. Considerar que el usuario del método Imprimir podría querer más adelante imprimir otros datos, posiblemente de otros tipos pasando una cantidad distinta de parámetros cada vez que invoque el método. Tip: usar params***
 
-~~~
+~~~c#
 Imprimir(1, "casa", 'A', 3.4, DayOfWeek.Saturday);
 Imprimir(1, 2, "tres");
 Imprimir();
