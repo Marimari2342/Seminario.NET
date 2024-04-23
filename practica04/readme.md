@@ -32,11 +32,11 @@ for (int i = 0; i < dF; i++)
 }
 ~~~
 
+</details>
+
 >[!NOTE]
 >
 > Punto 1 --> Contestado en *Persona.cs* y *Program.cs* (buscar archivos dentro de la carpeta [ejercicios](/practica04/ejercicios/)).
-
-</details>
 
 ## 🔵 Punto 2
 ***Modificar el programa anterior haciendo privados todos los campos. Definir un constructor adecuado y un método público Imprimir() que escriba en la consola los campos del objeto con el formato requerido para el listado.***
@@ -62,11 +62,11 @@ public string Imprimir() =>
     $"{Num+")",-5} {Nombre,-15} {Edad,-5} {DNI,-10}";
 ~~~
 
+</details>
+
 >[!NOTE]
 >
 > Punto 2 --> Contestado en *Persona.cs* y *Program.cs* (buscar archivos dentro de la carpeta [ejercicios](/practica04/ejercicios/)).
-
-</details>
 
 ## 🔵 Punto 3
 ***Agregar a la clase Persona un método EsMayorQue(Persona p) que devuelva verdadero si la persona que recibe el mensaje tiene más edad que la persona enviada como parámetro. Utilizarlo para realizar un programa que devuelva la persona más jóven de la lista.***
@@ -106,13 +106,11 @@ Console.WriteLine("Persona más joven:");
 Console.WriteLine(masJoven.Imprimir());
 ~~~
 
+</details>
 
 >[!NOTE]
 >
 > Punto 3 --> Contestado en *Persona.cs* y *Program.cs* (buscar archivos dentro de la carpeta [ejercicios](/practica04/ejercicios/)).
-
-</details>
-
 
 ## 🔵 Punto 4
 ***Codificar la clase Hora de tal forma que el siguiente código produzca la salida por consola que se observa.***
@@ -149,11 +147,11 @@ public class Hora
 }
 ~~~
 
+</details>
+
 >[!NOTE]
 >
 > Punto 4 --> Contestado en *Hora.cs* y *Program.cs* (buscar archivos dentro de la carpeta [ejercicios](/practica04/ejercicios/)).
-
-</details>
 
 ## 🔵 Punto 5
 ***Agregar un segundo constructor a la clase Hora para que pueda especificarse la hora por medio de un único valor que admita decimales. Por ejemplo 3,5 indica la hora 3 y 30 minutos. Si se utiliza este segundo constructor, el método imprimir debe mostrar los segundos con tres dígitos decimales. Así el siguiente código debe producir la salida por consola que se observa.***
@@ -196,11 +194,11 @@ public void Imprimir()
 }
 ~~~
 
+</details>
+
 >[!NOTE]
 >
 > Punto 5 --> Contestado en *Hora.cs* y *Program.cs* (buscar archivos dentro de la carpeta [ejercicios](/practica04/ejercicios/)).
-
-</details>
 
 ## 🔵 Punto 6
 ***Codificar una clase llamada Ecuacion2 para representar una ecuación de 2º grado. Esta clase debe tener 3 campos privados, los coeficientes a, b y c de tipo double. La única forma de establecer los valores de estos campos será en el momento de la instanciación de un objeto Ecuacion2.***
@@ -277,11 +275,11 @@ public void ImprimirRaices()
 }
 ~~~
 
+</details>
+
 >[!NOTE]
 >
 > Punto 6 --> Contestado en *Ecuacion2.cs* y *Program.cs* (buscar archivos dentro de la carpeta [ejercicios](/practica04/ejercicios/)).
-
-</details>
 
 ## 🔵 Punto 7
 ***Implementar la clase Matriz que se utilizará para trabajar con matrices matemáticas. Implementar los dos constructores y todos los métodos que se detallan a continuación:***
@@ -305,11 +303,11 @@ public void restarle(Matriz m)
 public void multiplicarPor(Matriz m)
 ~~~
 
+</details>
+
 >[!NOTE]
 >
 > Punto 7 --> Contestado en *Matriz.cs* y *Program.cs* (buscar archivos dentro de la carpeta [ejercicios](/practica04/ejercicios/)).
-
-</details>
 
 ## 🔵 Punto 8
 ***Prestar atención a los siguientes programas (ninguno funciona correctamente). ¿Qué se puede decir acerca de la inicialización de los objetos? ¿En qué casos son inicializados
@@ -394,13 +392,9 @@ class Cuenta
 
 ![ImagenPantalla](/../main/recursos/imagen9.png)
 
-<details><summary> <code> click para ver resolución 🖱 </code></summary><br>
-
 >[!NOTE]
 >
 > Punto 10 --> Contestado en *Cuenta.cs* y *Program.cs* (buscar archivos dentro de la carpeta [ejercicios](/practica04/ejercicios/)).
-
-</details>
 
 ## 🔵 Punto 11
 ***Reemplazar estas líneas de código por otras equivalentes que utilicen el operador null-coalescing (?? ) y / o la asignación null-coalescing (??=)***
