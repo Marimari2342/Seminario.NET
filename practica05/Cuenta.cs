@@ -1,24 +1,5 @@
-# .NET - Practica 5
+﻿namespace practica05;
 
-
-## 🟣 Punto 1
-
-***Codificar la clase Cuenta de tal forma que el siguiente código produzca la salida por consola que se indica.***
-
-~~~c#
-Cuenta c1 = new Cuenta();
-c1.Depositar(100).Depositar(50).Extraer(120).Extraer(50);
-Cuenta c2 = new Cuenta();
-c2.Depositar(200).Depositar(800);
-new Cuenta().Depositar(20).Extraer(20);
-c2.Extraer(1000).Extraer(1);
-Console.WriteLine("\nDETALLE");
-Cuenta.ImprimirDetalle();
-~~~
-
-
-
-~~~c#
 class Cuenta
 {
     public static int Id { get; set; }
@@ -94,12 +75,3 @@ class Cuenta
         Console.WriteLine($" * Se denegaron {ExtDen} extracciones por falta de fondos");
     }
 }
-~~~
-
-
-<br>
-<br>
-<br>
-
-
-<p><img align="center" src="https://github.com/Marimari2342/Marimari2342/blob/main/firmagith.png" alt="marigit"/></p>

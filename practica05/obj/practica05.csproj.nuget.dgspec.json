@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\maria\\proyectoPracticaNet\\practica05\\practica05.csproj": {}
+    "C:\\Users\\maria\\Downloads\\Seminario.NET\\practica05\\practica05.csproj": {}
   },
   "projects": {
-    "C:\\Users\\maria\\proyectoPracticaNet\\practica05\\practica05.csproj": {
+    "C:\\Users\\maria\\Downloads\\Seminario.NET\\practica05\\practica05.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\maria\\proyectoPracticaNet\\practica05\\practica05.csproj",
+        "projectUniqueName": "C:\\Users\\maria\\Downloads\\Seminario.NET\\practica05\\practica05.csproj",
         "projectName": "practica05",
-        "projectPath": "C:\\Users\\maria\\proyectoPracticaNet\\practica05\\practica05.csproj",
+        "projectPath": "C:\\Users\\maria\\Downloads\\Seminario.NET\\practica05\\practica05.csproj",
         "packagesPath": "C:\\Users\\maria\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\maria\\proyectoPracticaNet\\practica05\\obj\\",
+        "outputPath": "C:\\Users\\maria\\Downloads\\Seminario.NET\\practica05\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\maria\\AppData\\Roaming\\NuGet\\NuGet.Config"
