@@ -1,7 +1,7 @@
 # .NET - Practica 1
 
 
-## Punto 1
+## 🔴 Punto 1
 ***Consultar en la documentación de Microsoft y responder cuál es la diferencia entre los métodos WriteLine() y Write() de la clase System.Console ¿Cómo funciona el método ReadKey() de la misma clase? Escribir un programa que imprima en la consola la frase “Hola Mundo” haciendo una pausa entre palabra y palabra esperando a que el usuario presione una tecla para continuar. Tip: usar los métodos ReadKey() y Write() de la clase System.Console.***
 
 <details><summary> <code> click para ver resolución 🖱 </code></summary>
@@ -19,7 +19,7 @@ Console.Write("Mundo");
 ~~~
 </details>
 
-## Punto 2
+## 🔴 Punto 2
 ***Investigar por las secuencias de escape \n, \t , \\" y \\\. Escribir un programa que las utilice para imprimir distintos mensajes en la consola.***
 
 <details><summary> <code> click para ver resolución 🖱 </code></summary>
@@ -38,7 +38,7 @@ Console.WriteLine("Voy a hacer una tabulación horizontal --> \t asi");
 ~~~
 </details>
 
-## Punto 3
+## 🔴 Punto 3
 ***El carácter @ delante de un string desactiva los códigos de escape. Probar el siguiente fragmento de código, eliminar el carácter @ y utilizar las secuencias de escape necesarias para que el programa siga funcionando de igual manera***
 
 <details><summary> <code> click para ver resolución 🖱 </code></summary>
@@ -52,7 +52,7 @@ Console.WriteLine(st);
 
 </details>
 
-## Punto 4
+## 🔴 Punto 4
 ***Escribir un programa que solicite al usuario ingresar su nombre e imprima en la consola un saludo personalizado utilizando ese nombre o la frase “Hola mundo” si el usuario ingresó una línea en blanco. Para ingresar un string desde el teclado utilizar Console.ReadLine()***
 
 <details><summary> <code> click para ver resolución 🖱 </code></summary>
@@ -72,7 +72,7 @@ else
 
 </details>
 
-## Punto 5
+## 🔴 Punto 5
 ***Idem. al ejercicio anterior salvo que se imprimirá un mensaje de saludo diferente según sea el nombre ingresado por el usuario. Así para “Juan” debe imprimir “¡Hola amigo!”, para “María” debe imprimir “Buen día señora”, para “Alberto” debe imprimir “Hola Alberto”. En otro caso, debe imprimir “Buen día ” seguido del nombre ingresado o “¡Buen día mundo!” si se ha ingresado una línea vacía.***
 
 ***a) utilizando if ... else if***
@@ -135,7 +135,7 @@ switch (nombre)
 
 </details>
 
-## Punto 6
+## 🔴 Punto 6
 ***Utilizar Console.ReadLine() para leer líneas de texto (secuencia de caracteres que finaliza al presionar <ENTER>) por la consola. Por cada línea leída se debe imprimir inmediatamente la cantidad de caracteres de la misma. El programa termina al ingresar la cadena vacía. Tip: si st es una variable de tipo string, entonces st.Length devuelve la cantidad de caracteres del string.***
 
 <details><summary> <code> click para ver resolución 🖱 </code></summary>
@@ -164,7 +164,7 @@ while (i>0)
 
 </details>
 
-## Punto 7
+## 🔴 Punto 7
 ***¿Qué hace la instrucción Console.WriteLine("100".Length); ?***
 
 <details><summary> <code> click para ver resolución 🖱 </code></summary>
@@ -177,7 +177,7 @@ Lo que hace es decirme la cantidad de caracteres que componen el string "100", e
 
 </details>
 
-## Punto 8
+## 🔴 Punto 8
 ***Sea st una variable de tipo string correctamente declarada. ¿Es válida la siguiente instrucción: Console.WriteLine(st=Console.ReadLine());?***
 
 <details><summary> <code> click para ver resolución 🖱 </code></summary>
@@ -191,7 +191,7 @@ Si, lo que va a hacer esta sentencia es pedirte que ingreses un string y automat
 
 </details>
 
-## Punto 9
+## 🔴 Punto 9
 ***Escribir un programa que lea dos palabras separadas por un blanco que terminan con <ENTER>, y determinar si son simétricas (Ej: 'abbccd' y 'dccbba' son simétricas). Tip: si st es un string, entonces st[0] devuelve el primer carácter de st, y st[st.Length-1] devuelve el último carácter de st.***
 
 <details><summary> <code> click para ver resolución 🖱 </code></summary>
@@ -241,7 +241,7 @@ else
 
 </details>
 
-## Punto 10
+## 🔴 Punto 10
 ***Escribir un programa que imprima en la consola todos los múltiplos de 17 o de 29 comprendidos entre 1 y 1000.***
 
 <details><summary> <code> click para ver resolución 🖱 </code></summary>
@@ -258,7 +258,7 @@ for (int num=1;num <=1000;num++)
 
 </details>
 
-## Punto 11
+## 🔴 Punto 11
 ***Comprobar el funcionamiento del siguiente fragmento de código, analizar el resultado y contestar las preguntas.***
 
 ***a) ¿Qué se puede concluir respecto del operador de división “/” ?***
@@ -297,7 +297,7 @@ Console.WriteLine("entonces a/c = " + a / c);
 ~~~
 </details>
 
-## Punto 12
+## 🔴 Punto 12
 ***Escribir un programa que imprima todos los divisores de un número entero ingresado desde la consola. Para obtener el entero desde un string st utilizar int.Parse(st).***
 
 <details><summary> <code> click para ver resolución 🖱 </code></summary>
@@ -316,7 +316,7 @@ for (int i = 1;i<=num;i++)
 ~~~
 </details>
 
-## Punto 13
+## 🔴 Punto 13
 ***Si a y b son variables enteras, identificar el problema (y la forma de resolverlo) de la siguiente expresión. Tip: observar qué pasa cuando b = 0.***
 
 <details><summary> <code> click para ver resolución 🖱 </code></summary>
@@ -336,7 +336,7 @@ sigue con el programa.
 
 </details>
 
-## Punto 14
+## 🔴 Punto 14
 ***Utilizar el operador ternario condicional para establecer el contenido de una variable entera con el menor valor de otras dos variables enteras.***
 
 <details><summary> <code> click para ver resolución 🖱 </code></summary>
@@ -350,7 +350,7 @@ Console.WriteLine(num);
 
 </details>
 
-## Punto 15
+## 🔴 Punto 15
 ***¿Cuál es el problema del código siguiente y cómo se soluciona?***
 
 <details><summary> <code> click para ver resolución 🖱 </code></summary>
@@ -365,7 +365,7 @@ for (int i = 1; i <= 10;)
 
 </details>
 
-## Punto 16
+## 🔴 Punto 16
 ***Analizar el siguiente código. ¿Cuál es la salida por consola?***
 
 <details><summary> <code> click para ver resolución 🖱 </code></summary>
