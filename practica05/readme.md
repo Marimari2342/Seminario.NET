@@ -103,11 +103,11 @@ class Cuenta
 }
 ~~~
 
+</details>
+
 >[!NOTE]
 >
 > Punto 1 --> Contestado en *Cuenta.cs* y *Program.cs* (buscar archivos dentro de la carpeta [practica05](/practica05/)).
-
-</details>
 
 ## 🟣 Punto 2
 
