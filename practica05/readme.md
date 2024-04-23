@@ -107,7 +107,7 @@ class Cuenta
 
 >[!NOTE]
 >
-> Punto 1 --> Contestado en *Cuenta.cs* y *Program.cs* (buscar archivos dentro de la carpeta [practica05](/practica05/)).
+> Punto 1 --> Contestado en *Cuenta.cs* y *Program.cs*.
 
 ## 🟣 Punto 2
 
@@ -136,11 +136,12 @@ public static List<Cuenta> GetCuentas()
     return aux;
 }
 ~~~
->[!NOTE]
->
-> Punto 2 --> Contestado en *Cuenta.cs* y *Program.cs* (buscar archivos dentro de la carpeta [practica05](/practica05/)).
 
 </details>
+
+>[!NOTE]
+>
+> Punto 2 --> Contestado en *Cuenta.cs* y *Program.cs*.
 
 <br>
 <br>
