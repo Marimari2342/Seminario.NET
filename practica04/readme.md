@@ -14,7 +14,7 @@
 
 Armé un vector de personas, y la dimensión del vector la indico en la primer linea del archivo *personas.txt*. Esto no lo indica el ejercicio pero lo armé así para no sobreescribir la persona ya leida y armar una estructura, para poder luego usar en el punto 3 a la hora de comparar las edades.
 
-~~~
+~~~c#
 StreamReader listaDatos = new System.IO.StreamReader("recursos/personas.txt");
 int dF = int.Parse(listaDatos.ReadLine());
 Persona[] vectorPersonas = new Persona[dF];
@@ -38,7 +38,7 @@ for (int i = 0; i < dF; i++)
 ## Punto 2
 ***Modificar el programa anterior haciendo privados todos los campos. Definir un constructor adecuado y un método público Imprimir() que escriba en la consola los campos del objeto con el formato requerido para el listado.***
 
-~~~
+~~~c#
 //CONSTRUCTOR
 
 public Persona(string unNombre, int unaEdad, string unDni, int unNum)
@@ -50,7 +50,7 @@ public Persona(string unNombre, int unaEdad, string unDni, int unNum)
 }
 ~~~
 
-~~~
+~~~c#
 //METODO Imprimir()
 
 public string Imprimir() =>
@@ -64,7 +64,7 @@ public string Imprimir() =>
 ## Punto 3
 ***Agregar a la clase Persona un método EsMayorQue(Persona p) que devuelva verdadero si la persona que recibe el mensaje tiene más edad que la persona enviada como parámetro. Utilizarlo para realizar un programa que devuelva la persona más jóven de la lista.***
 
-~~~
+~~~c#
 //METODO EsMayorQue(Persona p)
 
 public bool EsMayorQue(Persona p) //Punto 3
@@ -79,7 +79,7 @@ public bool EsMayorQue(Persona p) //Punto 3
 ~~~
 
 Buscar la persona más joven usando el método *EsMayorQue(p)*.
-~~~
+~~~c#
 Persona masJoven = new Persona("", 100, "", 0);
 for (int i = 0; i < dF; i++)
 {
@@ -104,13 +104,13 @@ Console.WriteLine(masJoven.Imprimir());
 ![ImagenPantalla](/../main/recursos/imagen7.png)
 
 En el programa principal:
-~~~
+~~~c#
 Hora h = new Hora(23, 30, 15);
 Console.WriteLine(h.Imprimir());
 ~~~
 
 En la clase Hora:
-~~~
+~~~c#
 namespace ejercicios;
 
 public class Hora
@@ -139,7 +139,7 @@ public class Hora
 ## Punto 5
 ***Agregar un segundo constructor a la clase Hora para que pueda especificarse la hora por medio de un único valor que admita decimales. Por ejemplo 3,5 indica la hora 3 y 30 minutos. Si se utiliza este segundo constructor, el método imprimir debe mostrar los segundos con tres dígitos decimales. Así el siguiente código debe producir la salida por consola que se observa.***
 
-~~~
+~~~c#
 new Hora(23, 30, 15).Imprimir();
 new Hora(14.43).Imprimir();
 new Hora(14.45).Imprimir();
@@ -149,7 +149,7 @@ new Hora(14.45114).Imprimir();
 ![ImagenPantalla](/../main/recursos/imagen8.png)
 
 Segundo Constructor:
-~~~
+~~~c#
 public Hora(double hora)
 {
     this.Horas = (int)hora;
@@ -161,7 +161,7 @@ public Hora(double hora)
 
 También cambiamos el método imprimir, (lo pasamos de string a void pues tiene que devolver la hora sin necesidad de usar Console.WriteLine() en el programa principal).
 
-~~~
+~~~c#
 public void Imprimir()
 {
     if (this.SegDec == -1)
@@ -183,7 +183,7 @@ public void Imprimir()
 ## Punto 6
 ***Codificar una clase llamada Ecuacion2 para representar una ecuación de 2º grado. Esta clase debe tener 3 campos privados, los coeficientes a, b y c de tipo double. La única forma de establecer los valores de estos campos será en el momento de la instanciación de un objeto Ecuacion2.***
 
-~~~
+~~~c#
 public class Ecuacion2
 {
     private double a;
@@ -203,7 +203,7 @@ public class Ecuacion2
 
 * ***GetDiscriminante(): devuelve el valor del discriminante (double), el discriminante tiene la siguiente formula, (b^2)-4*a*c.***
 
-~~~
+~~~c#
 public double GetDiscriminante()
 {
     return Math.Pow(this.b, 2) - 4 * this.a * this.c;
@@ -212,7 +212,7 @@ public double GetDiscriminante()
 
 * ***GetCantidadDeRaices(): devuelve 0, 1 ó 2 dependiendo de la cantidad de raíces reales que posee la ecuación. Si el discriminante es negativo no tiene raíces reales, si el discriminante es cero tiene una única raíz, si el discriminante es mayor que cero posee 2 raíces reales.***
 
-~~~
+~~~c#
 public int GetCantidadDeRaices()
 {
     return GetDiscriminante() < 0 ? 0 : GetDiscriminante() == 0 ? 1 : 2;
@@ -221,7 +221,7 @@ public int GetCantidadDeRaices()
 
 * ***ImprimirRaices(): imprime la única o las 2 posibles raíces reales de la ecuación. En caso de no poseer soluciones reales debe imprimir una leyenda que así lo especifique.***
 
-~~~
+~~~c#
 public void ImprimirRaices()
 {
     if (this.GetCantidadDeRaices() == 0)
@@ -250,7 +250,7 @@ public void ImprimirRaices()
 ## Punto 7
 ***Implementar la clase Matriz que se utilizará para trabajar con matrices matemáticas. Implementar los dos constructores y todos los métodos que se detallan a continuación:***
 
-~~~
+~~~c#
 public Matriz(int filas, int columnas)
 public Matriz(double[,] matriz)
 public void SetElemento(int fila, int columna, double elemento)
@@ -275,7 +275,7 @@ public void multiplicarPor(Matriz m)
 ***Prestar atención a los siguientes programas (ninguno funciona correctamente). ¿Qué se puede decir acerca de la inicialización de los objetos? ¿En qué casos son inicializados
 automáticamente y con qué valor?***
 
-~~~
+~~~c#
 Foo f = new Foo();
 f.Imprimir();
 class Foo
@@ -288,7 +288,7 @@ class Foo
 }
 ~~~
 
-~~~
+~~~c#
 Foo f = new Foo();
 f.Imprimir();
 class Foo
@@ -305,7 +305,7 @@ class Foo
 ## Punto 9
 ***¿Qué se puede decir en relación a la sobrecarga de métodos en este ejemplo?***
 
-~~~
+~~~c#
 class A
 {
     public void Metodo(short n) {
@@ -323,7 +323,7 @@ class A
 ## Punto 10
 ***Completar la clase Cuenta para que el siguiente código produzca la salida indicada. Utilizar en la medida de lo posible la sintaxis :this en el encabezado de los constructores para invocar a otro constructor ya definido.***
 
-~~~
+~~~c#
 Cuenta cuenta = new Cuenta();
 cuenta.Imprimir();
 cuenta = new Cuenta(30222111);
@@ -356,7 +356,7 @@ class Cuenta
 ## Punto 11
 ***Reemplazar estas líneas de código por otras equivalentes que utilicen el operador null-coalescing (?? ) y / o la asignación null-coalescing (??=)***
 
-~~~
+~~~c#
 ...
 if (st1 == null)
 {
@@ -386,7 +386,7 @@ if (st4 == null)
 
 ![ImagenPantalla](/../main/recursos/imagen10.png)
 
-~~~
+~~~c#
 using Figuras;
 using Automotores;
 //El constructor de Circulo espera recibir el radio
