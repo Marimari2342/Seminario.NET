@@ -1,7 +1,7 @@
 # Práctica 2
 
 
-## Punto 1
+## 🟠 Punto 1
 ***Dado el siguiente código: El tipo object es un tipo referencia, por lo tanto luego de la sentencia o2 = o1 ambas variables están apuntando a la misma dirección. ¿Cómo explica entonces que el resultado en la consola no sea “Z Z”?***
 
 ~~~c#
@@ -26,7 +26,7 @@ o2 = "Z";           o1 --> A
 ~~~
 
 
-## Punto 2
+## 🟠 Punto 2
 ***¿Qué líneas del siguiente código provocan conversiones boxing y unboxing?***
 
 
@@ -48,7 +48,7 @@ string st2 = (string)o2; // st2(valor) <-- o2(referencia) == UNBOXING
 ~~~
 
 
-## Punto 3
+## 🟠 Punto 3
 ***¿Qué diferencias existen entre las conversiones de tipo implícitas y explícitas?***
 
 
@@ -56,7 +56,7 @@ string st2 = (string)o2; // st2(valor) <-- o2(referencia) == UNBOXING
 * **Conversiones explicitas:** tengo que indicar entre paréntesis el tipo de dato al que quiero convertir. Ejemplo --> int num = (int) 10.0; Si no aclaro entre paréntesis el tipo de conversion me va a tirar error.
 
 
-## Punto 4
+## 🟠 Punto 4
 ***Resolver los errores de compilación en el siguiente fragmento de código. Utilizar el operador as cuando sea posible.***
 
 
@@ -75,7 +75,7 @@ i = (int) o+ 1; //no puedo usar as porque int no acepta valores null
 ~~~
 
 
-## Punto 6
+## 🟠 Punto 6
 ***Supongamos que Program.cs sólo tiene dos líneas ¿Por qué no compila?***
 
 
@@ -88,7 +88,7 @@ Console.WriteLine(i);
 Porque no le asigno ningún valor a la variable i, entonces no puedo imprimirla en pantalla.
 
 
-## Punto 7
+## 🟠 Punto 7
 ***¿Cuál es la salida por consola del siguiente fragmento de código? ¿Por qué la tercera y sexta línea producen resultados diferentes?***
 
 
@@ -110,7 +110,7 @@ Console.WriteLine(o1 == o2);    /*Aca comparo dos objetos y son distintos porque
 La salida por consola será true - false, pues en el primer caso compara dos char que son iguales, y en el segundo caso compara dos objetos, que aunque ambos tengan el mismo contenido, no dejan de ser dos objetos distintos.
 
 
-## Punto 8
+## 🟠 Punto 8
 ***Investigar acerca de la clase StringBuilder del espacio de nombre System.Text ¿En qué circunstancias es preferible utilizar StringBuilder en lugar de utilizar string? Implementar un caso de ejemplo en el que el rendimiento sea claramente superior utilizando StringBuilder en lugar de string y otro en el que no.***
 
 
@@ -144,7 +144,7 @@ Console.WriteLine(num);
 ~~~
 
 
-## Punto 9
+## 🟠 Punto 9
 ***Investigar sobre el tipo DateTime y usarlo para medir el tiempo de ejecución de los algoritmos implementados en el ejercicio anterior.***
 
 
@@ -188,7 +188,7 @@ Console.WriteLine("Tiempo transcurrido usando StringBuilder: " + tiempo);
 ~~~
 
 
-## Punto 10
+## 🟠 Punto 10
 ***Comprobar el funcionamiento del siguiente programa y dibujar el estado de la pila y la memoria heap cuando la ejecución alcanza los puntos indicados (comentarios en el código)***
 
 
@@ -221,7 +221,7 @@ En el **CASO 2**, creamos un nuevo StringBuilder y lo asignamos a v[5], entonces
 ![Caso2](/../main/recursos/imagen2.png)
 
 
-## Punto 11
+## 🟠 Punto 11
 ***¿Para qué sirve el método Split de la clase string? Usarlo para escribir en la consola todas las palabras (una por línea) de una frase ingresada por consola por el usuario.***
 
 
@@ -239,7 +239,7 @@ foreach (var palabra in palabras)
 ~~~
 
 
-## Punto 12
+## 🟠 Punto 12
 ***Definir el tipo de datos enumerativo llamado Meses y utilizarlo para:***
 * ***Imprimir en la consola el nombre de cada uno de los meses en orden inverso (diciembre, noviembre, … , enero).***
 * ***Solicitar al usuario que ingrese un texto y responder si el texto tipeado corresponde al nombre de un mes.***
@@ -287,7 +287,7 @@ enum Meses
 ~~~
 
 
-## Punto 13
+## 🟠 Punto 13
 ***¿Cuál es la salida por consola si no se pasan argumentos por la línea de comandos?***
 
 
@@ -300,7 +300,7 @@ Si no paso argumentos por la linea de comandos y no los definí en el archivo la
 * Primer linea --> **false**, pues args <> null
 * Segunda linea --> **0**, pues no tengo ningún argumento definido ni pasado por la linea de comandos.
 
-## Punto 14
+## 🟠 Punto 14
 ***¿Qué hace la instrucción? ¿Asigna a la variable vector el valor null?***
 
 
@@ -311,7 +311,7 @@ int[]? vector = new int[0];
 No, lo que hace la instrucción es indicar que el vector de enteros acepta valores null, y luego declara un vector de 0 elementos enteros. Si en lugar de tener 0 elementos tuviera 1 elemento, ese elemento al querer leerlo devolvería 0.
 
 
-## Punto 15
+## 🟠 Punto 15
 ***Determinar qué hace el siguiente programa y explicar qué sucede si no se pasan parámetros cuando se invoca desde la línea de comandos.***
 
 
@@ -323,7 +323,7 @@ Este programa muestra en pantalla el mensaje ¡Hola <arg[0]>!, donde arg[0] es u
 Por ejemplo si args[0]: "Juana", el programa devolverá --> ¡Hola Juana!
 
 
-## Punto 16
+## 🟠 Punto 16
 ***Escribir un programa que reciba una lista de nombres como parámetro por la línea de comandos e imprima por consola un saludo personalizado para cada uno de ellos.***
 
 ***a) Utilizando la sentencia for***
@@ -345,7 +345,7 @@ foreach (string nombre in args)
 ~~~
 
 
-## Punto 17
+## 🟠 Punto 17
 ***Implementar un programa que muestre todos los números primos entre 1 y un número natural dado (pasado al programa como argumento por la línea de comandos). Definir el método bool EsPrimo(int n) que devuelve true sólo si n es primo. Esta función debe comprobar si n es divisible por algún número entero entre 2 y la raíz cuadrada de n. (Nota: Math.Sqrt(d) devuelve la raíz cuadrada de d)***
 
 
@@ -380,7 +380,7 @@ internal class Program
 ~~~
 
 
-## Punto 18
+## 🟠 Punto 18
 ***Escribir una función (método int Fac(int n)) que calcule el factorial de un número n pasado al programa como parámetro por la línea de comando***
 
 ***a) Definiendo una función no recursiva***
@@ -447,7 +447,7 @@ internal class Program
 ~~~
 
 
-## Punto 19
+## 🟠 Punto 19
 ***Idem. al ejercicio 18.a) y 18.b) pero devolviendo el resultado en un parámetro de salida void Fac(int n, out int f)***
 
 * Función NO recursiva que devuelve el resultado en un parámetro de salida
@@ -501,7 +501,7 @@ internal class Program
 ~~~
 
 
-## Punto 20
+## 🟠 Punto 20
 ***Codificar el método Swap que recibe 2 parámetros enteros e intercambia sus valores. El cambio debe apreciarse en el método invocador.***
 
 
@@ -525,7 +525,7 @@ static void Swap(ref int num1, ref int num2)
 ~~~
 
 
-## Punto 21
+## 🟠 Punto 21
 ***Codificar el método Imprimir para que el siguiente código produzca la salida por consola que se observa. Considerar que el usuario del método Imprimir podría querer más adelante imprimir otros datos, posiblemente de otros tipos pasando una cantidad distinta de parámetros cada vez que invoque el método. Tip: usar params***
 
 ~~~c#
