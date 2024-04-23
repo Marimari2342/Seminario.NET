@@ -12,6 +12,8 @@
 
 ***NOTA: Se puede utilizar: Console.SetIn(new System.IO.StreamReader(nombreDeArchivo)); para cambiar la entrada estándar de la consola y poder leer directamente desde un archivo de texto.***
 
+<details><summary> <code> click para ver resolución 🖱 </code></summary><br>
+
 Armé un vector de personas, y la dimensión del vector la indico en la primer linea del archivo *personas.txt*. Esto no lo indica el ejercicio pero lo armé así para no sobreescribir la persona ya leida y armar una estructura, para poder luego usar en el punto 3 a la hora de comparar las edades.
 
 ~~~c#
@@ -30,13 +32,16 @@ for (int i = 0; i < dF; i++)
 }
 ~~~
 
-
 >[!NOTE]
 >
 > Punto 1 --> Contestado en *Persona.cs* y *Program.cs* (buscar archivos dentro de la carpeta [ejercicios](/practica04/ejercicios/)).
 
+</details>
+
 ## 🔵 Punto 2
 ***Modificar el programa anterior haciendo privados todos los campos. Definir un constructor adecuado y un método público Imprimir() que escriba en la consola los campos del objeto con el formato requerido para el listado.***
+
+<details><summary> <code> click para ver resolución 🖱 </code></summary><br>
 
 ~~~c#
 //CONSTRUCTOR
@@ -61,8 +66,12 @@ public string Imprimir() =>
 >
 > Punto 2 --> Contestado en *Persona.cs* y *Program.cs* (buscar archivos dentro de la carpeta [ejercicios](/practica04/ejercicios/)).
 
+</details>
+
 ## 🔵 Punto 3
 ***Agregar a la clase Persona un método EsMayorQue(Persona p) que devuelva verdadero si la persona que recibe el mensaje tiene más edad que la persona enviada como parámetro. Utilizarlo para realizar un programa que devuelva la persona más jóven de la lista.***
+
+<details><summary> <code> Respuesta 🖱 </code></summary><br>
 
 ~~~c#
 //METODO EsMayorQue(Persona p)
@@ -78,7 +87,12 @@ public bool EsMayorQue(Persona p) //Punto 3
 }
 ~~~
 
+</details>
+
 Buscar la persona más joven usando el método *EsMayorQue(p)*.
+
+<details><summary> <code> Respuesta 🖱 </code></summary><br>
+
 ~~~c#
 Persona masJoven = new Persona("", 100, "", 0);
 for (int i = 0; i < dF; i++)
@@ -97,11 +111,15 @@ Console.WriteLine(masJoven.Imprimir());
 >
 > Punto 3 --> Contestado en *Persona.cs* y *Program.cs* (buscar archivos dentro de la carpeta [ejercicios](/practica04/ejercicios/)).
 
+</details>
+
 
 ## 🔵 Punto 4
 ***Codificar la clase Hora de tal forma que el siguiente código produzca la salida por consola que se observa.***
 
 ![ImagenPantalla](/../main/recursos/imagen7.png)
+
+<details><summary> <code> click para ver resolución 🖱 </code></summary><br>
 
 En el programa principal:
 ~~~c#
@@ -135,6 +153,7 @@ public class Hora
 >
 > Punto 4 --> Contestado en *Hora.cs* y *Program.cs* (buscar archivos dentro de la carpeta [ejercicios](/practica04/ejercicios/)).
 
+</details>
 
 ## 🔵 Punto 5
 ***Agregar un segundo constructor a la clase Hora para que pueda especificarse la hora por medio de un único valor que admita decimales. Por ejemplo 3,5 indica la hora 3 y 30 minutos. Si se utiliza este segundo constructor, el método imprimir debe mostrar los segundos con tres dígitos decimales. Así el siguiente código debe producir la salida por consola que se observa.***
@@ -147,6 +166,8 @@ new Hora(14.45114).Imprimir();
 ~~~
 
 ![ImagenPantalla](/../main/recursos/imagen8.png)
+
+<details><summary> <code> click para ver resolución 🖱 </code></summary><br> 
 
 Segundo Constructor:
 ~~~c#
@@ -179,9 +200,12 @@ public void Imprimir()
 >
 > Punto 5 --> Contestado en *Hora.cs* y *Program.cs* (buscar archivos dentro de la carpeta [ejercicios](/practica04/ejercicios/)).
 
+</details>
 
 ## 🔵 Punto 6
 ***Codificar una clase llamada Ecuacion2 para representar una ecuación de 2º grado. Esta clase debe tener 3 campos privados, los coeficientes a, b y c de tipo double. La única forma de establecer los valores de estos campos será en el momento de la instanciación de un objeto Ecuacion2.***
+
+<details><summary> <code> click para ver resolución 🖱 </code></summary><br>
 
 ~~~c#
 public class Ecuacion2
@@ -198,10 +222,13 @@ public class Ecuacion2
     }
 }
 ~~~
+</details>
 
 ***Codificar los siguientes métodos:***
 
 * ***GetDiscriminante(): devuelve el valor del discriminante (double), el discriminante tiene la siguiente formula, (b^2)-4*a*c.***
+
+<details><summary> <code> Respuesta 🖱 </code></summary><br>
 
 ~~~c#
 public double GetDiscriminante()
@@ -210,7 +237,11 @@ public double GetDiscriminante()
 }
 ~~~
 
+</details>
+
 * ***GetCantidadDeRaices(): devuelve 0, 1 ó 2 dependiendo de la cantidad de raíces reales que posee la ecuación. Si el discriminante es negativo no tiene raíces reales, si el discriminante es cero tiene una única raíz, si el discriminante es mayor que cero posee 2 raíces reales.***
+
+<details><summary> <code> Respuesta 🖱 </code></summary><br>
 
 ~~~c#
 public int GetCantidadDeRaices()
@@ -219,7 +250,11 @@ public int GetCantidadDeRaices()
 }
 ~~~
 
+</details>
+
 * ***ImprimirRaices(): imprime la única o las 2 posibles raíces reales de la ecuación. En caso de no poseer soluciones reales debe imprimir una leyenda que así lo especifique.***
+
+<details><summary> <code> Respuesta 🖱 </code></summary><br>
 
 ~~~c#
 public void ImprimirRaices()
@@ -246,6 +281,7 @@ public void ImprimirRaices()
 >
 > Punto 6 --> Contestado en *Ecuacion2.cs* y *Program.cs* (buscar archivos dentro de la carpeta [ejercicios](/practica04/ejercicios/)).
 
+</details>
 
 ## 🔵 Punto 7
 ***Implementar la clase Matriz que se utilizará para trabajar con matrices matemáticas. Implementar los dos constructores y todos los métodos que se detallan a continuación:***
