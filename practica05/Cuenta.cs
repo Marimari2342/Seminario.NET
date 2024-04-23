@@ -1,4 +1,6 @@
 ﻿namespace practica05;
+using System;
+using System.Collections;
 
 class Cuenta
 {
@@ -10,11 +12,22 @@ class Cuenta
     private static double _monto_extracciones;
     private static double _monto_depositos;
     public int Id_cuenta { get; set; }
+
+    public static List<Cuenta> lista {get;set;} = new List<Cuenta>();
     public Cuenta()
     {
         Id++;
         Id_cuenta = Id;
+        lista.Add(this);
         Console.WriteLine($"Se creó la cuenta Id={Id_cuenta}");
+    }
+
+    public static List<Cuenta> GetCuentas()
+    {
+        List<Cuenta> aux = new List<Cuenta>();
+        foreach (Cuenta obj in lista)
+            aux.Add(obj);
+        return aux;
     }
 
     public static double Extracciones
@@ -28,7 +41,7 @@ class Cuenta
             _monto_extracciones = value;
         }
     }
-    
+
     public static double Depositos
     {
         get

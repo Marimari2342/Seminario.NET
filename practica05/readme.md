@@ -104,6 +104,36 @@ class Cuenta
 ~~~
 </details>
 
+## 🟣 Punto 2
+
+***Agregar a la clase Cuenta del ejercicio anterior un método estático GetCuentas() que devuelva un List</Cuenta/> con todas las cuentas creadas. Controlar que la modificación de la lista devuelta, por ejemplo borrando algún elemento, no afecte el listado que internamente mantiene la clase Cuenta. Sin embargo debe ser posible interactuar efectivamente con los objetos Cuenta de la lista devuelta. Verificar que el siguiente código produzca la salida por consola que se indica:***
+
+<details><summary> <code> click para ver resolución 🖱 </code></summary><br>
+
+
+~~~c#
+public static List<Cuenta> lista {get;set;} = new List<Cuenta>();
+
+//En el constructor solo añadimos la linea que añade una nueva Cuenta a la lista
+public Cuenta()     
+{
+    Id++;
+    Id_cuenta = Id;
+    lista.Add(this);    // <-- ACA
+    Console.WriteLine($"Se creó la cuenta Id={Id_cuenta}");
+}
+
+//Metodo estático
+public static List<Cuenta> GetCuentas()
+{
+    List<Cuenta> aux = new List<Cuenta>();
+    foreach (Cuenta obj in lista)
+        aux.Add(obj);
+    return aux;
+}
+~~~
+
+
 <br>
 <br>
 <br>
