@@ -28,6 +28,7 @@ class Cuenta
             _monto_extracciones = value;
         }
     }
+    
     public static double Depositos
     {
         get
@@ -39,6 +40,7 @@ class Cuenta
             _monto_depositos = value;
         }
     }
+
     public Cuenta Depositar(double monto)
     {
         TotalDep += monto;
@@ -47,6 +49,7 @@ class Cuenta
         Console.WriteLine($"Se depositó {monto} en la cuenta {Id_cuenta} (Saldo={TotalDep})");
         return this;
     }
+
     public Cuenta Extraer(double monto)
     {
         if (monto <= TotalDep)
