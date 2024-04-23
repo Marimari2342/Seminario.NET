@@ -102,6 +102,11 @@ class Cuenta
     }
 }
 ~~~
+
+>[!NOTE]
+>
+> Punto 1 --> Contestado en *Cuenta.cs* y *Program.cs* (buscar archivos dentro de la carpeta [practica05](/practica05/)).
+
 </details>
 
 ## 🟣 Punto 2
@@ -109,7 +114,6 @@ class Cuenta
 ***Agregar a la clase Cuenta del ejercicio anterior un método estático GetCuentas() que devuelva un List</Cuenta/> con todas las cuentas creadas. Controlar que la modificación de la lista devuelta, por ejemplo borrando algún elemento, no afecte el listado que internamente mantiene la clase Cuenta. Sin embargo debe ser posible interactuar efectivamente con los objetos Cuenta de la lista devuelta. Verificar que el siguiente código produzca la salida por consola que se indica:***
 
 <details><summary> <code> click para ver resolución 🖱 </code></summary><br>
-
 
 ~~~c#
 public static List<Cuenta> lista {get;set;} = new List<Cuenta>();
@@ -132,7 +136,11 @@ public static List<Cuenta> GetCuentas()
     return aux;
 }
 ~~~
+>[!NOTE]
+>
+> Punto 2 --> Contestado en *Cuenta.cs* y *Program.cs* (buscar archivos dentro de la carpeta [practica05](/practica05/)).
 
+</details>
 
 <br>
 <br>
