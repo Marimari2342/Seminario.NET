@@ -215,6 +215,41 @@ class A
 ***Modificar la definición de la clase Matriz realizada en la práctica 4. Eliminar los métodos SetElemento(...) y GetElemento(...). Definir un indizador adecuado para leer y escribir elementos de la matriz. Eliminar los métodos GetDiagonalPrincipal() y GetDiagonalSecundaria() reemplazándolos por las propiedades de sólo lectura DiagonalPrincipal y DiagonalSecundaria.***
 
 <details><summary> <code> click para ver resolución 🖱 </code></summary><br>
+
+Eliminar los métodos SetElemento() y GetElemento()
+~~~C#
+public double[,] MiMatriz { get; set; }
+~~~
+Eliminar los métodos GetDiagonalPrincipal() y GetDiagonalSecundaria() reemplazándolos por las propiedades de sólo lectura DiagonalPrincipal y DiagonalSecundaria.
+~~~C#
+public double[] GetDiagonalPrincipal
+{
+    get
+    {
+        EsCuadrada(this.MiMatriz.GetLength(0), this.MiMatriz.GetLength(1));
+        double[] diagPrinc = new double[this.MiMatriz.GetLength(0)];
+        for (int i = 0; i < this.MiMatriz.GetLength(0); i++)
+        {
+            diagPrinc[i] = this.MiMatriz[i, i];
+        }
+        return diagPrinc;
+    }
+}
+
+public double[] GetDiagonalSecundaria()
+{
+    Get{
+        EsCuadrada(this.MiMatriz.GetLength(0), this.MiMatriz.GetLength(1));
+        double[] diagSec = new double[this.MiMatriz.GetLength(0)];
+        for (int i = 0; i < this.MiMatriz.GetLength(0); i++)
+        {
+            diagSec[i] = this.MiMatriz[i, this.MiMatriz.GetLength(0) - i - 1];
+        }
+        return diagSec;
+    }
+}
+~~~
+
 </details>
 
 <br>
