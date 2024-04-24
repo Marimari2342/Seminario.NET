@@ -192,10 +192,10 @@ class A
     }
     static void metodo2()
     {
-        new ClaseA().c = 'a';
+        new ClaseA().c = 'a'; //[1]
         st = "st2";
         c = 'B';
-        new A().st = "otro string";
+        new A().st = "otro string"; //[2]
     }
 }
 ~~~
