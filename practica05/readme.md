@@ -176,6 +176,33 @@ cuentas = Cuenta.GetCuentas;
 >
 > Punto 3 --> Contestado en *Cuenta.cs* y *Program.cs*.
 
+## 🟣 Punto 4
+
+***Qué líneas del código siguiente provocan error de compilación? Analizar cuándo es posible acceder a miembros estáticos y de instancia.***
+
+~~~c#
+class A
+{
+    char c;
+    static string st;
+    void metodo1()
+    {
+        st = "string";
+        c = 'A';
+    }
+    static void metodo2()
+    {
+        new ClaseA().c = 'a';
+        st = "st2";
+        c = 'B';
+        new A().st = "otro string";
+    }
+}
+~~~
+
+<details><summary> <code> click para ver resolución 🖱 </code></summary><br>
+</details>
+
 <br>
 <br>
 <br>
