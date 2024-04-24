@@ -194,13 +194,20 @@ class A
     {
         new ClaseA().c = 'a'; //[1]
         st = "st2";
-        c = 'B';
-        new A().st = "otro string"; //[2]
+        c = 'B'; //[2]
+        new A().st = "otro string"; //[3]
     }
 }
 ~~~
 
 <details><summary> <code> click para ver resolución 🖱 </code></summary><br>
+
+* [1] <i>El nombre del tipo o del espacio de nombres 'ClaseA' no se encontró.</i> Esto es porque la clase es A en lugar de ClaseA. Entonces <code>new ClaseA().c = 'a';</code> debe ser cambiado por <code>new A().c = 'a';</code>
+
+* [2] <i>Se requiere una referencia de objeto para el campo, método o propiedad 'A.c' no estáticos.</i> Este error dado en la linea <code>c = 'B';</code> es porque quiero acceder a una variable de instancia dentro del metodo2() que es estático.
+
+* [3] <i>No se puede obtener acceso al miembro 'A.st' con una referencia de instancia; califíquelo con un nombre de tipo en su lugar.</i> Este error dado en la linea <code>new A().st = "otro string";</code> se da porque quiero modificar una variable de instancia estática desde un método.
+
 </details>
 
 <br>
