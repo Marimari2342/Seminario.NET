@@ -36,6 +36,7 @@
     }
 }*/
 
+//PUNTO5
 class A
 {
     char c;
