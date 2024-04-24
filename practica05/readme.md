@@ -176,7 +176,7 @@ cuentas = Cuenta.GetCuentas;
 >
 > Punto 3 --> Contestado en *Cuenta.cs* y *Program.cs*.
 
-## 🟣 Punto 4
+## 🟣 Punto 5
 
 ***Qué líneas del código siguiente provocan error de compilación? Analizar cuándo es posible acceder a miembros estáticos y de instancia.***
 
@@ -208,6 +208,13 @@ class A
 
 * [3] <i>No se puede obtener acceso al miembro 'A.st' con una referencia de instancia; califíquelo con un nombre de tipo en su lugar.</i> Este error dado en la linea <code>new A().st = "otro string";</code> se da porque quiero modificar una variable de instancia estática desde un método.
 
+</details>
+
+## 🟣 Punto 6
+
+***Modificar la definición de la clase Matriz realizada en la práctica 4. Eliminar los métodos SetElemento(...) y GetElemento(...). Definir un indizador adecuado para leer y escribir elementos de la matriz. Eliminar los métodos GetDiagonalPrincipal() y GetDiagonalSecundaria() reemplazándolos por las propiedades de sólo lectura DiagonalPrincipal y DiagonalSecundaria.***
+
+<details><summary> <code> click para ver resolución 🖱 </code></summary><br>
 </details>
 
 <br>
