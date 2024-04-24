@@ -18,7 +18,8 @@ internal class Program
         //Punto2
         new Cuenta();
         new Cuenta();
-        List<Cuenta> cuentas = Cuenta.GetCuentas();
+        //List<Cuenta> cuentas = Cuenta.GetCuentas(); 
+        List<Cuenta> cuentas = Cuenta.GetCuentas; // <-- Punto3
         // se recuperó la lista de cuentas creadas
         cuentas[0].Depositar(50);
         // se depositó 50 en la primera cuenta de la lista devuelta
@@ -27,7 +28,8 @@ internal class Program
         // se borró un elemento de la lista devuelta
         // pero la clase Cuenta sigue manteniendo todos
         // los datos "La cuenta id: 1 tiene 50 de saldo"
-        cuentas = Cuenta.GetCuentas();
+        //cuentas = Cuenta.GetCuentas();
+        cuentas = Cuenta.GetCuentas; // < --Punto3
         // se recuperó nuevamente la lista de cuentas
         Console.WriteLine(cuentas.Count);
         cuentas[0].Extraer(30);

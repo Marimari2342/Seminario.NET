@@ -150,11 +150,31 @@ public static List<Cuenta> GetCuentas()
 <details><summary> <code> click para ver resolución 🖱 </code></summary><br>
 
 ~~~c#
+//PROPIEDAD ESTÁTICA EN Cuenta.cs
+public static List<Cuenta> GetCuentas
+{
+    get
+    {
+        List<Cuenta> aux = new List<Cuenta>();
+        foreach (Cuenta obj in lista)
+            aux.Add(obj);
+        return aux;
+    }
+}
 
+//CAMBIOS EN EL MAIN Program.cs
+List<Cuenta> cuentas = Cuenta.GetCuentas(); // <-- ANTES con metodo GetCuentas()
+cuentas = Cuenta.GetCuentas();
+        
+List<Cuenta> cuentas = Cuenta.GetCuentas; // <-- AHORA con propiedad GetCuentas
+cuentas = Cuenta.GetCuentas;
 ~~~
 
 </details>
 
+>[!NOTE]
+>
+> Punto 3 --> Contestado en *Cuenta.cs* y *Program.cs*.
 
 <br>
 <br>

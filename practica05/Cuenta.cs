@@ -13,7 +13,8 @@ class Cuenta
     private static double _monto_depositos;
     public int Id_cuenta { get; set; }
 
-    public static List<Cuenta> lista {get;set;} = new List<Cuenta>();
+    //PUNTO2
+    public static List<Cuenta> lista { get; set; } = new List<Cuenta>();
     public Cuenta()
     {
         Id++;
@@ -22,12 +23,24 @@ class Cuenta
         Console.WriteLine($"Se creó la cuenta Id={Id_cuenta}");
     }
 
-    public static List<Cuenta> GetCuentas()
+    /*public static List<Cuenta> GetCuentas()
     {
         List<Cuenta> aux = new List<Cuenta>();
         foreach (Cuenta obj in lista)
             aux.Add(obj);
         return aux;
+    }*/
+
+    //PUNTO3
+    public static List<Cuenta> GetCuentas
+    {
+        get
+        {
+            List<Cuenta> aux = new List<Cuenta>();
+            foreach (Cuenta obj in lista)
+                aux.Add(obj);
+            return aux;
+        }
     }
 
     public static double Extracciones
