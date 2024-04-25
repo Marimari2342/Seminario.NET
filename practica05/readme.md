@@ -409,9 +409,11 @@ class A
 
 ## 🟣 Punto 11
 
-******
+***¿Qué diferencia hay entre estas dos declaraciones?***
 
 ~~~c#
+public int X = 3; // a)
+public int X => 3; // b)
 ~~~
 
 <br>
