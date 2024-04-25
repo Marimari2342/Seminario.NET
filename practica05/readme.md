@@ -256,7 +256,82 @@ public double[] GetDiagonalSecundaria()
 
 ***Definir la clase Persona con las siguientes propiedades de lectura y escritura: Nombre de tipo string, Sexo de tipo char, DNI de tipo int, y FechaNacimiento de tipo DateTime. Además definir una propiedad de sólo lectura (calculada) Edad de tipo int. Definir un indizador de lectura/escritura que permita acceder a las propiedades a través de un índice entero. Así, si p es un objeto Persona, con p[0] se accede al nombre, p[1] al sexo p[2] al DNI, p[3] a la fecha de nacimiento y p[4] a la edad. En caso de asignar p[4] simplemente el valor es descartado. Observar que el tipo del indizador debe ser capaz almacenar valores de tipo int, char, DateTime y string.***
 
+<details><summary> <code> click para ver resolución 🖱 </code></summary><br>
 
+~~~C#
+class Persona
+{
+    public string Nombre { get; set; }
+    public char Sexo { get; set; }
+    public int DNI { get; set; }
+    public DateTime FechaNac { get; set; }
+
+    public Persona()
+    {
+        Nombre = "";
+    }
+
+    public int Edad
+    {
+        get
+        {
+            DateTime hoy = DateTime.Now;
+            int edad = hoy.Year - FechaNac.Year;
+            if (hoy.Month < FechaNac.Month)
+            {
+                edad--;
+            }
+            else if (hoy.Month == FechaNac.Month)
+            {
+                if (hoy.Day < FechaNac.Day)
+                {
+                    edad--;
+                }
+            }
+            return edad;
+        }
+    }
+
+    public object this[int i]
+    {
+        get
+        {
+            if (i == 0) return Nombre;
+            else if (i == 1) return Sexo;
+            else if (i == 2) return DNI;
+            else if (i == 3) return FechaNac;
+            else return Edad;
+        }
+        set
+        {
+            if (i == 0) Nombre = (string)value;
+            else if (i == 1) Sexo = (char)value;
+            else if (i == 2) DNI = (int)value;
+            else if (i == 3) FechaNac = (DateTime)value;
+        }
+    }
+}
+~~~
+
+El Main (en Program.cs)
+
+~~~c#
+Persona p = new Persona();
+p[0] = "Maria Paez";
+p[1] = 'F';
+p[2] = 30326545;
+p[3] = new DateTime(1980, 08, 12);
+Console.WriteLine($"Nombre: {p[0]}");
+Console.WriteLine("Sexo: {0}", p[1].Equals('M') ? "Masculino" : "Femenino");
+Console.WriteLine($"DNI: {p[2]}");
+Console.WriteLine($"Nacimiento: {p[3]:dd/MM/yyyy}");
+Console.WriteLine($"Edad: {p[4]}");
+~~~
+</details>
+
+>[!NOTE]
+>
+> Punto 7 --> Contestado en *Persona.cs* y *Program.cs*.
 
 <br>
 <br>
