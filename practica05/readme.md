@@ -426,6 +426,9 @@ public int X => 3; // b)
 ~~~
 
 <details><summary> <code> click para ver resolución 🖱 </code></summary><br>
+
+La diferencia entre ambas declaraciones es que la primera <code>public int X = 3;</code> es una variable pública de tipo entero a la cual se le asigna el 3 y la segunda <code>public int X => 3;</code> es una Propiedad de solo lectura que retorna un 3. 
+
 </details>
 
 <br>
