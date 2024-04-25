@@ -71,3 +71,24 @@ internal class Program
     }
 }*/
 
+//PUNTO9
+/*class Auto
+{
+    private string marca;
+    public string Marca
+    {
+        set
+        {
+            Marca = value;
+        }
+        get
+        {
+            return marca;
+        }
+    }
+}
+
+Auto a = new Auto();
+a.Marca = "Ford";
+Console.WriteLine(a.Marca);*/
+
