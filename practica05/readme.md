@@ -385,7 +385,7 @@ class Auto
 ***Nota: Observar que utilizar la convención de prefijar a los campos privados con guión bajo, hace más difícil cometer este tipo de errores***
 
 <details><summary> <code> click para ver resolución 🖱 </code></summary><br>
-El error sucede en el método set de la Propiedad Marca, puesto que se esta igualando el valor value con la propiedad misma y lo que debería hacerse es asignar el valor value a la variable de clase. Para solucionar escribimos la Propiedad Marca así:
+El error sucede en el método set de la Propiedad Marca, puesto que se esta igualando el valor value con la propiedad misma, es decir, se están mezclando las cosas. Si usamos propiedades no necesitamos tener la variable de instancia </marca/>. Para solucionar escribimos la Propiedad Marca así:
 
 ~~~c#
 public string Marca {get;set;}
