@@ -1,10 +1,10 @@
 ﻿using practica05;
-/*internal class Program
+internal class Program
 
 {
     private static void Main(string[] args)
     {
-        //PUNTO1
+        /*//PUNTO1
         Cuenta c1 = new Cuenta();
         c1.Depositar(100).Depositar(50).Extraer(120).Extraer(50);
         Cuenta c2 = new Cuenta();
@@ -13,6 +13,7 @@
         c2.Extraer(1000).Extraer(1);
         Console.WriteLine("\nDETALLE");
         Cuenta.ImprimirDetalle();
+
 
         //PUNTO2
         new Cuenta();
@@ -32,12 +33,27 @@
         // se recuperó nuevamente la lista de cuentas
         Console.WriteLine(cuentas.Count);
         cuentas[0].Extraer(30);
-        //se extrajo 30 de la cuenta id: 1 que tenía 50 de saldo
+        //se extrajo 30 de la cuenta id: 1 que tenía 50 de saldo*/
+
+
+        //PUNTO7
+        Persona p = new Persona();
+        p[0] = "Maria Paez";
+        p[1] = 'F';
+        p[2] = 30326545;
+        p[3] = new DateTime(1980, 08, 12);
+
+        Console.WriteLine($"Nombre: {p[0]}");
+        Console.WriteLine("Sexo: {0}", p[1].Equals('M') ? "Masculino" : "Femenino");
+        Console.WriteLine($"DNI: {p[2]}");
+        Console.WriteLine($"Nacimiento: {p[3]:dd/MM/yyyy}");
+        Console.WriteLine($"Edad: {p[4]}");
+
     }
-}*/
+}
 
 //PUNTO5
-class A
+/*class A
 {
     char c;
     static string st;
@@ -53,5 +69,5 @@ class A
         c = 'B';
         new A().st = "otro string"; //[2]
     }
-}
+}*/
 

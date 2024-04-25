@@ -63,7 +63,7 @@ public class Matriz
         return aux;
     }
 
-    public double[] GetDiagonalPrincipal
+    /*public double[] GetDiagonalPrincipal
     {
         get
         {
@@ -88,7 +88,7 @@ public class Matriz
             }
             return diagSec;
         }
-    }
+    }*/
 
     public double[][] GetArregloDeArreglo()
     {

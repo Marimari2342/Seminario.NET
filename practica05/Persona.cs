@@ -1,11 +1,16 @@
-namespace ejercicios;
+namespace practica05;
 
-public class Persona
+class Persona
 {
     public string Nombre { get; set; }
     public char Sexo { get; set; }
     public int DNI { get; set; }
     public DateTime FechaNac { get; set; }
+
+    public Persona()
+    {
+        Nombre = "";
+    }
 
     public int Edad
     {
@@ -24,6 +29,7 @@ public class Persona
                     edad--;
                 }
             }
+            return edad;
         }
     }
 
@@ -46,4 +52,6 @@ public class Persona
         }
     }
 }
+
+
 
