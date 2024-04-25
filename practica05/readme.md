@@ -354,6 +354,9 @@ class ListaDePersonas
 
 * ***Un índice de tipo char que devuelve un List<string> con todos los nombres de las personas de la lista que comienzan con el carácter pasado como índice.***
 
+<details><summary> <code> click para ver resolución 🖱 </code></summary><br>
+</details>
+
 ## 🟣 Punto 9
 
 ***¿Cuál es el error en el siguiente programa?***
@@ -381,6 +384,9 @@ class Auto
 
 ***Nota: Observar que utilizar la convención de prefijar a los campos privados con guión bajo, hace más difícil cometer este tipo de errores***
 
+<details><summary> <code> click para ver resolución 🖱 </code></summary><br>
+</details>
+
 ## 🟣 Punto 10
 
 ***Identificar todos los miembros en la siguiente declaración de clase. Indicar si se trata de un constructor, método, campo, propiedad o indizador, si es estático o de instancia, y en caso que corresponda si es de sólo lectura, sólo escritura o lectura y escritura. En el caso de las propiedades indicar también si se trata de una propiedad auto-implementada. Nota: La clase compila perfectamente. Sólo prestar atención a la sintaxis, la semántica es irrelevante.***
@@ -407,6 +413,9 @@ class A
 }
 ~~~
 
+<details><summary> <code> click para ver resolución 🖱 </code></summary><br>
+</details>
+
 ## 🟣 Punto 11
 
 ***¿Qué diferencia hay entre estas dos declaraciones?***
@@ -415,6 +424,9 @@ class A
 public int X = 3; // a)
 public int X => 3; // b)
 ~~~
+
+<details><summary> <code> click para ver resolución 🖱 </code></summary><br>
+</details>
 
 <br>
 <br>
