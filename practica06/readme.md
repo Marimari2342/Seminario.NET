@@ -1,7 +1,7 @@
 # .NET - Practica 6
 
 
-## 🟣 Punto 1
+## ⚪ Punto 1
 
 ***Sin borrar ni modificar ninguna línea, completar la definición de las clases B, C y D para que el siguiente código produzca la salida indicada:***
 
@@ -42,7 +42,7 @@ SALIDA POR CONSOLA
 ![ImagenPantalla](/../main/recursos/imagen11.png)
 
 
-## 🟣 Punto 2
+## ⚪ Punto 2
 
 ***Aunque consultar en el código por el tipo de un objeto indica habitualmente un diseño ineficiente, por motivos didácticos vamos a utilizarlo. Completar el siguiente código, que utiliza las clases definidas en el ejercicio anterior, para que se produzca la salida indicada:***
 
@@ -64,7 +64,7 @@ SALIDA POR CONSOLA
 
 ![ImagenPantalla](/../main/recursos/imagen12.png)
 
-## 🟣 Punto 3
+## ⚪ Punto 3
 
 ***¿Por qué no funciona el siguiente código? ¿Cómo se puede solucionar fácilmente?***
 
@@ -83,7 +83,7 @@ class Taxi : Auto
 <details><summary> <code> Respuesta 🖱 </code></summary><br>
 </details>
 
-## 🟣 Punto 4
+## ⚪ Punto 4
 
 ***Respecto al siguiente programa: ¿Por qué no es necesario agregar :base en el constructor de Taxi? Eliminar el segundo constructor de la clase Auto y modificar la clase Taxi para el programa siga funcionando.***
 
@@ -106,7 +106,7 @@ class Taxi : Auto
 <details><summary> <code> Respuesta 🖱 </code></summary><br>
 </details>
 
-## 🟣 Punto 5
+## ⚪ Punto 5
 
 ***¿Qué líneas del siguiente código provocan error de compilación y por qué?***
 
@@ -129,7 +129,7 @@ public class Auto
 <details><summary> <code> Respuesta 🖱 </code></summary><br>
 </details>
 
-## 🟣 Punto 7
+## ⚪ Punto 7
 
 ***Ofrecer una implementación polimórfica para mejorar el siguiente programa:***
 
@@ -166,7 +166,7 @@ static class Imprimidor
 <details><summary> <code> Respuesta 🖱 </code></summary><br>
 </details>
 
-## 🟣 Punto 8
+## ⚪ Punto 8
 
 ***Crear un programa para gestionar empleados en una empresa. Los empleados deben tener las propiedades públicas de sólo lectura Nombre, DNI, FechaDeIngreso, SalarioBase y Salario. Los valores de estas propiedades (a excepción de Salario que es una propiedad calculada) deben establecerse por medio de un constructor adecuado.***
 
