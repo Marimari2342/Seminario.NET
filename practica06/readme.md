@@ -64,7 +64,44 @@ SALIDA POR CONSOLA
 
 ![ImagenPantalla](/../main/recursos/imagen12.png)
 
+## 🟣 Punto 3
 
+***¿Por qué no funciona el siguiente código? ¿Cómo se puede solucionar fácilmente?***
+
+~~~c#
+class Auto
+{
+    double velocidad;
+    public virtual void Acelerar() => Console.WriteLine("Velocidad = {0}", velocidad += 10);
+}
+class Taxi : Auto
+{
+    public override void Acelerar() => Console.WriteLine("Velocidad = {0}", velocidad += 5);
+}
+~~~
+
+<details><summary> <code> Respuesta 🖱 </code></summary><br>
+</details>
+
+## 🟣 Punto 4
+
+***Respecto al siguiente programa: ¿Por qué no es necesario agregar :base en el constructor de Taxi? Eliminar el segundo constructor de la clase Auto y modificar la clase Taxi para el programa siga funcionando.***
+
+~~~c#
+Taxi t = new Taxi(3);
+Console.WriteLine($"Un {t.Marca} con {t.Pasajeros} pasajeros");
+class Auto
+{
+    public string Marca { get; private set; } = "Ford";
+    public Auto(string marca) => this.Marca = marca;
+    public Auto() { }
+}
+class Taxi : Auto
+{
+    public int Pasajeros { get; private set; }
+    public Taxi(int pasajeros) => this.Pasajeros = pasajeros;
+}
+~~~
 
 <br>
 <br>
