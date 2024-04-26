@@ -68,9 +68,9 @@ foreach (A a in vector)
 
 * ***Utilizando el operador is***
 
-Como C hereda de B y D hereda de C, tengo que preguntar en el if que "a" sea B y que no sea C y D, pues al ser heredados los tipo C y D también son de tipo B.
-
 <details><summary> <code> Respuesta 🖱 </code></summary><br>
+
+Como C hereda de B y D hereda de C, tengo que preguntar en el if que "a" sea B y que no sea C y D, pues al ser heredados los tipo C y D también son de tipo B.
 
 ~~~c#
 A[] vector = [ new C(1),new D(2),new B(3),new D(4),new B(5)];
