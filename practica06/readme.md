@@ -38,9 +38,13 @@ a.Imprimir();
 ~~~
 
 SALIDA POR CONSOLA
+
 A_3
+
 B_5 --> A_5
+
 C_15 --> B_15 --> A_15
+
 D_41 --> C_41 --> B_41 --> A_41
 
 
@@ -66,3 +70,11 @@ SALIDA POR CONSOLA
 B_3 --> A_3
 B_5 --> A_5
 
+
+
+<br>
+<br>
+<br>
+
+
+<p><img align="center" src="https://github.com/Marimari2342/Marimari2342/blob/main/firmagith.png" alt="marigit"/></p>
