@@ -68,7 +68,27 @@ foreach (A a in vector)
 
 * ***Utilizando el operador is***
 
+Como C hereda de B y D hereda de C, tengo que preguntar en el if que "a" sea B y que no sea C y D, pues al ser heredados los tipo C y D también son de tipo B.
+
+<details><summary> <code> Respuesta 🖱 </code></summary><br>
+
+~~~c#
+A[] vector = [ new C(1),new D(2),new B(3),new D(4),new B(5)];
+foreach (A a in vector)
+{
+    if (a is B && a is not C && a is not D)
+        {
+            a.Imprimir();
+        }
+}
+~~~
+
+</details>
+
 * ***Utilizando el método GetType() y el operador typeof() (investigar sobre éste último en la documentación en línea de .net)***
+
+<details><summary> <code> Respuesta 🖱 </code></summary><br>
+</details>
 
 SALIDA POR CONSOLA
 

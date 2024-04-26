@@ -38,10 +38,19 @@ internal class Program
     }
     private static void Main(string[] args)
     {
-        A[] vector = [new A(3), new B(5), new C(15), new D(41)];
+        /*A[] vector = [new A(3), new B(5), new C(15), new D(41)];
         foreach (A a in vector)
         {
             a.Imprimir();
+        }*/
+        Console.WriteLine("Punto2");
+        A[] vector = [new C(1), new D(2), new B(3), new D(4), new B(5)];
+        foreach (A a in vector)
+        {
+            if (a is B && a is not C && a is not D)
+            {
+                a.Imprimir();
+            }
         }
     }
 }
