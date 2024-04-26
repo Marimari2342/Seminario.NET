@@ -42,3 +42,27 @@ A_3
 B_5 --> A_5
 C_15 --> B_15 --> A_15
 D_41 --> C_41 --> B_41 --> A_41
+
+
+## 🟣 Punto 2
+
+***Aunque consultar en el código por el tipo de un objeto indica habitualmente un diseño ineficiente, por motivos didácticos vamos a utilizarlo. Completar el siguiente código, que utiliza las clases definidas en el ejercicio anterior, para que se produzca la salida indicada:***
+
+~~~c#
+A[] vector = [ new C(1),new D(2),new B(3),new D(4),new B(5)];
+foreach (A a in vector)
+{
+    ...
+}
+~~~
+
+***Es decir, se deben imprimir sólo los objetos cuyo tipo exacto sea B***
+
+* ***Utilizando el operador is***
+
+* ***Utilizando el método GetType() y el operador typeof() (investigar sobre éste último en la documentación en línea de .net)***
+
+SALIDA POR CONSOLA
+B_3 --> A_3
+B_5 --> A_5
+
