@@ -36,6 +36,20 @@ internal class Program
             base.Imprimir();
         }
     }
+
+    //PUNTO4
+    class Auto
+    {
+        public string Marca { get; private set; } = "Ford";
+        public Auto(string marca) => this.Marca = marca;
+        public Auto() { }
+    }
+    class Taxi : Auto
+    {
+        public int Pasajeros { get; private set; }
+        public Taxi(int pasajeros) : base("Chevrolet") => this.Pasajeros = pasajeros;
+    }
+
     private static void Main(string[] args)
     {
         /*A[] vector = [new A(3), new B(5), new C(15), new D(41)];
@@ -54,7 +68,7 @@ internal class Program
             }
         }*/
 
-        Console.WriteLine("Punto2b");
+        /*Console.WriteLine("Punto2b");
         A[] vector = [new C(1), new D(2), new B(3), new D(4), new B(5)];
         foreach (A a in vector)
         {
@@ -63,7 +77,12 @@ internal class Program
             {
                 a.Imprimir();
             }
-        }
+        }*/
+
+        Console.WriteLine("Punto4");
+        Taxi t = new Taxi(3);
+        Console.WriteLine($"Un {t.Marca} con {t.Pasajeros} pasajeros");
+
     }
 }
 
