@@ -116,7 +116,7 @@ SALIDA POR CONSOLA
 ~~~c#
 class Auto
 {
-    double velocidad;
+    protected double velocidad; // --> Agrego la palabra protected y soluciono
     public virtual void Acelerar() => Console.WriteLine("Velocidad = {0}", velocidad += 10);
 }
 class Taxi : Auto
@@ -126,6 +126,9 @@ class Taxi : Auto
 ~~~
 
 <details><summary> <code> Respuesta 🖱 </code></summary><br>
+
+El problema es que la variable velocidad es privada por defecto (pués no está indicado el tipo de acceso), y un miembro privado sólo es visible en la clase donde se define. Aunque en este caso se hereda, no puede accederse desde la clase derivada. Para solucionarlo necesitamos extender el acceso de la variable a la clase derivada usando la palabra **protected** para marcarlo como protegido (aunque no es una buena práctica acceder a los campos definidos en una superclase).
+
 </details>
 
 ## ⚪ Punto 4
