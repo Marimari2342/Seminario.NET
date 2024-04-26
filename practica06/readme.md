@@ -39,9 +39,8 @@ a.Imprimir();
 
 SALIDA POR CONSOLA
 
-A_3
-
-B_5 --> A_5
+<p>A_3</p>
+<p>B_5 --> A_5</p>
 
 C_15 --> B_15 --> A_15
 
