@@ -38,6 +38,7 @@ a.Imprimir();
 ~~~
 
 SALIDA POR CONSOLA
+
 ![ImagenPantalla](/../main/recursos/imagen11.png)
 
 
@@ -60,6 +61,7 @@ foreach (A a in vector)
 * ***Utilizando el método GetType() y el operador typeof() (investigar sobre éste último en la documentación en línea de .net)***
 
 SALIDA POR CONSOLA
+
 ![ImagenPantalla](/../main/recursos/imagen12.png)
 
 
