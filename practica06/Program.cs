@@ -43,11 +43,23 @@ internal class Program
         {
             a.Imprimir();
         }*/
-        Console.WriteLine("Punto2");
+
+        /*Console.WriteLine("Punto2");
         A[] vector = [new C(1), new D(2), new B(3), new D(4), new B(5)];
         foreach (A a in vector)
         {
             if (a is B && a is not C && a is not D)
+            {
+                a.Imprimir();
+            }
+        }*/
+
+        Console.WriteLine("Punto2b");
+        A[] vector = [new C(1), new D(2), new B(3), new D(4), new B(5)];
+        foreach (A a in vector)
+        {
+            Type tipo = a.GetType();
+            if (tipo.Equals(typeof(B)))
             {
                 a.Imprimir();
             }

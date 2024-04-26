@@ -88,6 +88,21 @@ foreach (A a in vector)
 * ***Utilizando el método GetType() y el operador typeof() (investigar sobre éste último en la documentación en línea de .net)***
 
 <details><summary> <code> Respuesta 🖱 </code></summary><br>
+
+En este caso me guardo el tipo de "a" en la variable de tipo Type y luego comparo con el tipo B (que lo consigo usando typeof(B)).
+
+~~~c#
+A[] vector = [ new C(1),new D(2),new B(3),new D(4),new B(5)];
+foreach (A a in vector)
+{
+    Type tipo = a.GetType();
+    if (tipo.Equals(typeof(B)))
+    {
+        a.Imprimir();
+    }
+}
+~~~
+
 </details>
 
 SALIDA POR CONSOLA
