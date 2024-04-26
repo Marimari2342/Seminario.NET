@@ -153,9 +153,9 @@ class Taxi : Auto
 
 <details><summary> <code> Respuesta 🖱 </code></summary><br>
 
-La palabra clave <code>base</code> se utiliza para invocar a un método u otro miembro de la clase base, o en el encabezado de un constructor para indicar el constructor de la clase base que se debe invocar. En el caso del ejemplo no es necesario agregar <code>:base</code> en el constructor de Taxi puesto que se toma por defector el constructor de la clase Auto.  
+La palabra clave <code>base</code> se utiliza para invocar a un método u otro miembro de la clase base, o en el encabezado de un constructor para indicar el constructor de la clase base que se debe invocar. En el caso del ejemplo no es necesario agregar <code>:base</code> en el constructor de Taxi puesto que se toma por defecto el constructor de la clase Auto.  
 
-Si eliminamos el segundo constructor de la clase Auto debemos modificar la clase Taxi de la siguiente manera para que el programa siga funcionando:
+Si eliminamos el segundo constructor de la clase Auto, debemos modificar la clase Taxi de la siguiente manera para que el programa siga funcionando:
 
 ~~~c#
 Taxi t = new Taxi(3);
