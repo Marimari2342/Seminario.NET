@@ -103,6 +103,102 @@ class Taxi : Auto
 }
 ~~~
 
+<details><summary> <code> Respuesta 🖱 </code></summary><br>
+</details>
+
+## 🟣 Punto 5
+
+***¿Qué líneas del siguiente código provocan error de compilación y por qué?***
+
+~~~c#
+class Persona
+{
+    public string Nombre { get; set; }
+}
+public class Auto
+{
+    private Persona _dueño1, _dueño2;
+    public Persona GetPrimerDueño() => _dueño1;
+    protected Persona SegundoDueño
+    {
+        set => _dueño2 = value;
+    }
+}
+~~~
+
+<details><summary> <code> Respuesta 🖱 </code></summary><br>
+</details>
+
+## 🟣 Punto 7
+
+***Ofrecer una implementación polimórfica para mejorar el siguiente programa:***
+
+~~~c#
+Imprimidor.Imprimir(new A(), new B(), new C(), new D());
+
+class A {
+    public void ImprimirA() => Console.WriteLine("Soy una instancia A");
+}
+class B {
+    public void ImprimirB() => Console.WriteLine("Soy una instancia B");
+}
+class C {
+    public void ImprimirC() => Console.WriteLine("Soy una instancia C");
+}
+class D {
+    public void ImprimirD() => Console.WriteLine("Soy una instancia D");
+}
+static class Imprimidor
+{
+    public static void Imprimir(params object[] vector)
+    {
+        foreach (object o in vector)
+        {
+            if (o is A a) { a.ImprimirA(); }
+            else if (o is B b) { b.ImprimirB(); }
+            else if (o is C c) { c.ImprimirC(); }
+            else if (o is D d) { d.ImprimirD(); }
+        }
+    }
+}
+~~~
+
+<details><summary> <code> Respuesta 🖱 </code></summary><br>
+</details>
+
+## 🟣 Punto 8
+
+***Crear un programa para gestionar empleados en una empresa. Los empleados deben tener las propiedades públicas de sólo lectura Nombre, DNI, FechaDeIngreso, SalarioBase y Salario. Los valores de estas propiedades (a excepción de Salario que es una propiedad calculada) deben establecerse por medio de un constructor adecuado.***
+
+***Existen dos tipos de empleados: Administrativo y Vendedor. No se podrán crear objetos de la clase padre empleado, pero sí de sus clases hijas (Administrativo y Vendedor). Aparte de las propiedades de solo lectura mencionadas, el administrativo tiene otra propiedad pública de lectura/escritura llamada Premio y el vendedor tiene otra propiedad pública de lectura/escritura llamada Comision.***
+
+***La propiedad de solo lectura Salario, se calcula como el salario base más la comisión o el premio según corresponda. Las clases tendrán además un método público llamado AumentarSalario() que tendrá una implementación distinta en cada clase. En el caso del administrativo se incrementará el salario base en un 1% por cada año de antigüedad que posea en la empresa, en el caso del vendedor se incrementará el salario base en un 5% si su antigüedad es inferior a 10 años o en un 10% en caso contrario.***
+
+***El siguiente código (ejecutado el día 9/4/2022) debería mostrar en la consola el resultado indicado:***
+
+~~~c#
+Empleado[] empleados = new Empleado[] {
+    new Administrativo("Ana", 20000000, DateTime.Parse("26/4/2018"), 10000) {Premio=1000},
+    new Vendedor("Diego", 30000000, DateTime.Parse("2/4/2010"), 10000) {Comision=2000},
+    new Vendedor("Luis", 33333333, DateTime.Parse("30/12/2011"), 10000) {Comision=2000}
+};
+foreach (Empleado e in empleados)
+{
+    Console.WriteLine(e);
+    e.AumentarSalario();
+    Console.WriteLine(e);
+}
+~~~
+
+SALIDA POR CONSOLA
+
+![ImagenPantalla](/../main/recursos/imagen13.png)
+
+***Recomendaciones: Observar que el método AumentarSalario() y la propiedad de solo lectura Salario en la clase Empleado pueden declararse como abstractos. Intentar no usar campos sino propiedades auto-implementadas todas las veces que sea posible. Además sería deseable que la propiedad SalarioBase definida en Empleado sea pública para la lectura y protegida para la escritura, para que pueda establecerse desde las subclases Administrativo y Vendedor.***
+
+<details><summary> <code> Respuesta 🖱 </code></summary><br>
+</details>
+
 <br>
 <br>
 <br>
