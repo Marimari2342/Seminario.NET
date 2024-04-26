@@ -38,7 +38,7 @@ internal class Program
     }
 
     //PUNTO4
-    class Auto
+    /*class Auto
     {
         public string Marca { get; private set; } = "Ford";
         public Auto(string marca) => this.Marca = marca;
@@ -48,6 +48,20 @@ internal class Program
     {
         public int Pasajeros { get; private set; }
         public Taxi(int pasajeros) : base("Chevrolet") => this.Pasajeros = pasajeros;
+    }*/
+
+    class Persona
+    {
+        public string Nombre { get; set; }
+    }
+    public class Auto
+    {
+        private Persona _dueño1, _dueño2;
+        public Persona GetPrimerDueño() => _dueño1;
+        protected Persona SegundoDueño
+        {
+            set => _dueño2 = value;
+        }
     }
 
     private static void Main(string[] args)
@@ -79,9 +93,9 @@ internal class Program
             }
         }*/
 
-        Console.WriteLine("Punto4");
+        /*Console.WriteLine("Punto4");
         Taxi t = new Taxi(3);
-        Console.WriteLine($"Un {t.Marca} con {t.Pasajeros} pasajeros");
+        Console.WriteLine($"Un {t.Marca} con {t.Pasajeros} pasajeros");*/
 
     }
 }

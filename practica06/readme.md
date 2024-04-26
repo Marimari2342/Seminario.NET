@@ -196,6 +196,11 @@ public class Auto
 ~~~
 
 <details><summary> <code> Respuesta 🖱 </code></summary><br>
+
+<code>public Persona GetPrimerDueño() => _dueño1;</code> --> Incoherencia de accesibilidad: el tipo de valor devuelto 'Program.Persona' es menos accesible que el método 'Program.Auto.GetPrimerDueño()'.
+
+<code>protected Persona SegundoDueño</code> --> Incoherencia de accesibilidad: el tipo de propiedad 'Program.Persona' es menos accesible que la propiedad 'Program.Auto.SegundoDueño'
+
 </details>
 
 ## ⚪ Punto 7
