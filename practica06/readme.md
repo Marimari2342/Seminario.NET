@@ -38,13 +38,7 @@ a.Imprimir();
 ~~~
 
 SALIDA POR CONSOLA
-
-<p>A_3</p>
-<p>B_5 --> A_5</p>
-
-C_15 --> B_15 --> A_15
-
-D_41 --> C_41 --> B_41 --> A_41
+![ImagenPantalla](/../main/recursos/imagen11.png)
 
 
 ## 🟣 Punto 2
@@ -66,8 +60,7 @@ foreach (A a in vector)
 * ***Utilizando el método GetType() y el operador typeof() (investigar sobre éste último en la documentación en línea de .net)***
 
 SALIDA POR CONSOLA
-B_3 --> A_3
-B_5 --> A_5
+![ImagenPantalla](/../main/recursos/imagen12.png)
 
 
 
