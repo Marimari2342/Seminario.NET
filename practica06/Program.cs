@@ -1,5 +1,5 @@
 ﻿
-
+/*
 internal class Program
 {
     //PUNTO1
@@ -65,7 +65,7 @@ internal class Program
     }*/
 
     
-
+/*
     abstract class ClaseMadre
     {
         public abstract void Imprimir();
@@ -129,8 +129,8 @@ internal class Program
         /*Console.WriteLine("Punto4");
         Taxi t = new Taxi(3);
         Console.WriteLine($"Un {t.Marca} con {t.Pasajeros} pasajeros");*/
-
+/*
         Imprimidor.Imprimir(new A(), new B(), new C(), new D());
     }
-}
+}*/
 

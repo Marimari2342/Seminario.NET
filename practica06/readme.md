@@ -304,6 +304,17 @@ SALIDA POR CONSOLA
 ***Recomendaciones: Observar que el método AumentarSalario() y la propiedad de solo lectura Salario en la clase Empleado pueden declararse como abstractos. Intentar no usar campos sino propiedades auto-implementadas todas las veces que sea posible. Además sería deseable que la propiedad SalarioBase definida en Empleado sea pública para la lectura y protegida para la escritura, para que pueda establecerse desde las subclases Administrativo y Vendedor.***
 
 <details><summary> <code> Respuesta 🖱 </code></summary><br>
+
+~~~c#
+
+~~~
+
+~~~c#
+~~~
+
+~~~c#
+~~~
+
 </details>
 
 <br>

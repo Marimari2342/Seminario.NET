@@ -4,8 +4,8 @@ internal class Program
     {
         //Propiedades
         public string Nombre { get; protected set; }
-        public string DNI { get; protected set; }
-        public DateType FechaDeIngreso { get; protected set; }
+        public int DNI { get; protected set; }
+        public DateTime FechaDeIngreso { get; protected set; }
         public double SalarioBase { get; protected set; }
         public abstract double Salario { get; }
         public int Antiguedad
@@ -30,42 +30,66 @@ internal class Program
         }
 
         //Constructores
-        public Empleado(string nombre, string dni, DateType ingreso, double base )
+        public Empleado(string nombre, int dni, DateTime ingreso, double salBase)
         {
             this.Nombre = nombre;
             this.DNI = dni;
             this.FechaDeIngreso = ingreso;
-            this.SalarioBase = base;
+            this.SalarioBase = salBase;
         }
 
         //Metodos
         public abstract void AumentarSalario();
+        public override string ToString()
+        {
+            return $"Nombre: {Nombre}, DNI: {DNI} Antiguedad: {Antiguedad} \nSalario Base: {SalarioBase}, ";
+        }
     }
 
     class Administrativo : Empleado
     {
+        //Propiedades
         public double Premio { get; set; }
         public override double Salario { get { return Premio + SalarioBase; } }
+
+        //Constructores
+        public Administrativo(string nombre, int dni, DateTime ingreso, double salBase) : base(nombre, dni, ingreso, salBase) { }
+
+        //Metodos
         public override void AumentarSalario()
         {
-            this.Salario += this.Salario * this.Antiguedad / 100;
+            this.SalarioBase += this.SalarioBase * this.Antiguedad / 100;
+        }
+        public override string ToString()
+        {
+            return "Administrativo" + base.ToString() + $"Salario: {Salario} \n-------------";
         }
     }
 
     class Vendedor : Empleado
     {
+        //Propiedades
         public double Comision { get; set; }
         public override double Salario { get { return Comision + SalarioBase; } }
+
+        //Constructores
+        public Vendedor(string nombre, int dni, DateTime ingreso, double salBase) : base(nombre, dni, ingreso, salBase) { }
+
+        //Metodos
         public override void AumentarSalario()
         {
             if (this.Antiguedad < 10)
             {
-                this.Salario += this.Salario * 5 * this.Antiguedad / 100;
+                this.SalarioBase += this.SalarioBase * 5 * this.Antiguedad / 100;
             }
             else
             {
-                this.Salario += this.Salario * this.Antiguedad / 10;
+                this.SalarioBase += this.SalarioBase * this.Antiguedad / 10;
             }
+        }
+        public override string ToString()
+        {
+            return "Vendedor" + base.ToString() + $"Salario: {Salario} \n-------------";
         }
     }
 
