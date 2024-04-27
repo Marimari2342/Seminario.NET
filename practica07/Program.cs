@@ -1,2 +1,33 @@
-﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!");
+﻿//Interfaces
+/*alquilables   vendibles   lavables    reciclables     atendibles*/
+interface IAlquilables
+{
+    void esAlquilada();
+    void esDevuelta();
+}
+
+interface IVendibles
+{
+    void esVendida();
+}
+
+interface ILavables
+{
+    void esLavada();
+    void esSecada();
+}
+
+interface IReciclables
+{
+    void esReciclada();
+}
+
+interface IAtendibles
+{
+    void esAtendida();
+}
+
+//Clases
+
+//Main
+
