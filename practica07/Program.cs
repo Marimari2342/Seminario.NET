@@ -1,41 +1,41 @@
 ﻿//Interfaces
 /*alquilables   vendibles   lavables    reciclables     atendibles*/
-interface IAlquilables
+interface IAlquilable
 {
     void SeAlquilaA(Persona p);
-    void SeDevuelveA(Persona p);
+    void SeDevuelvePor(Persona p);
 }
 
-interface IVendibles
+interface IVendible
 {
     void SeVendeA(Persona p);
 }
 
-interface ILavables
+interface ILavable
 {
     void SeLava();
     void SeSeca();
 }
 
-interface IReciclables
+interface IReciclable
 {
     void SeRecicla();
 }
 
-interface IAtendibles
+interface IAtendible
 {
     void SeAtiende();
 }
 
 //Clases
 /*Libros    Peliculas   Autos   Perros  Personas*/
-class Libro : IAlquilables, IReciclables
+class Libro : IAlquilable, IReciclable
 {
     public void SeAlquilaA(Persona p)
     {
         Console.WriteLine("Alquilando libro a persona");
     }
-    public void SeDevuelveA(Persona p)
+    public void SeDevuelvePor(Persona p)
     {
         Console.WriteLine("Libro devuelto por persona");
     }
@@ -45,19 +45,19 @@ class Libro : IAlquilables, IReciclables
     }
 }
 
-class Pelicula : IAlquilables
+class Pelicula : IAlquilable
 {
     public void SeAlquilaA(Persona p)
     {
         Console.WriteLine("Alquilando película a persona");
     }
-    public void SeDevuelveA(Persona p)
+    public void SeDevuelvePor(Persona p)
     {
         Console.WriteLine("Película devuelta por persona");
     }
 }
 
-class Auto : IVendibles, ILavables, IReciclables
+class Auto : IVendible, ILavable, IReciclable
 {
     public void SeVendeA(Persona p)
     {
@@ -66,7 +66,7 @@ class Auto : IVendibles, ILavables, IReciclables
     public void SeLava()
     {
         Console.WriteLine("Lavando auto");
-    } 
+    }
     public void SeSeca()
     {
         Console.WriteLine("Secando Auto");
@@ -77,7 +77,7 @@ class Auto : IVendibles, ILavables, IReciclables
     }
 }
 
-class Perro : IVendibles, IAtendibles
+class Perro : IVendible, IAtendible
 {
     public void SeVendeA(Persona p)
     {
@@ -89,12 +89,23 @@ class Perro : IVendibles, IAtendibles
     }
 }
 
-class Persona : IAtendibles
+class Persona : IAtendible
 {
     public void SeAtiende()
     {
         Console.WriteLine("Atendiendo persona");
     }
 }
-//Main
+
+//Procesador
+static class Procesador
+{
+    public static void Alquilar(IAlquilable x, Persona p) => x.SeAlquilaA(p);
+    public static void Devolver(IAlquilable x, Persona p) => x.SeDevuelvePor(p);
+    public static void Vender(IVendible x, Persona p) => x.SeVendeA(p);
+    public static void Lavar(ILavable x) => x.SeLava();
+    public static void Secar(ILavable x) => x.SeSeca();
+
+
+}
 
