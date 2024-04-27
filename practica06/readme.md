@@ -412,6 +412,10 @@ class Vendedor : Empleado
 
 </details>
 
+>[!NOTE]
+>
+> Punto 8 --> Contestado en [*Empleado.cs*](/practica06/Empleado.cs).
+
 <br>
 <br>
 <br>
