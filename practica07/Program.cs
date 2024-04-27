@@ -2,44 +2,44 @@
 /*alquilables   vendibles   lavables    reciclables     atendibles*/
 interface IAlquilables
 {
-    void esAlquilada();
-    void esDevuelta();
+    void SeAlquilaA(Persona p);
+    void SeDevuelveA(Persona p);
 }
 
 interface IVendibles
 {
-    void esVendida();
+    void SeVendeA(Persona p);
 }
 
 interface ILavables
 {
-    void esLavada();
-    void esSecada();
+    void SeLava();
+    void SeSeca();
 }
 
 interface IReciclables
 {
-    void esReciclada();
+    void SeRecicla();
 }
 
 interface IAtendibles
 {
-    void esAtendida();
+    void SeAtiende();
 }
 
 //Clases
 /*Libros    Peliculas   Autos   Perros  Personas*/
 class Libro : IAlquilables, IReciclables
 {
-    public void esAlquilada()
+    public void SeAlquilaA(Persona p)
     {
         Console.WriteLine("Alquilando libro a persona");
     }
-    public void esDevuelta()
+    public void SeDevuelveA(Persona p)
     {
         Console.WriteLine("Libro devuelto por persona");
     }
-    public void esReciclada()
+    public void SeRecicla()
     {
         Console.WriteLine("Reciclando libro");
     }
@@ -47,13 +47,53 @@ class Libro : IAlquilables, IReciclables
 
 class Pelicula : IAlquilables
 {
-    public void esAlquilada()
+    public void SeAlquilaA(Persona p)
     {
         Console.WriteLine("Alquilando película a persona");
     }
-    public void esDevuelta()
+    public void SeDevuelveA(Persona p)
     {
         Console.WriteLine("Película devuelta por persona");
+    }
+}
+
+class Auto : IVendibles, ILavables, IReciclables
+{
+    public void SeVendeA(Persona p)
+    {
+        Console.WriteLine("Vendiendo auto a persona");
+    }
+    public void SeLava()
+    {
+        Console.WriteLine("Lavando auto");
+    } 
+    public void SeSeca()
+    {
+        Console.WriteLine("Secando Auto");
+    }
+    public void SeRecicla()
+    {
+        Console.WriteLine("Reciclando auto");
+    }
+}
+
+class Perro : IVendibles, IAtendibles
+{
+    public void SeVendeA(Persona p)
+    {
+        Console.WriteLine("Vendiendo perro a persona");
+    }
+    public void SeAtiende()
+    {
+        Console.WriteLine("Atendiendo perro");
+    }
+}
+
+class Persona : IAtendibles
+{
+    public void SeAtiende()
+    {
+        Console.WriteLine("Atendiendo persona");
     }
 }
 //Main
