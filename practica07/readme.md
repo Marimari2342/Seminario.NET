@@ -215,7 +215,45 @@ SALIDA POR CONSOLA
 ![ImagenPantalla](/../main/recursos/imagen15.png)
 
 <details><summary> <code> Respuesta 🖱 </code></summary><br>
+
+Para incorporar la posibilidad de lavar a los perros agregamos en la clase Perro:
+
+~~~c#
+public void SeLava()
+{
+    Console.WriteLine("Lavando perro");
+}
+public void SeSeca()
+{
+    Console.WriteLine("Secando perro");
+}
+~~~
+
+Para incorporar una clase derivada de Película llamada PeliculaClasica, debemos agregar el código de abajo y cambiar los métodos en la clase Pelicula poniendo virtual, para que puedan ser modificados por la clase hija.
+
+~~~c#
+class PeliculaClasica : Pelicula, IVendible
+{
+    public override void SeAlquilaA(Persona p)
+    {
+        Console.WriteLine("Alquilando película clásica a persona");
+    }
+    public override void SeDevuelvePor(Persona p)
+    {
+        Console.WriteLine("Película clásica devuelta por persona");
+    }
+    public void SeVendeA(Persona p)
+    {
+        Console.WriteLine("Vendiendo película clásica a persona");
+    }
+}
+~~~
+
 </details>
+
+>[!NOTE]
+>
+> Punto 2 --> Completo (y probado) en [*Program.cs*](/practica07/Program.cs) (junto al Punto 1).
 
 <br>
 <br>
