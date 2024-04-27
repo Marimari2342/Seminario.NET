@@ -178,7 +178,7 @@ static class Procesador
 
 >[!NOTE]
 >
-> Punto 1 --> Contestado en [*Program.cs*](/practica07/Program.cs).
+> Punto 1 --> Completo (y probado) en [*Program.cs*](/practica07/Program.cs).
 
 ## 🟡 Punto 2
 
