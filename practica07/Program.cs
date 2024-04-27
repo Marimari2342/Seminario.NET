@@ -49,15 +49,34 @@
 
     class Pelicula : IAlquilable
     {
-        public void SeAlquilaA(Persona p)
+        //PUNTO2 --> Agrego "virtual" así puedo modificar el método desde la clase que hereda
+        public virtual void SeAlquilaA(Persona p) 
         {
             Console.WriteLine("Alquilando película a persona");
         }
-        public void SeDevuelvePor(Persona p)
+        public virtual void SeDevuelvePor(Persona p)
         {
             Console.WriteLine("Película devuelta por persona");
         }
     }
+
+    //PUNTO2 --> PeliculaClásica derivada de Pelicula
+    class PeliculaClasica : Pelicula, IVendible
+    {
+        public override void SeAlquilaA(Persona p)
+        {
+            Console.WriteLine("Alquilando película clásica a persona");
+        }
+        public override void SeDevuelvePor(Persona p)
+        {
+            Console.WriteLine("Película clásica devuelta por persona");
+        }
+        public void SeVendeA(Persona p)
+        {
+            Console.WriteLine("Vendiendo película clásica a persona");
+        }
+    }
+    //
 
     class Auto : IVendible, ILavable, IReciclable
     {
@@ -79,7 +98,7 @@
         }
     }
 
-    class Perro : IVendible, IAtendible
+    class Perro : IVendible, IAtendible, ILavable
     {
         public void SeVendeA(Persona p)
         {
@@ -89,6 +108,16 @@
         {
             Console.WriteLine("Atendiendo perro");
         }
+        //PUNTO2 --> Incorporar la posibilidad de lavar a los perros
+        public void SeLava()
+        {
+            Console.WriteLine("Lavando perro");
+        }
+        public void SeSeca()
+        {
+            Console.WriteLine("Secando perro");
+        }
+        //
     }
 
     class Persona : IAtendible
@@ -131,5 +160,10 @@
         Procesador.Secar(auto);
         Procesador.Vender(auto, persona);
         Procesador.Vender(perro, persona);
+        //PUNTO2
+        PeliculaClasica peliculaClasica = new PeliculaClasica();
+        Procesador.Alquilar(peliculaClasica, persona);
+        Procesador.Devolver(peliculaClasica, persona);
+        Procesador.Vender(peliculaClasica, persona);
     }
 }
