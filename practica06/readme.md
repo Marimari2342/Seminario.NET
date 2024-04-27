@@ -199,7 +199,7 @@ public class Auto
 
 <code>public Persona GetPrimerDueño() => _dueño1;</code> --> Incoherencia de accesibilidad: el tipo de valor devuelto 'Program.Persona' es menos accesible que el método 'Program.Auto.GetPrimerDueño()'.
 
-<code>protected Persona SegundoDueño</code> --> Incoherencia de accesibilidad: el tipo de propiedad 'Program.Persona' es menos accesible que la propiedad 'Program.Auto.SegundoDueño'
+<code>protected Persona SegundoDueño</code> --> Incoherencia de accesibilidad: el tipo de propiedad 'Program.Persona' es menos accesible que la propiedad 'Program.Auto.SegundoDueño'.
 
 </details>
 
@@ -209,7 +209,6 @@ public class Auto
 
 ~~~c#
 Imprimidor.Imprimir(new A(), new B(), new C(), new D());
-
 class A {
     public void ImprimirA() => Console.WriteLine("Soy una instancia A");
 }
@@ -238,6 +237,40 @@ static class Imprimidor
 ~~~
 
 <details><summary> <code> Respuesta 🖱 </code></summary><br>
+
+Lo que hacemos es crear una ClaseMadre que sea abstracta y luego todas las otras clases heredan el método Imprimir de la ClaseMadre (usar override para poder sobreescribir el método base). Luego el código dentro del foreach lo cambiamos sacando todos los if, y cada objeto se va a imprimir de la manera correcta, dependiendo el subtipo específico.
+
+~~~c#
+Imprimidor.Imprimir(new A(), new B(), new C(), new D());
+
+abstract class ClaseMadre
+{
+    public abstract void Imprimir();
+}
+class A : ClaseMadre {
+    public override void Imprimir() => Console.WriteLine("Soy una instancia A");
+}
+class B : ClaseMadre {
+    public override void Imprimir() => Console.WriteLine("Soy una instancia B");
+}
+class C : ClaseMadre {
+    public override void Imprimir() => Console.WriteLine("Soy una instancia C");
+}
+class D : ClaseMadre {
+    public override void Imprimir() => Console.WriteLine("Soy una instancia D");
+}
+static class Imprimidor
+{
+    public static void Imprimir(params object[] vector)
+    {
+        foreach (ClaseMadre aux in vector)
+        {
+            aux.Imprimir();
+        }
+    }
+}
+~~~
+
 </details>
 
 ## ⚪ Punto 8

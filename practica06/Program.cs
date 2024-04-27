@@ -3,7 +3,7 @@
 internal class Program
 {
     //PUNTO1
-    class A
+    /*class A
     {
         protected int _id; //variable _id
         public A(int id) => _id = id; //constructor que recibe valor id y lo guarda en _id
@@ -35,7 +35,7 @@ internal class Program
             Console.Write($"D_{_id} --> ");
             base.Imprimir();
         }
-    }
+    }*/
 
     //PUNTO4
     /*class Auto
@@ -50,7 +50,7 @@ internal class Program
         public Taxi(int pasajeros) : base("Chevrolet") => this.Pasajeros = pasajeros;
     }*/
 
-    class Persona
+    /*class Persona
     {
         public string Nombre { get; set; }
     }
@@ -61,6 +61,39 @@ internal class Program
         protected Persona SegundoDueño
         {
             set => _dueño2 = value;
+        }
+    }*/
+
+    
+
+    abstract class ClaseMadre
+    {
+        public abstract void Imprimir();
+    }
+    class A : ClaseMadre
+    {
+        public override void Imprimir() => Console.WriteLine("Soy una instancia A");
+    }
+    class B : ClaseMadre
+    {
+        public override void Imprimir() => Console.WriteLine("Soy una instancia B");
+    }
+    class C : ClaseMadre
+    {
+        public override void Imprimir() => Console.WriteLine("Soy una instancia C");
+    }
+    class D : ClaseMadre
+    {
+        public override void Imprimir() => Console.WriteLine("Soy una instancia D");
+    }
+    static class Imprimidor
+    {
+        public static void Imprimir(params object [] vector)
+        {
+            foreach (ClaseMadre aux in vector)
+            {
+                aux.Imprimir();
+            }
         }
     }
 
@@ -97,6 +130,7 @@ internal class Program
         Taxi t = new Taxi(3);
         Console.WriteLine($"Un {t.Marca} con {t.Pasajeros} pasajeros");*/
 
+        Imprimidor.Imprimir(new A(), new B(), new C(), new D());
     }
 }
 
