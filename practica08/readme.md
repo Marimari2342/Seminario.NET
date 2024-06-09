@@ -61,6 +61,37 @@ class Trabajador
 
 ***Ejecutar el programa y una vez interrumpido, proseguir paso a paso, en general la tecla asociada para ejecutar paso a paso entrando en los métodos que se invocan es F11, sin embargo también es posible utilizar el botón de la barra que aparece en la parte superior del editor cuando el programa está con la ejecución interrumpida.***
 
+***b) ¿Qué salida produce por Consola?***
+
+<details><summary> <code> Respuesta 🖱 </code></summary><br>
+
+~~~
+Se inició el trabajo
+Trabajo concluido
+~~~
+
+</details>
+
+***c) Borrar (o comentar) la instrucción t1.Trabajando = T1Trabajando; del método Main y contestar: ¿Cuál es el error que ocurre? ¿Dónde y por qué? ¿Cómo se debería implementar el método Trabajar() para evitarlo?***
+
+<details><summary> <code> Respuesta 🖱 </code></summary><br>
+
+El programa tira dos warning:
+
+* Trabajador.cs(8,9) --> La función local "T1Trabajando" se declara pero nunca se usa.
+
+* Trabajador.cs(3,26) --> El campo 'Trabajador.Trabajando' nunca se asigna y siempre tendrá el valor predeterminado null.
+
+Luego se muestra la siguiente excepción:
+
+Unhandled exception. System.NullReferenceException: Object reference not set to an instance of an object.
+
+* at Trabajador.Trabajar() in Trabajador.cs:line 8
+
+* at Program.<Main>$(String[] args) in Program.cs:line 14
+
+</details>
+
 <br>
 <br>
 <br>

@@ -10,7 +10,7 @@ Console.WriteLine(i);*/
 
 
 Trabajador t1 = new Trabajador();
-t1.Trabajando = T1Trabajando;
+//t1.Trabajando = T1Trabajando;
 t1.Trabajar();
 
 void T1Trabajando(object? sender, EventArgs e)
