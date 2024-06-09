@@ -88,7 +88,7 @@ Unhandled exception. System.NullReferenceException: Object reference not set to 
 
 * at Trabajador.Trabajar() in Trabajador.cs:line 8
 
-* at Program.<Main>$(String[] args) in Program.cs:line 14
+* at Program. </Maín/> $(String[] args) in Program.cs:line 14
 
 </details>
 
