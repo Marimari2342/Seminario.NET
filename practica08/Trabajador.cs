@@ -1,12 +1,15 @@
 class Trabajador
 {
-    public EventHandler? Trabajando; //No es necesario definir un tipo delegado propio
-    //porque la plataforma provee el tipo EventHandler
-    //que se adecua a lo que se necesita
+    public EventHandler? Trabajando = (object sender, EventArgs e) => Console.WriteLine("Se inició el trabajo");
+
     public void Trabajar()
     {
-        Trabajando(this, EventArgs.Empty);
-        //realiza algún trabajo
-        Console.WriteLine("Trabajo concluido");
+        if (Trabajando != null)
+        {
+            Trabajando(this, EventArgs.Empty);
+            //realiza algún trabajo
+            Console.WriteLine("Trabajo concluido");
+        }
     }
 }
+
