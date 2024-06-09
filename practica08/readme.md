@@ -29,6 +29,38 @@ El valor de la variable i después de la invocación a1(ref i) dependerá de cu�
 
 </details>
 
+## ⚫ Punto 2
+
+***Dado el siguiente código:***
+
+~~~c#
+-------Program.cs---------
+Trabajador t1 = new Trabajador();
+t1.Trabajando = T1Trabajando;
+t1.Trabajar();
+
+void T1Trabajando(object? sender, EventArgs e)
+=> Console.WriteLine("Se inició el trabajo");
+
+-------Trabajador.cs---------
+class Trabajador
+{
+    public EventHandler? Trabajando; //No es necesario definir un tipo delegado propio
+    //porque la plataforma provee el tipo EventHandler
+    //que se adecua a lo que se necesita
+    public void Trabajar()
+    {
+        Trabajando(this, EventArgs.Empty);
+        //realiza algún trabajo
+        Console.WriteLine("Trabajo concluido");
+    }
+}
+~~~
+
+***a) Ejecutar paso a paso el programa y observar cuidadosamente su funcionamiento. Para ejecutar paso a paso colocar un punto de interrupción (breakpoint) en la primera línea ejecutable del método Main().***
+
+***Ejecutar el programa y una vez interrumpido, proseguir paso a paso, en general la tecla asociada para ejecutar paso a paso entrando en los métodos que se invocan es F11, sin embargo también es posible utilizar el botón de la barra que aparece en la parte superior del editor cuando el programa está con la ejecución interrumpida.***
+
 <br>
 <br>
 <br>
