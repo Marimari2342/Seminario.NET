@@ -1,0 +1,15 @@
+C:\Users\maria\Downloads\Seminario.NET\practica08\obj\Debug\net8.0\practica08.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\maria\Downloads\Seminario.NET\practica08\obj\Debug\net8.0\practica08.AssemblyInfoInputs.cache
+C:\Users\maria\Downloads\Seminario.NET\practica08\obj\Debug\net8.0\practica08.AssemblyInfo.cs
+C:\Users\maria\Downloads\Seminario.NET\practica08\obj\Debug\net8.0\practica08.csproj.CoreCompileInputs.cache
+C:\Users\maria\Downloads\Seminario.NET\practica08\obj\Debug\net8.0\practica08.sourcelink.json
+C:\Users\maria\Downloads\Seminario.NET\practica08\bin\Debug\net8.0\practica08.exe
+C:\Users\maria\Downloads\Seminario.NET\practica08\bin\Debug\net8.0\practica08.deps.json
+C:\Users\maria\Downloads\Seminario.NET\practica08\bin\Debug\net8.0\practica08.runtimeconfig.json
+C:\Users\maria\Downloads\Seminario.NET\practica08\bin\Debug\net8.0\practica08.dll
+C:\Users\maria\Downloads\Seminario.NET\practica08\bin\Debug\net8.0\practica08.pdb
+C:\Users\maria\Downloads\Seminario.NET\practica08\obj\Debug\net8.0\practica08.dll
+C:\Users\maria\Downloads\Seminario.NET\practica08\obj\Debug\net8.0\refint\practica08.dll
+C:\Users\maria\Downloads\Seminario.NET\practica08\obj\Debug\net8.0\practica08.pdb
+C:\Users\maria\Downloads\Seminario.NET\practica08\obj\Debug\net8.0\practica08.genruntimeconfig.cache
+C:\Users\maria\Downloads\Seminario.NET\practica08\obj\Debug\net8.0\ref\practica08.dll

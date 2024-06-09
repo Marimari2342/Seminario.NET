@@ -1,0 +1,1 @@
+delegate void AccionInt(ref int i);

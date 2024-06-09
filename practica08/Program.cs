@@ -1,2 +1,8 @@
-﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!");
+﻿AccionInt a1 = (ref int i) => i = i * 2;
+a1 += a1; //2+2 = 4
+a1 += a1; //4+4 = 8
+a1 += a1; //8+8 = 16
+int i = 1;
+Console.WriteLine(i);
+a1(ref i);
+Console.WriteLine(i);
