@@ -100,6 +100,41 @@ Unhandled exception. System.NullReferenceException: Object reference not set to 
 
 ## ⚫ Punto 3
 
+***Analizar el siguiente código:***
+
+~~~c#
+-------Program.cs---------
+ContadorDeLineas contador = new ContadorDeLineas();
+contador.Contar();
+-------ContadorDeLineas.cs---------
+class ContadorDeLineas
+{
+    private int _cantLineas = 0;
+    public void Contar()
+    {
+        Ingresador _ingresador = new Ingresador();
+        _ingresador.Contador = this;
+        _ingresador.Ingresar();
+        Console.WriteLine($"Cantidad de líneas ingresadas: {_cantLineas}");
+    }
+    public void UnaLineaMas() => _cantLineas++;
+}
+-------Ingresador.cs---------
+class Ingresador
+{
+    public ContadorDeLineas? Contador { get; set; }
+    public void Ingresar()
+    {
+        string st = Console.ReadLine()??"";
+        while (st != "")
+        {
+            Contador?.UnaLineaMas();
+            st = Console.ReadLine()??"";
+        }
+    }
+}
+~~~
+
 ## ⚫ Punto 4
 
 ## ⚫ Punto 5
