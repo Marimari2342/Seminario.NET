@@ -92,6 +92,18 @@ Unhandled exception. System.NullReferenceException: Object reference not set to 
 
 </details>
 
+***d) Eliminar el método T1Trabajando en Program.cs y suscribirse al evento con una expresión lambda.***
+
+***e) Reemplazar el campo público Trabajando de la clase Trabajador, por un evento público generado por el compilador (event notación abreviada). ¿Qué operador se debe usar en la suscripción?***
+
+***f) Cambiar en la clase Trabajador el evento generado automáticamente por uno implementado de manera explícita con los dos descriptores de acceso y haciendo que, al momento en que alguien se suscriba al evento, se dispare el método Trabajar(), haciendo innecesaria la invocación t1.Trabajar(); en Program.cs***
+
+## ⚫ Punto 3
+
+## ⚫ Punto 4
+
+## ⚫ Punto 5
+
 <br>
 <br>
 <br>
