@@ -135,9 +135,38 @@ class Ingresador
 }
 ~~~
 
+***Existe un alto nivel de acoplamiento entre las clases ContadorDeLineas e Ingresador, habiendo una referencia circular: un objeto ContadorDeLineas posee una referencia a un objeto Ingresador y éste último posee una referencia al primero. Esto no es deseable, hace que el código sea difícil de mantener. Eliminar esta referencia circular utilizando un evento, de tal forma que ContadorDeLineas posea una referencia a Ingresador pero que no ocurra lo contrario.***
+
 ## ⚫ Punto 4
 
+***Codificar una clase Ingresador con un método público Ingresar() que permita al usuario ingresar líneas por la consola hasta que se ingrese la línea con la palabra "fin". Ingresador debe implementar dos eventos. Uno sirve para notificar que se ha ingresado una línea vacía ( "" ). El otro para indicar que se ha ingresado un valor numérico (debe comunicar el valor del número ingresado como argumento cuando se genera el evento). A modo de ejemplo observar el siguiente código que hace uso de un objeto Ingresador.***
+
+~~~c#
+Ingresador ingresador = new Ingresador();
+ingresador.LineaVaciaIngresada += (sender, e) =>
+    { Console.WriteLine("Se ingresó una línea en blanco"); };
+ingresador.NroIngresado += (sender, e) =>
+    { Console.WriteLine($"Se ingresó el número {e.Valor}"); };
+ingresador.Ingresar();
+~~~
+
 ## ⚫ Punto 5
+
+***Codificar la clase Temporizador con un evento Tic que se genera cada cierto intervalo de tiempo medido en milisegundos una vez que el temporizador se haya habilitado. La clase debe contar con dos propiedades: Intervalo de tipo int y Habilitado de tipo bool. No se debe permitir establecer la propiedad Habilitado en true si no existe ninguna suscripción al evento Tic. No se debe permitir establecer el valor de Intervalo menor a 100. En el lanzamiento del evento, el temporizador debe informar la cantidad de veces que se provocó el evento. Para detener los eventos debe establecerse la propiedad Habilitado en false. A modo de ejemplo, el siguiente código debe producir la salida indicada.***
+
+~~~c#
+Temporizador t = new Temporizador();
+t.Tic += (sender, e) =>
+{
+    Console.WriteLine(DateTime.Now.ToString("HH:mm:ss") + " ");
+    if (e.Tics == 5)
+    {
+        t.Habilitado = false;
+    }
+};
+t.Intervalo = 2000;
+t.Habilitado = true;
+~~~
 
 <br>
 <br>
