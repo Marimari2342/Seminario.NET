@@ -1,0 +1,5 @@
+***En esta carpeta se encuentran los trabajos grupales con los cuales se aprueba la materia. Estan:***
+
+* **Primer trabajo para entregar -->** <code>[AQUI](/trabajos_grupales/07_Primer_Trabajo_Para_Entregar.pdf)</code>
+
+* **Trabajo final grupal -->** <code>[AQUI](/trabajos_grupales/12_Trabajo_Final_Para_Entregar.pdf)</code>
