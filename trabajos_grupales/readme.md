@@ -2,6 +2,10 @@
 
 * **Primer trabajo para entregar -->** <code>[AQUI](/trabajos_grupales/07_Primer_Trabajo_Para_Entregar.pdf)</code>
 
+>[!NOTE]
+>Para ir al repositorio de la primer entrega --> <code>[AQUI](https://github.com/Marimari2342/primeraEntrega.Net)</code>
+>
+
 * **Trabajo final grupal -->** <code>[AQUI](/trabajos_grupales/12_Trabajo_Final_Para_Entregar.pdf)</code>
 
 <br>
